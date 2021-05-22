@@ -1,3 +1,12 @@
+
+# 编程语言学习笔记
+* [C++](lang/cpp_feature.md)
+* [Python](lang/py_feature.md)
+* [makefile&cmake](lang/mk_feature.md)
+* [shell](lang/sh_feature.md)
+* [标记语言](lang/markup_lang.md)
+
+
 # 操作系统
 
 ## OS启动
