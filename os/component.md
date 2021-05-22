@@ -7,7 +7,6 @@ Linux内核中，当等待某件事件发生时可以使当前进程以休眠的
 
 #### 基本操作
 
-wait_event_interruptible()等待函数，使用sleep进入休眠，`__wait_event`等待条件成立时唤醒。
 init_waitqueue_head()初始化等待队列头，初始化的对象wait_queue_head_t是等待队列的基础结构；
 
 	struct __wait_queue_head {
@@ -16,11 +15,20 @@ init_waitqueue_head()初始化等待队列头，初始化的对象wait_queue_hea
 	};
 	typedef struct __wait_queue_head wait_queue_head_t;
 
+wait_event_interruptible()等待函数，使用sleep进入休眠，`__wait_event`等待条件成立时唤醒。
+
+	#define wait_event_interruptible(wq, condition)    \
+	({                                                 \
+	     int __ret = 0;                                  \
+	     if (!(condition))                               \
+	      __wait_event_interruptible(wq, condition, __ret); \
+	      __ret;                                         \
+	})
 
 #### 参考文档
 1. [内核中的等待队列](https://zhuanlan.zhihu.com/p/60713292)
 2. [Linux内核之休眠与唤醒](https://sourcelink.top/2020/07/15/linux-wake-up/)
-
+3. [wait_event_interruptible 使用方法](https://blog.csdn.net/allen6268198/article/details/8112551)
 
 ## Atomic
 
