@@ -1,3 +1,12 @@
-# [操作系统相关](os/readme.md)
+# 操作系统
 
-# [网络相关](net/readme.md)
+## OS启动
+- [BIOS](os/boot.md#bios)
+- [UEFI](os/boot.md#uefi)
+- [BootLoader](os/boot.md#bootloader)
+
+## Linux组件
+- [等待队列](os/linux.md#wait_queue)
+
+
+# [网络](net/readme.md)
