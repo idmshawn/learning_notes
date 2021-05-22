@@ -10,5 +10,6 @@
 - [字符设备注册](os/kernel.md#字符设备注册)
 - [地址操作](os/kernel.md#地址操作)
 - [等待队列](os/component.md#wait-queue)
+- [原子操作](os/component.md#atomic)
 
 # 网络及协议
