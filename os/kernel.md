@@ -78,7 +78,7 @@ ko插入时指定参数插入
 |register_chrdev_region|指定设备编号来静态注册一个字符设备||
 |alloc_chrdev_region|动态分配一个字符设备,注册成功并将分配到的主次设备号放入dev里||
 |cdev_init|初始化cdev结构体,并将file_operations结构体放入cdev-> ops 里||
-|cdev_add|将cdev结构体添加到系统中,并将dev(注册好的设备编号)放入cdev-> dev里,  count(次设备编号个数)放入cdev->count里||
+|cdev_add|将cdev结构体添加到系统中||
 
 #### 参考文档
 1. [使用register_chrdev_region系列来注册字符设备](https://www.cnblogs.com/lifexy/p/7827559.html)
