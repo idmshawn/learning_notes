@@ -15,20 +15,38 @@ init_waitqueue_head()初始化等待队列头，初始化的对象wait_queue_hea
 	};
 	typedef struct __wait_queue_head wait_queue_head_t;
 
-wait_event_interruptible()等待函数，使用sleep进入休眠，`__wait_event`等待条件成立时唤醒。
+wait_event_interruptible()等待函数，成功地唤醒一个被wait_event_interruptible()的进程，需要满足：
+1. condition为真的前提下;
+2. 调用wake_up();
 
-	#define wait_event_interruptible(wq, condition)    \
-	({                                                 \
-	     int __ret = 0;                                  \
-	     if (!(condition))                               \
-	      __wait_event_interruptible(wq, condition, __ret); \
-	      __ret;                                         \
-	})
+如果仅修改condition，那么只是满足其中一个条件，此时，被wait_event_interruptible()起来的进程尚未位于runqueue队列中，因此不会被调度。
+这个时候只要wake_up一下就立刻会重新进入运行调度。
+
+wait_event_interruptible()的等效代码（非实际代码，实际通过多层宏封装和函数调用）：
+
+	wait_event_interruptible(wq, condition) /*等效没有考虑返回值*/
+	{
+	     if (!(condition))
+	     {
+		 wait_queue_t _ _wait;
+		 init_waitqueue_entry(&_ _wait, current);
+		 add_wait_queue(&wq, &_ _wait);
+		 for (;;)
+		 {
+		    set_current_state(TASK_INTERRUPTIBLE);
+		    if (condition)
+		    break;
+		    schedule();  /* implicit call: del_from_runqueue(current)*/
+		 }
+		 current->state = TASK_RUNNING;
+		 remove_wait_queue(&wq, &_ _wait);
+	      }
+	}
 
 #### 参考文档
-1. [内核中的等待队列](https://zhuanlan.zhihu.com/p/60713292)
-2. [Linux内核之休眠与唤醒](https://sourcelink.top/2020/07/15/linux-wake-up/)
-3. [wait_event_interruptible 使用方法](https://blog.csdn.net/allen6268198/article/details/8112551)
+1. [wait_event_interruptible 使用方法](https://blog.csdn.net/allen6268198/article/details/8112551)
+2. [内核中的等待队列](https://zhuanlan.zhihu.com/p/60713292)
+3. [Linux内核之休眠与唤醒](https://sourcelink.top/2020/07/15/linux-wake-up/)
 
 ## Atomic
 
