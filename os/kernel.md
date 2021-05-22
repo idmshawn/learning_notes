@@ -95,25 +95,3 @@ ko插入时指定参数插入
 |SetPageReserved|||
 |pci_register_driver|||
 
-
-
-## Wait Queue
-#### 简介
-Linux内核中，当等待某件事件发生时可以使当前进程以休眠的方式进行等待，这样不会占用cpu资源，当事件发生的时候则将其唤醒；
-等待队列（wait queue）作为一种异步事件通知机制，可用来实现阻塞进程的唤醒。
-
-#### 常用函数及功能
-
-|函数|功能|备注|
-|--|--|--|
-|wait_event_interruptible|使用sleep进入休眠，`__wait_event`等待某个条件成立时唤醒||
-|init_waitqueue_head|||
-|atomic_set|||
-|atomic_inc|||
-|atomic_read|||
-
-
-#### 参考文档
-1. [Linux内核之休眠与唤醒](https://sourcelink.top/2020/07/15/linux-wake-up/)
-2. [浅析Linux等待队列](https://www.cnblogs.com/noaming1900/archive/2011/01/14/1935528.html)
-
