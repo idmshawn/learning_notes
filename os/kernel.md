@@ -65,6 +65,7 @@ ko插入时指定参数插入
 #### 参考文档
 1. [Linux Kernel Modules](https://cs4118.github.io/dev-guides/linux-modules.html)
 
+
 ## Wait Queue
 #### 简介
 Linux内核中，等待队列（wait queue）作为一种异步事件通知机制，可用来实现阻塞进程的唤醒。
@@ -85,14 +86,27 @@ Linux内核中，等待队列（wait queue）作为一种异步事件通知机�
 2. [浅析Linux等待队列](https://www.cnblogs.com/noaming1900/archive/2011/01/14/1935528.html)
 
 
-## 其它
+## 字符设备注册
+
+#### 常用函数及功能(详见参考文档1)
+
+|函数|功能|备注|
+|--|--|--|
+|register_chrdev_region|指定设备编号来静态注册一个字符设备||
+|cdev_init|初始化cdev结构体,并将file_operations结构体放入cdev-> ops 里||
+|cdev_add|将cdev结构体添加到系统中,并将dev(注册好的设备编号)放入cdev-> dev里,  count(次设备编号个数)放入cdev->count里||
+
+#### 参考文档
+1. [使用register_chrdev_region系列来注册字符设备](https://www.cnblogs.com/lifexy/p/7827559.html)
+
+
+## 地址操作
 
 #### 常用函数及功能
 
 |函数|功能|备注|
 |--|--|--|
-|wait_event_interruptible|||
-|init_waitqueue_head|||
-|atomic_set|||
-|atomic_inc|||
-|atomic_read|||
+|virt_to_page|||
+|SetPageReserved|||
+|pci_register_driver|||
+
