@@ -6,7 +6,7 @@
 - [BootLoader](os/boot.md#bootloader)
 
 ## Linux组件
-- [等待队列](os/linux.md#wait_queue)
+- [等待队列](os/component.md#wait_queue)
 
 
 # 网络及协议
