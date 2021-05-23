@@ -9,7 +9,22 @@
 ##### 类图
 
 ### 工具
-- [PlantUML:在线UNL绘制](https://plantuml.com/zh/)
+
+##### PlantUML
+
+[PlantUML在线绘制](https://plantuml.com/zh/)
+支持github上的markdwon内嵌plantuml解析，示例：
+
+```plantuml
+@startuml component
+actor client
+node app
+database db
+
+db -> app
+app -> client
+@enduml
+```
 
 ### 参考文档
 
