@@ -5,7 +5,8 @@
 - [图](data_struct/graph.md)
 
 ### 算法
-
+- 排序
+- 搜索
 
 # 编程语言学习笔记
 * [C++](lang/cpp_feature.md)
@@ -18,6 +19,7 @@
 # 软件工程
 - 软件工程
 - [设计模式](sw_eng/patterns.md)
+- [UML](sw_eng/uml.md)
 
 # 操作系统
 
