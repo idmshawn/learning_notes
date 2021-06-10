@@ -52,8 +52,9 @@
 |翻屏|屏中：M；屏上：H；屏下：L||
 
 # GIT常用命令
-git中文社区 http://gitbook.liuhui998.com/index.html
-git命令闯关教程 https://learngitbranching.js.org/
+[git中文社区](http://gitbook.liuhui998.com/index.html)
+
+[git命令闯关教程](https://learngitbranching.js.org)
 
 |用途|命令格式|详细说明|
 |----|-----|----|
