@@ -6,3 +6,4 @@
 2. Linux内核参考书：Linux内核设计与实现
 3. Linux内核参考书：深入理解Linux内核
 4. Linux内核参考书：Linux设备驱动程序
+5. [Linux下动态链接库文件的realname、soname和linkname](https://blog.csdn.net/J_H_C/article/details/98375371)
