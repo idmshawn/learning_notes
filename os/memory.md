@@ -1,5 +1,11 @@
 # 内存映射
 
+### Linux内存地址空间
+底部为0地址，往上为地址增长方向
+
+![image](https://user-images.githubusercontent.com/61963619/125583008-79cb1dcb-b400-44e9-93f7-71d98f38f6b5.png)
+
+
 ### 页号
 
 linux提供以下预定义宏，用以获取页大小及页号。
