@@ -16,9 +16,9 @@ linux提供以下预定义宏，用以获取页大小及页号。[参考文档2]
 |PAGE_SIZE|内存页大小|不同平台上大小不同，范围可以从4KB到64KB|
 |PAGE_MASK|页号掩码|地址与上PAGE_MASK，结果为这个地址所在的页面的页面号|
 
-### 虚拟内存管理
+### 虚拟内存管理(VMM: Virtual Machine Manager)
 
-
+vm_area_struct为VM area管理的结构体；
 remap_pfn_range: 将内核空间的内存映射到用户空间 [参考文档3~4]
 
 
