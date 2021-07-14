@@ -35,6 +35,7 @@
 - [地址操作](os/kernel.md#地址操作)
 - [等待队列](os/component.md#wait-queue)
 - [原子操作](os/component.md#atomic)
+- [内存映射](os/memory.md)
 
 # [网络及协议](net/README.md)
 
