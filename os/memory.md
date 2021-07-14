@@ -18,9 +18,9 @@ linux提供以下预定义宏，用以获取页大小及页号。[参考文档2]
 
 ### 虚拟内存管理(VMM: Virtual Machine Manager)
 
-vm_area_struct为VM area管理的结构体；
-remap_pfn_range: 将内核空间的内存映射到用户空间 [参考文档3~4]
+vm_area_struct为VM area管理的结构体；（Linux 会把进程虚拟内存空间划分为多个分区，在 Linux 内核中使用 vm_area_struct 对象来表示）
 
+remap_pfn_range: 将内核空间的内存映射到用户空间 [参考文档3~4]
 
 mmap: 物理地址映射出虚拟地址
 
