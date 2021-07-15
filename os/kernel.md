@@ -66,7 +66,7 @@ ko插入时指定参数插入
 1. [Linux Kernel Modules](https://cs4118.github.io/dev-guides/linux-modules.html)
 
 
-## 字符设备注册
+## 字符设备
 允许使用设备名称创建一个内核设备对象，如创建一个`my_obj`的设备对象，在linux下即可查到`/dev/my_obj`。
 
 支持静态注册(指定设备编号来注册)和动态分配(不指定设备编号来注册)。静态分配时需要指定设备编号。
@@ -82,7 +82,8 @@ ko插入时指定参数插入
 
 #### 参考文档
 1. [使用register_chrdev_region系列来注册字符设备](https://www.cnblogs.com/lifexy/p/7827559.html)
-
+2. [Linux驱动篇(五)--字符设备驱动(一)](https://zhuanlan.zhihu.com/p/137636768)
+3. [Linux字符设备驱动](https://www.cnblogs.com/chen-farsight/p/6155518.html)
 
 ## 地址操作
 
