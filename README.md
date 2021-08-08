@@ -24,8 +24,8 @@
 
 # [操作系统](os/README.md)
 
-### OS启动
-### Linux组件
+- OS启动
+- Linux组件
 
 # [网络及协议](net/README.md)
 
