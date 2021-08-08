@@ -9,7 +9,7 @@
 
 TDD优势：站在用户角度设计API；而不是像前者站在实现角度，系统实现和测试用例会出现相互耦合；
 
-### 测试驱动开发(TDD)
+## 测试驱动开发(TDD)
 Kent Beck书籍: Test-Driven Development 
 
 TDD三定律(TDD cyclye)：
@@ -17,7 +17,7 @@ liuguangcong解释不清晰，建议再参考以下解释：
 - [Test-Driven Development (TDD) – Quick Guide](https://brainhub.eu/blog/test-driven-development-tdd/)
 - [Test-Driven Development (TDD)](https://docs.firstdecode.com/tdd/)
 
-### 测试替身(TestDouble)
+## 测试替身(TestDouble)
 概念来自《xUnit Test Patterns》。敏捷开发最基础的工程实践是“持续集成”和“单元测试“。
 xUnit Test Patterns一书主要就是介绍作者在实践“单元测试”过程中碰到的许多问题及其解决之道。
 
@@ -38,4 +38,5 @@ SUT(system under test)：被测对象；
 
 时机选择遵循**最小侵入**原则。
 
+## 测试分层
 
