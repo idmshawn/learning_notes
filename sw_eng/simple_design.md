@@ -67,6 +67,23 @@
 尽量拆解为小粒度的原子操作，可及时验证、快速恢复。
 
 
+# 编程范式
+### 面向对象设计原则
+SOLID(核心是对多态的设计原则)
+- **S**ingle responsibility principle：单一职责原则；
+通过接口分离变和不变，隔离变化；
+- The **O**pen/Closed Principle：开闭原则；
+“软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但是对于修改是封闭的”；
+多态的目标在于系统对于变化的拓展而非修改；
+- **L**iskov Substitution principle：里式替换原则；
+“派生类（子类）对象可以在程序中代替其基类（超类）对象。”
+接口设计要达到类型擦除的圆满效果；
+- **I**nterface-segregation principles：接口隔离原则；
+面向不同客户的接口要分离开；
+- **D**ependency inversion principle: 依赖倒置原则；
+接口的设计和规定者应该是接口的使用方；
+
+
 # CleanCode
 
 引言：[重构要首先识别代码坏味道](https://github.com/MagicBowen/refactoring/blob/master/effective-refactoring-1.md#%E5%85%B3%E4%BA%8E%E6%9C%AC%E6%96%87)
