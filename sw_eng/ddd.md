@@ -28,3 +28,6 @@
 - Repository
 - Service
 - Event
+
+### 面向模型的实现模式
+x
