@@ -19,13 +19,31 @@
 
 ## 工具
 
-##### PlantUML
+### PlantUML
 
 github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链，示例：
 
 ![uml](http://www.plantuml.com/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
 
+### Mermaid
+
+github开源。
+
+PlantText在github上只能使用外链，没法直接使用内嵌语法(实际markdown支持内嵌，但github未支持？)；
+
+Mermaid可以使用内嵌语法；类图关系语法与plantUML类似，其它语法仍有差异？
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ### 参考文档
 
-1. [PlantText:UML在线绘制](https://www.planttext.com/)
-2. [PlantUML官网](https://plantuml.com/zh/)
+1. [PlantText](https://www.planttext.com/)：UML在线绘制
+2. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍
+3. [mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
+4. [mermaid官网](https://mermaid-js.github.io/mermaid/#/)
