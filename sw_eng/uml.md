@@ -49,10 +49,10 @@ Class13 <.. Class14: Dependency
 
 > 另一方面，从类的成员的角度来看，派生类自动地将基类地所有成员作为自己的成员，这叫做“继承”。基类和派生类又可以分别叫做“父类”和“子类”，有时也成为“一般类”和“特殊类”。
 
-继承是从子类的角度讲的，派生是从基类的角度讲的。
+在C++中，派生（Derive）和继承(inheritance)是一个概念，只是站的角度不同。继承是儿子接收父亲的产业，派生是父亲把产业传承给儿子。
 
-派生指江河的源头产生出支流，引申为从一个主要事物的发展中分化出来。
-继承可以使得子类具有父类的属性和方法，或者重新定义、追加属性和方法等。
+被继承的类称为父类或基类，继承的类称为子类或派生类。“子类”和“父类”通常放在一起称呼，“基类”和“派生类”通常放在一起称呼。
+
 
 ## 工具
 
@@ -78,7 +78,8 @@ graph TD;
 1. [UML中类之间的六大关系](https://blog.csdn.net/ruren1/article/details/81584232?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control)
 2. [关联、聚合、组合的区别](https://zhuanlan.zhihu.com/p/359672087)
 3. [UML类图的箭头含义](https://www.jianshu.com/p/8969ab8c48c7)
-4. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
-5. [PlantText](https://www.planttext.com/)：UML在线绘制
-6. [mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
-7. [mermaid官网](https://mermaid-js.github.io/mermaid/#/)
+4. [C++继承和派生简明教程](http://c.biancheng.net/view/2264.html)
+5. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
+6. [PlantText](https://www.planttext.com/)：UML在线绘制
+7. [mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
+8. [mermaid官网](https://mermaid-js.github.io/mermaid/#/)
