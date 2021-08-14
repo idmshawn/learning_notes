@@ -29,7 +29,7 @@
 - Service
 - Event
 
-### 面向模型的实现模式(C语言的实现)
+### 面向模型的实现模式(C语言的实现)？？
 ##### 表达概念
 ###### 1 命名
 命名同时表达领域语义与**模型角色**(如xxService，xxRepo)；
@@ -39,7 +39,7 @@ Modular C可采用类似C++类的方法，不要一个文件塞太多东西，�
 
 ###### 2 行为
 - 突出对外API，最小化暴露；(头文件显式定义API，只放API依赖的元素)
-- 让接口有领域含义，尽量不要有get/set([Tell Don't Ask原则](https://www.aqee.net/post/tell-dont-ask.html)，尽量不感知调用对象内部状态)；
+- 让接口有领域含义，尽量不要有get/set([Tell Don't Ask原则](https://www.aqee.net/post/tell-dont-ask.html)，尽量不感知调用对象内部状态)；(不要为了私有变量做get/set)
 - 区分set(update)和构造的服务上下文区别；？？
 - **通过包含接口类型，显式化声明接口；(派生行为，即例中的setup_handle函数指针)**
 
@@ -69,11 +69,28 @@ Value Object(值对象)建议用const修饰。
   > - 返回值依赖，create关系，一般返回指针类型
   > - 减少dependency的物理依赖，尽量前置声明，不要在头文件中包含依赖的头文件；
 
-##### 生命周期管理
+##### 生命周期管理？？？（目的是什么？）
+
 C语言用factory和repository隐藏内存预占的全局变量；
+
+- 全局变量没有生命周期的语义，区分内存预占和生命周期管理；
+- C语言没有构造和析构，生命周期管理显式的使用Factory(如示例中port_factory.c中的alloc和release函数)；
+- 用Factory隐藏内存预占的全局变量，明确对外提供生命周期语义；
+- 嵌入式场景下，Factory和Repository很多情况可以合一；
+- 编译器拓展，实现全局自动注册的能力，区分类型与对象的生命周期；
+
 
 ##### 物理设计
 保持逻辑结构和物理结构的一致性；
-Modular C风格，一个.h和.c表示一个概念；
 
-
+- 符号隐藏
+> - 使用static关键字隐藏私有方法（Modular C中的PRIVATE实际为static）；
+> - 使用编译器拓展隐藏包内接口；
+- 文件组织
+> - 头文件结构
+> - API访问级别：包内、包外、私有；
+> - 接口参数格式，显式的this，const；
+> - Modular C风格，一个.h和.c表示一个概念；
+> - **前置声明**，可避免将仅内部使用的结构体开放到头文件中！！参考C++的[PImpl](https://en.cppreference.com/w/cpp/language/pimpl)技术；编译时弱依赖的指针、返回值类型、函数参数类型等都可做前置声明；
+- 文件夹(包)组织
+*问题： 一个组件中的so有没有数量限制，6~7个so是不是太多？ 1个so是否合适？*
