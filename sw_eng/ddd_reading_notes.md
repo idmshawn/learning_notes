@@ -261,6 +261,8 @@ Module需要与模型的其它部分一同演变。
 #### 5.6.3 在混合范式中坚持使用Model-Driven Design
 
 ## Ch6：领域对象的生命周期
+使用Factory创建和重建复杂对象，使用Aggregate来封装它们的内部结构；最后，在生命周期的中间和末尾使用Repository来提供查找和检索持久对象并封装庞大基础设置的手段。
+
 ### 6.1 模式：Aggregate
 
 ### 6.2 模式：Factory
