@@ -98,14 +98,3 @@ GoF的23中模式，可分三类。
 > - 蓝：Description，附加描述；
 - 设计建模：设计模型(设计模式，其它视图)
 - 代码实现：面向对象编码
-
-# CleanCode
-
-引言：[重构要首先识别代码坏味道](https://github.com/MagicBowen/refactoring/blob/master/effective-refactoring-1.md#%E5%85%B3%E4%BA%8E%E6%9C%AC%E6%96%87)
-
-### 提升可读性
-
-### 消除重复
-
-### 耦合？
-
