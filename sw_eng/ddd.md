@@ -30,7 +30,7 @@
 - Service
 - Event
 
-## [DDD读书笔记](ddd_reading_notes.md)
+## [DDD读书笔记](../reading/ddd_notes.md)
 
 # 面向模型的实现模式(C语言的实现)
 ### 表达概念
