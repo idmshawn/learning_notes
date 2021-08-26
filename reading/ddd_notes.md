@@ -448,7 +448,7 @@ BC的变更
 - 逐步淘汰遗留系统
 - Open Host Service->Published Language
 
-## 书中提到的设计模式
+## 书中提到的[设计模式](design_pattern.md)
 - 策略模式(strategy)：p36，ch1.4
 - 外观模式(facade)：p59，ch3.2； p91，ch5.4.1, p279, ch14.8.2
 - 观察者模式(observers)：p68, ch4.1.1
