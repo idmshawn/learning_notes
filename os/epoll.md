@@ -14,19 +14,10 @@
 - `int eventfd_write(int fd, eventfd_t value);` 从eventfd中读出一个值
 
 # 示例
-见文献2
-例二、eventfd可以被epoll监控， 一旦有状态变化，可以触发通知
+
+eventfd可以被epoll监控， 一旦有状态变化，可以触发通知 (详见文献2)
 
 ```c
-#include <sys/eventfd.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <sys/epoll.h>
-#include <string.h>
-#include <pthread.h>
-
 int g_iEvtfd = -1;
 
 void *eventfd_child_Task(void *pArg)
@@ -114,18 +105,7 @@ int main(int argc, char**argv[])
 }
 
 ```
-运行结果
-``` kane@kanelinux:/mnt/hgfs/kanelinuxshare/eventfd$ ./a.out
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
-Read 1 (0x1) from iEvtfd
 
-```
 
 ## 参考
 1. [关于非阻塞I/O、多路复用、epoll的杂谈](https://bbs.huaweicloud.com/blogs/137781)
