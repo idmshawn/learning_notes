@@ -6,6 +6,16 @@
 - `int epoll_ctl(int epfd, int op, int fd, struct epoll_event *ev)` 对interest list增删改
 - `int epoll_wait(int epfd, struct epoll_event *evlist, int maxevents, int timeout);` 调用该方法获取ready的文件描述符
 
+### Epoll工作原理图示
+1.进程483通过epoll_create()创建一个epoll实例，该实例存在于内核空间。
+
+2.进程483通过epoll_ctl()系统调用，添加五个感兴趣的文件描述符到interest list。
+
+3.当有文件描述符ready时，系统内核会把该文件描述符添加到ready list，ready list是interest list的子集。
+事件发生后添加到ready list，这个过程是内核完成的。
+
+4. 用户程序调用epoll_wait()时，内核会把ready list返回给用户程序。
+
 # EventFd
 
 ### 操作函数
