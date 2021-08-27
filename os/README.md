@@ -12,6 +12,7 @@
 - [等待队列](component.md#wait-queue)
 - [原子操作](component.md#atomic)
 - [内存映射](memory.md)
+- [线程通信:epoll](epoll.md)
 
 ### 参考
 1. 在线课程：[Linux内核分析及应用 陈莉君(西电)](https://www.xuetangx.com/course/XIYOU08091001441/1516763)
