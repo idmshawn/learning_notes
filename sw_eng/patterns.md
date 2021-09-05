@@ -13,21 +13,26 @@
 # 设计模式
 
 ### 结构模式
-代理模式(Proxy)
-适配器模式(Adapter)
-工厂(Factory)
-抽象工厂(Abstract Factory)
-门面模式(Facade)
+##### 代理模式(Proxy)
+##### 适配器模式(Adapter)
+##### 工厂(Factory)
+##### 抽象工厂(Abstract Factory)
+
+##### 门面模式(Facade)(也称外观模式)
+用户只看到一个门面类，不感知复杂的内部细节；
 
 ### 创建模式
-工厂模式(Factory Method)
-单例模式(Singleton)
-构建者模式(Builder)
+##### 工厂模式(Factory Method)
+##### 单例模式(Singleton)
+##### 构建者模式(Builder)(也称生成器模式)
 
 ### 行为模式
-策略模式(Strategy)
-观察者模式(Observer)
+##### 策略模式(Strategy)
+一个抽象的stategy接口，对应3~5个不同的策略；
 
+##### 观察者模式(Observer)
+
+##### 访问者模式(Visitor Pattern)
 
 ### 参考
 1. 设计模式之禅(第2版), 秦小波 
