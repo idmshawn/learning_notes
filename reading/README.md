@@ -13,7 +13,7 @@
 * [人月神话(精简)剖析](https://wenku.baidu.com/view/a66b8480b42acfc789eb172ded630b1c58ee9b7d.html)
 * 微信读书(仅前两章)
 
-## [设计模式之禅](design_pattern.md)
+## [设计模式之禅](../sw_eng/patterns.md)
 
 ###### 建议
 重点章节适合深度理解，少量典型模式需掌握；其它模式使用时查阅参考。
