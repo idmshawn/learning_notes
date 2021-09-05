@@ -31,5 +31,6 @@
 
 
 ### 参考
-1. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
-2. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
+1. 设计模式之禅(第2版), 秦小波 
+2. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
+3. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
