@@ -67,3 +67,4 @@
 - 策略(stategy)：重构MOOC课程.ppt p45, 重构2 p330
 - 单例(singleton): 重构2 p318
 - 访问者(visitor)：重构2 p330
+- 模板方法(template method)：重构MOOC课程.ppt p33
