@@ -36,6 +36,10 @@ Define a family of algorithms, encapsulate each one, and make them interchangeal
 ##### 观察者模式(Observer)
 
 ##### 访问者模式(Visitor Pattern)
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+##### 模板方法模式(Template method Pattern)
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
 ### 参考
 1. 设计模式之禅(第2版), 秦小波 
