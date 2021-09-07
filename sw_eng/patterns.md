@@ -11,6 +11,7 @@
 | |迪米特法则|Law of Demeter, LoD(Least Knowledge Principle,LKP)|Only talk to your immediate friends.|||
 
 # 设计模式
+(标题后的星表示难易度，星数量越多越困难)
 
 ## 结构模式
 ### 代理模式(Proxy)
@@ -18,17 +19,15 @@
 ### 工厂(Factory)
 ### 抽象工厂(Abstract Factory)
 
-### 门面模式(Facade Pattern)(也称外观模式)
+### 门面模式(Facade Pattern)(也称外观模式) :star: :star: 
 ###### 定义
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 用户只看到一个门面类，不感知复杂的内部细节；
 
 ## 创建模式
 ### 工厂模式(Factory Method)
-### 单例模式(Singleton)
-难易度 :star: 
-### 构建者模式(Builder Pattern)(也称生成器模式)
-难易度 :star: :star: 
+### 单例模式(Singleton)  :star: 
+### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
 ###### 定义
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ###### 使用场景
@@ -40,8 +39,8 @@ separate the construction of a complex object from its representation so that th
 而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
 
 ## 行为模式
-### 策略模式(Strategy Pattern)
-难易度 :star: :star: 
+### 策略模式(Strategy Pattern) :star: :star: :star: 
+###### 定义
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.
 一个抽象的stategy接口，对应3~5个不同的策略；
 
@@ -53,8 +52,7 @@ Represent an operation to be performed on the elements of an object structure. V
 ###### 使用场景
 
 
-### 模板方法模式(Template Method Pattern)
-难易度 :star: 
+### 模板方法模式(Template Method Pattern)  :star: 
 ###### 定义
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 ###### 使用场景
