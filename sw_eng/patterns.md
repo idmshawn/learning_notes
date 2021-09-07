@@ -60,6 +60,21 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 - 重要、复杂的算法，可以把核心算法设计为模板方法，周边的相关细节功能则由各个子类实现；
 - 重构时的常用模式，把相同的代码抽取到父类中，然后通过钩子函数(见“模板方法模式的拓展”)约束其行为。
 
+# 设计模式应用
+书籍或教程中提及的设计模式
+### 附1，《领域驱动设计》中提到的设计模式
+- 策略模式(Strategy)：p36，ch1.4
+- 外观模式(Facade)：p59，ch3.2； p91，ch5.4.1, p279, ch14.8.2
+- 观察者模式(Observers)：p68, ch4.1.1
+- 适配器模式(Adapter)：p279, ch14.8.2
+- 工厂模式(Factory)、抽象工厂：p113, ch6.2
+- 构建器模式(Builder)：p113, ch6.2
+### 附2，《重构》中提到的设计模式
+- 生成器(Builder)：重构MOOC课程.ppt p41
+- 策略(stategy)：重构MOOC课程.ppt p45, 重构2 p330
+- 单例(singleton): 重构2 p318
+- 访问者(visitor)：重构2 p330
+- 模板方法(template method)：重构MOOC课程.ppt p33
 
 # 参考
 1. 设计模式之禅(第2版), 秦小波 
