@@ -33,9 +33,9 @@ separate the construction of a complex object from its representation so that th
 - 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
 - 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
 ###### 优缺点/比较
-建造者模式与工厂模式非常相似。
-但Builer最主要功能是基本方法的调用顺序安排，即这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；
-而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。
+建造者模式与工厂模式非常相似。  
+但Builer最主要功能是基本方法的调用顺序安排，即这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；  
+而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
 
 ## 行为模式
 ### 策略模式(Strategy Pattern)
@@ -51,6 +51,9 @@ Represent an operation to be performed on the elements of an object structure. V
 ### 模板方法模式(Template method Pattern)
 ###### 定义
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+###### 使用场景
+
+###### 优缺点/比较
 
 # 参考
 1. 设计模式之禅(第2版), 秦小波 
