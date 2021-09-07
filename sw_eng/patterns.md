@@ -12,36 +12,47 @@
 
 # 设计模式
 
-### 结构模式
-##### 代理模式(Proxy)
-##### 适配器模式(Adapter)
-##### 工厂(Factory)
-##### 抽象工厂(Abstract Factory)
+## 结构模式
+### 代理模式(Proxy)
+### 适配器模式(Adapter)
+### 工厂(Factory)
+### 抽象工厂(Abstract Factory)
 
-##### 门面模式(Facade Pattern)(也称外观模式)
+### 门面模式(Facade Pattern)(也称外观模式)
+###### 定义
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 用户只看到一个门面类，不感知复杂的内部细节；
 
-### 创建模式
-##### 工厂模式(Factory Method)
-##### 单例模式(Singleton)
-##### 构建者模式(Builder Pattern)(也称生成器模式)
+## 创建模式
+### 工厂模式(Factory Method)
+### 单例模式(Singleton)
+### 构建者模式(Builder Pattern)(也称生成器模式)
+###### 定义
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
+###### 使用场景
+- 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
+- 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
+###### 优缺点/比较
+建造者模式与工厂模式非常相似。
+但Builer最主要功能是基本方法的调用顺序安排，即这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；
+而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。
 
-### 行为模式
-##### 策略模式(Strategy Pattern)
+## 行为模式
+### 策略模式(Strategy Pattern)
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.
 一个抽象的stategy接口，对应3~5个不同的策略；
 
-##### 观察者模式(Observer)
+### 观察者模式(Observer)
 
-##### 访问者模式(Visitor Pattern)
+### 访问者模式(Visitor Pattern)
+###### 定义
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
-##### 模板方法模式(Template method Pattern)
+### 模板方法模式(Template method Pattern)
+###### 定义
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
-### 参考
+# 参考
 1. 设计模式之禅(第2版), 秦小波 
 2. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
 3. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
