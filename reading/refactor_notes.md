@@ -62,9 +62,4 @@
 
 重构方法；
 
-### 附、《重构》中提到的设计模式
-- 生成器(Builder)：重构MOOC课程.ppt p41
-- 策略(stategy)：重构MOOC课程.ppt p45, 重构2 p330
-- 单例(singleton): 重构2 p318
-- 访问者(visitor)：重构2 p330
-- 模板方法(template method)：重构MOOC课程.ppt p33
+### 附、[《重构》中提到的设计模式](../sw_eng/patterns.md)
