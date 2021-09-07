@@ -26,7 +26,9 @@ Provide a unified interface to a set of interfaces in a subsystem. Facade define
 ## 创建模式
 ### 工厂模式(Factory Method)
 ### 单例模式(Singleton)
+难易度 :star: 
 ### 构建者模式(Builder Pattern)(也称生成器模式)
+难易度 :star: :star: 
 ###### 定义
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ###### 使用场景
@@ -39,6 +41,7 @@ separate the construction of a complex object from its representation so that th
 
 ## 行为模式
 ### 策略模式(Strategy Pattern)
+难易度 :star: :star: 
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.
 一个抽象的stategy接口，对应3~5个不同的策略；
 
@@ -47,8 +50,11 @@ Define a family of algorithms, encapsulate each one, and make them interchangeal
 ### 访问者模式(Visitor Pattern)
 ###### 定义
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+###### 使用场景
+
 
 ### 模板方法模式(Template Method Pattern)
+难易度 :star: 
 ###### 定义
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 ###### 使用场景
