@@ -18,16 +18,19 @@
 ##### 工厂(Factory)
 ##### 抽象工厂(Abstract Factory)
 
-##### 门面模式(Facade)(也称外观模式)
+##### 门面模式(Facade Pattern)(也称外观模式)
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 用户只看到一个门面类，不感知复杂的内部细节；
 
 ### 创建模式
 ##### 工厂模式(Factory Method)
 ##### 单例模式(Singleton)
-##### 构建者模式(Builder)(也称生成器模式)
+##### 构建者模式(Builder Pattern)(也称生成器模式)
+separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
 ### 行为模式
-##### 策略模式(Strategy)
+##### 策略模式(Strategy Pattern)
+Define a family of algorithms, encapsulate each one, and make them interchangealbe.
 一个抽象的stategy接口，对应3~5个不同的策略；
 
 ##### 观察者模式(Observer)
