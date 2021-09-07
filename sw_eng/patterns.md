@@ -46,7 +46,7 @@ Define a family of algorithms, encapsulate each one, and make them interchangeal
 
 ### 观察者模式(Observer)
 
-### 访问者模式(Visitor Pattern)
+### 访问者模式(Visitor Pattern) :star: :star: :star: :star: :star: 
 ###### 定义
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 ###### 使用场景
