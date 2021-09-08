@@ -13,8 +13,13 @@ Software entities like classes, modules and functions should be open for extensi
 
 ### (L)里氏替换原则(The Liskov Substitution Principle, **LSP**)
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.  
-“子类应该是可替换基类的，也就是说任何基类可以出现的地方，子类一定可以出现”
-
+“子类应该是可替换父类的，也就是说任何父类可以出现的地方，子类一定可以出现”   
+(反之不一定行，有子类出现的地方，父类未必就可以胜任)  
+里氏替换包含了4层函数：
+1. 子类必须完全实现父类的方法；
+2. 子类可以有自己的个性；
+3. 子类覆盖或实现父类的方法时输入参数可以被放大；
+4. 子类覆写或实现父类的方法时输出结果可以被缩小；
 
 ### (I)接口隔离原则(Interface Segregation Principle, **ISP**)
 Clients should not be forced to depend upon interfaces that they dont't use. The dependency of one class to another one should depend on the smallest possible interface.  
@@ -40,7 +45,7 @@ Convert the interface of a class into another interface clients expect. Adapter 
 ###### 使用场景
 类似于笔记本的110V~220V电源适配器，引入一个转换对象，用于把一个接口或类转换后，可对接其它接口或类。
 ###### 注意事项
-软件设计阶段最好不要使用此模式，它不是为了解决还在开发阶段的问题，而是为了解决正在服役的项目问题。  
+适配器是一个“补救”模式。软件设计阶段最好不要使用此模式，它不是为了解决还在开发阶段的问题，而是为了解决正在服役的项目问题。  
 项目一定要遵循依赖倒置和里氏替换原则，否则即使再适合使用适配器的场合下，也会迎来大的改造。
 
 ### 工厂(Factory)
