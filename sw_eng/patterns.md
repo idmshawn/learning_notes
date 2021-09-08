@@ -69,9 +69,13 @@ separate the construction of a complex object from its representation so that th
 而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
 
 ## 行为模式
-### 策略模式(Strategy Pattern) :star: :star: :star: 
+### 策略模式(Strategy Pattern)(也称政策模式, Policy) :star: :star: :star: 
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.  
-一个抽象的stategy接口，对应3~5个不同的策略；
+(定义一组算法，将每个算法都封装起来，并且使它们之间可以互换)  
+###### 使用场景
+- 多个类只有在算法或行为上稍有不同的场景；
+- 算法需要自由切换的场景；
+- 需要屏蔽算法规则的场景；
 
 ### 观察者模式(Observer)(也称发布订阅模式,Publish/subscribe) :star: :star: :star: 
 Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.  
