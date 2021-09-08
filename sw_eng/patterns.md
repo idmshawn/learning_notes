@@ -37,9 +37,11 @@ Only talk to your immediate friends.
 ### 适配器模式(Adapter Pattern)(也称包装模式, wrapper) :star: :star: 
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.  
 (将一个类的接口变换成用户所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作)
-
 ###### 使用场景
 类似于笔记本的110V~220V电源适配器，引入一个转换对象，用于把一个接口或类转换后，可对接其它接口或类。
+###### 注意事项
+软件设计阶段最好不要使用此模式，它不是为了解决还在开发阶段的问题，而是为了解决正在服役的项目问题。  
+项目一定要遵循依赖倒置和里氏替换原则，否则即使再适合使用适配器的场合下，也会迎来大的改造。
 
 ### 工厂(Factory)
 ### 抽象工厂(Abstract Factory)
