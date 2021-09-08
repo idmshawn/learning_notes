@@ -13,12 +13,12 @@ Software entities like classes, modules and functions should be open for extensi
 
 ### (L)里氏替换原则(The Liskov Substitution Principle, **LSP**)
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.  
-“派生的子类应该是可替换基类的，也就是说任何基类可以出现的地方，子类一定可以出现”
+“子类应该是可替换基类的，也就是说任何基类可以出现的地方，子类一定可以出现”
 
 
 ### (I)接口隔离原则(Interface Segregation Principle, **ISP**)
 Clients should not be forced to depend upon interfaces that they dont't use. The dependency of one class to another one should depend on the smallest possible interface.  
-“类不应该被迫依赖他们不使用的方法”，接口要尽量小、接口要高内聚、定制服务、接口设计是有限度的
+“用户不应该被迫依赖他们不使用的方法”，接口要尽量小、接口要高内聚、定制服务、接口设计是有限度的
 
 ### (D)依赖倒置原则(Dependence Inversion Principle, **DIP**)
 High level modules should not depend upon low level modules. Both should depend upon abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.  
