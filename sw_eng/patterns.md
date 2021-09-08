@@ -1,14 +1,33 @@
 
 # 设计原则
 
-|序号|原则|缩写|原文|描述|使用场景|
-|--|--|--|--|--|--|
-|S|单一职责原则|Single Responsibility Principle, **SRP**|There should never be more than one reason for a class to change|“一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中”|SRP适用于接口、类、方法。接口一定要做到单一职责，类的设计尽量做到只有一个原因引起变化。|
-|O|开闭原则|Open-Closed Principle, **OCP**|Software entities like classes, modules and functions should be open for extension but closed for modifications.|软件实现应该对拓展开放，对修改关闭；即，应设计可以在不被修改的前提下易于拓展的模块；||
-|L|里氏替换原则|The Liskov Substitution Principle, **LSP**|Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.|“派生的子类应该是可替换基类的，也就是说任何基类可以出现的地方，子类一定可以出现”||
-|I|接口隔离原则|Interface Segregation Principle, **ISP**|Clients should not be forced to depend upon interfaces that they dont't use. The dependency of one class to another one should depend on the smallest possible interface.|“类不应该被迫依赖他们不使用的方法”，接口要尽量小、接口要高内聚、定制服务、接口设计是有限度的||
-|D|依赖倒置原则|Dependence Inversion Principle, **DIP**|High level modules should not depend upon low level modules. Both should depend upon abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.|高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象||
-| |迪米特法则|Law of Demeter, LoD(Least Knowledge Principle,LKP)|Only talk to your immediate friends.|||
+### (S)单一职责原则(Single Responsibility Principle, **SRP**) 
+There should never be more than one reason for a class to change  
+“一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中”
+###### 适用场景
+SRP适用于接口、类、方法。接口一定要做到单一职责，类的设计尽量做到只有一个原因引起变化。
+
+### (O)开闭原则(Open-Closed Principle, **OCP**)
+Software entities like classes, modules and functions should be open for extension but closed for modifications.  
+软件实现应该对拓展开放，对修改关闭；即，应设计可以在不被修改的前提下易于拓展的模块；
+
+### (L)里氏替换原则(The Liskov Substitution Principle, **LSP**)
+Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.  
+“派生的子类应该是可替换基类的，也就是说任何基类可以出现的地方，子类一定可以出现”
+
+
+### (I)接口隔离原则(Interface Segregation Principle, **ISP**)
+Clients should not be forced to depend upon interfaces that they dont't use. The dependency of one class to another one should depend on the smallest possible interface.  
+“类不应该被迫依赖他们不使用的方法”，接口要尽量小、接口要高内聚、定制服务、接口设计是有限度的
+
+### (D)依赖倒置原则(Dependence Inversion Principle, **DIP**)
+High level modules should not depend upon low level modules. Both should depend upon abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.  
+高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。
+
+
+### 迪米特法则(Law of Demeter, ala. Least Knowledge Principle,**LKP**)
+Only talk to your immediate friends.  
+
 
 # 设计模式
 (标题后的星表示难易度，星数量越多越困难)
@@ -16,7 +35,7 @@
 ## 结构模式
 ### 代理模式(Proxy)
 ### 适配器模式(Adapter)
-
+###### 定义
 
 ### 工厂(Factory)
 ### 抽象工厂(Abstract Factory)
