@@ -73,7 +73,14 @@ separate the construction of a complex object from its representation so that th
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.  
 一个抽象的stategy接口，对应3~5个不同的策略；
 
-### 观察者模式(Observer)
+### 观察者模式(Observer)(也称发布订阅模式,Publish/subscribe) :star: :star: :star: 
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.  
+(定义对象间一种一对多的依赖关系，使得每当一个对象改变状态，则所有依赖于它的对象都会得到通知并被自动更新)  
+实际是将主控监控观察按照被动等通知(订阅)实现。
+###### 使用场景
+- 关联行为场景；关联行为是可拆分的，而不是“组合”关系。
+- 事件多级触发场景；
+- 跨系统的消息交互场景，如消息队列的处理机制。
 
 ### 访问者模式(Visitor Pattern) :star: :star: :star: :star: :star: 
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
