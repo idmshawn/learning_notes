@@ -34,22 +34,24 @@ Only talk to your immediate friends.
 
 ## 结构模式
 ### 代理模式(Proxy)
-### 适配器模式(Adapter)
-###### 定义
+### 适配器模式(Adapter Pattern)(也称包装模式, wrapper) :star: :star: 
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.  
+(将一个类的接口变换成用户所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作)
+
+###### 使用场景
+类似于笔记本的110V~220V电源适配器，引入一个转换对象，用于把一个接口或类转换后，可对接其它接口或类。
 
 ### 工厂(Factory)
 ### 抽象工厂(Abstract Factory)
 
 ### 门面模式(Facade Pattern)(也称外观模式) :star: :star: 
-###### 定义
-Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.  
 用户只看到一个门面类，不感知复杂的内部细节；
 
 ## 创建模式
 ### 工厂模式(Factory Method)
 ### 单例模式(Singleton)  :star: 
 ### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
-###### 定义
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ###### 使用场景
 - 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
@@ -61,20 +63,17 @@ separate the construction of a complex object from its representation so that th
 
 ## 行为模式
 ### 策略模式(Strategy Pattern) :star: :star: :star: 
-###### 定义
-Define a family of algorithms, encapsulate each one, and make them interchangealbe.
+Define a family of algorithms, encapsulate each one, and make them interchangealbe.  
 一个抽象的stategy接口，对应3~5个不同的策略；
 
 ### 观察者模式(Observer)
 
 ### 访问者模式(Visitor Pattern) :star: :star: :star: :star: :star: 
-###### 定义
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 ###### 使用场景
 
 
 ### 模板方法模式(Template Method Pattern)  :star: 
-###### 定义
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 ###### 使用场景
 - 多个子类有公有的方法，并且逻辑基本相同时；
