@@ -119,3 +119,4 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 2. [Design Patterns Cards](http://www.mcdonaldland.info/files/designpatterns/designpatternscard.pdf)(设计模式记忆卡片)
 3. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
 4. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
+5. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
