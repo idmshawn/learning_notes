@@ -98,6 +98,10 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 - 重要、复杂的算法，可以把核心算法设计为模板方法，周边的相关细节功能则由各个子类实现；
 - 重构时的常用模式，把相同的代码抽取到父类中，然后通过钩子函数(见“模板方法模式的拓展”)约束其行为。
 
+## 拓展
+### MVC(Model View Controller)框架
+
+
 # 设计模式应用
 书籍或教程中提及的设计模式
 ### 附1，《领域驱动设计》中提到的设计模式
