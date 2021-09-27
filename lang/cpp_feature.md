@@ -100,7 +100,6 @@
 用户可以引用此头文件简化自己函数中的类型判断，以支持模板化的泛型编程。
 * static_assert：编译时的断言检查。如果断言为假，编译器会打印一个特殊的错误信息。运行时什么也不会干。
 
-
 # C++实现
 
 ### C++接口类(Interface)实现
@@ -110,8 +109,9 @@ C++使用抽象类实现接口。
 
 ## 参考
 1. C++手册：[cppreference](https://en.cppreference.com/w/)
-2. [泛型编程与STL](https://blog.csdn.net/zl6481033/article/details/89465421?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=1328665.10354.16159908009496807&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control)
-3. [C++那些事](https://light-city.club/sc/)
+2. [C++那些事](https://light-city.club/sc/)
+3. [C++ STL与泛型编程（三）](https://blog.csdn.net/zl6481033/article/details/89465421?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=1328665.10354.16159908009496807&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control)
+4. [泛型编程、STL的概念、STL模板思想及其六大组件的关系，以及泛型编程(GP)、STL、面向对象编程（OOP）、C++之间的关系](https://blog.csdn.net/lsfreeing/article/details/77870275)
 
 ### 面试参考
 * 指针与引用的区别？ 传值参数和传引用参数的差异点？
