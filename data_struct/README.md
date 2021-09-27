@@ -1,7 +1,7 @@
 ## Introduction of data strutures and algorithm analysis
 
 ## 算法性能
-解释见文献1；汇总图综合文献1和2。
+解释见文献1；汇总图综合文献1和2（注意2中的竖坐标有压缩）。
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
 2. [大 O 表示法初学指南](https://zhuanlan.zhihu.com/p/50516776)
 
