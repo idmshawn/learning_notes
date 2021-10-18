@@ -1,5 +1,5 @@
 
-# 数据结构与算法
+# [数据结构与算法](data_struct/README.md)
 ### 基础数据结构
 
 - [树](data_struct/trees.md)
