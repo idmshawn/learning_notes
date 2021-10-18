@@ -30,8 +30,7 @@
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
 2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
 
-## 排序(sort)算法
-
+## [排序(sort)算法](sort.md)
 
 ## 查找(或叫搜索)(search)算法
 
