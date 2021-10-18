@@ -1,9 +1,9 @@
 
 # 数据结构
 
-## [树](trees.md)
-## [堆](heap.md)
-## [图](graph.md)
+- [树](trees.md)
+- [堆](heap.md)
+- [图](graph.md)
 
 # 算法
 ## 算法性能(大O表示法)
