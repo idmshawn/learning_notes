@@ -1,5 +1,12 @@
 
-# 算法性能(大O表示法)
+# 数据结构
+
+## [树](trees.md)
+## [堆](heap.md)
+## [图](graph.md)
+
+# 算法
+## 算法性能(大O表示法)
 ### 常见的算法性能
 ![perf](../images/algo_perf.png)
 （汇总图综合文献1和2，注意文献2中的竖坐标有压缩）
@@ -23,11 +30,16 @@
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
 2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
 
-# 排序(sort)算法
+## 排序(sort)算法
 
 
-# 查找(或叫搜索)(search)算法
+## 查找(或叫搜索)(search)算法
 
+## 参考网站
+
+1. [算法可视](https://algorithm-visualizer.org)
+2. [可视化算法](https://visualgo.net/en)
+3. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 
 
 # 常见面试题
@@ -36,9 +48,3 @@
    - 二分查找：对数时间；
    - 散列表：常量时间；
 2. xx
-
-# 参考网站
-
-1. [算法可视](https://algorithm-visualizer.org)
-2. [可视化算法](https://visualgo.net/en)
-3. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
