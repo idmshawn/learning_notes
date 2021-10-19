@@ -7,7 +7,7 @@
 
 # 算法
 ## 算法性能(大O表示法)
-### 常见的算法性能
+#### 常见的算法性能
 ![perf](../images/algo_perf.png)
 （汇总图综合文献1和2，注意文献2中的竖坐标有压缩）
 
@@ -16,7 +16,7 @@
 - 线性时间 O(n)
 
 解释见文献1；
-### 大O的意义
+#### 大O的意义
 数学上使用希腊字母表示函数式关系，大O表示函数式上边界；  
 即，大O表示法描述算法性能时，O(x)表示算法的最差性能是x；
 
@@ -26,19 +26,33 @@
 - Theta (Θ()) describes the exact bound of the complexity.
 - Little O (o()) describes the upper bound excluding the exact bound.
 
-### 参考
-1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
-2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
+## 算法基础
+
+#### 递归(recursive)
+每个递归函数都有两部分：[参考文档3；有的算法书无此概念]
+- 基线条件(base case)，函数不再调用自己的终结条件
+- 递归条件(recursive case)，函数调用自己的条件
+
+``` c++
+void countdown(int i)
+    cout<<i;
+  if (i <= 1)  // 基线条件
+    return ; 
+  else         // 递归条件
+    countdown(i-1);
+```
 
 ## [排序(sort)算法](sort.md)
 
 ## 查找(或叫搜索)(search)算法
 
 ## 参考网站
-
-1. [算法可视](https://algorithm-visualizer.org)
-2. [可视化算法](https://visualgo.net/en)
-3. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
+1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
+2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
+3. 算法图解
+4. [算法可视](https://algorithm-visualizer.org)
+5. [可视化算法](https://visualgo.net/en)
+6. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 
 
 # 常见面试题
