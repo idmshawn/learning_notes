@@ -1,9 +1,33 @@
 
 ## 选择排序(Selection Sort)
+*歌单排序：将歌单中的歌曲按照播放次数最多的排序，遍历歌单，找出播放次数最多的歌，添加到新列表中。*  
+
+思路上最直接的排序算法，需要一个临时空间存储已排序元素。数组实现的步骤：
+1. 遍历未排序数组；
+2. 每次遍历从未排序的数组中找出最大(小)值，追加到已排序数组中。
+
+示例
+``` C++
+
+template<typename T>
+void selection_sort(std::vector<T>& arr) {
+    for (int i = 0; i < arr.size() - 1; i++) {
+        int min = i;
+        for (int j = i + 1; j < arr.size(); j++)
+            if (arr[j] < arr[min])
+                min = j;
+        std::swap(arr[i], arr[min]);
+    }
+}
+
+```
 
 
 ## 冒泡排序(Bubble Sort)
 
+
+## 插入排序
+*扑克插牌：*
 
 ## 快速排序(Quicksort)
 
@@ -23,3 +47,4 @@ C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](h
 
 ## 参考文档
 1. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
+2. [选择排序](https://www.runoob.com/w3cnote/selection-sort.html)
