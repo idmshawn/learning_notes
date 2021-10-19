@@ -1,6 +1,6 @@
 
 ## 选择排序(Selection Sort)
-*歌单排序：将歌单中的歌曲按照播放次数最多的排序，遍历歌单，找出播放次数最多的歌，添加到新列表中。*  
+*歌单排序：将歌单中的歌曲按照播放次数最多的排序，遍历歌单，找出播放次数最多的歌，添加到新列表中。*  [参考文档3]
 
 思路上最直接的排序算法。数组实现的步骤(使用临时空间存储已排序元素)：
 1. 遍历未排序数组；
@@ -60,3 +60,4 @@ C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](h
 ## 参考文档
 1. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 2. [十大经典排序算法](https://www.runoob.com/w3cnote/ten-sorting-algorithm.html)
+3. 算法图解
