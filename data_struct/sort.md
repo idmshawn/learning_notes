@@ -48,16 +48,21 @@ void selection_sort(std::vector<T>& arr) {
 
 #### 示例(递归实现，综合文档2及其它，C++改造)
 ``` C++
+/* 严蔚敏《数据结构》标准分割函数；
+实现两个功能：1、元素按大小移到pivot两侧；2、返回一个中间位置的pivot？
+*/
 template <typename T>
-int partition(vector<T> &a, int low, int high)  // 严蔚敏《数据结构》标准分割函数
+int partition(vector<T> &a, int low, int high)
 {
-    int pivot = a[low];
+    int pivot = a[low]; // 此处的pivot是元素值
     while (low < high) {
-        while (low < high && a[high] > pivot)
+        while (low < high && a[high] > pivot) {
             high--;
+	}
 	a[low] = a[high];
-	while (low < high && a[low] < pivot)
+	while (low < high && a[low] < pivot) {
 	    low++;
+	}
         a[high] = a[low];
     }
 
@@ -68,10 +73,10 @@ int partition(vector<T> &a, int low, int high)  // 严蔚敏《数据结构》�
 template <typename T>
 void quick_sort(vector<T> &a, int low,int high)
 {
-    if (low < high) {
-        int pivot = partition(a, low, high);
-	quick_sort(a, low, pivot - 1);
-	quick_sort(a, pivot + 1, high);
+    if (low < high) {  // low等于大于high时，递归条件终止
+        int p = partition(a, low, high);  // 此处的p是元素位置，即数组下标索引; 未免混淆，不再用pivot变量名
+	quick_sort(a, low, p - 1);
+	quick_sort(a, p + 1, high);
     }
 }
 ```
