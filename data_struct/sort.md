@@ -26,7 +26,6 @@ void bubble_sort(T arr[], int len) {
 
 示例 (未使用额外空间，直接交换元素)
 ``` C++
-
 template<typename T>
 void selection_sort(std::vector<T>& arr) {
     for (int i = 0; i < arr.size() - 1; i++) {
@@ -37,14 +36,14 @@ void selection_sort(std::vector<T>& arr) {
         std::swap(arr[i], arr[min]);
     }
 }
-
 ```
 
 ## 归并排序(Merge Sort)
 
 示例(递归实现)
 ``` C++
-void Merge(vector<int> &Array, int front, int mid, int end) {
+template <typename T>
+void merge(vector<T> &Array, int front, int mid, int end) {
     vector<int> LeftSubArray(Array.begin() + front, Array.begin() + mid + 1);
     vector<int> RightSubArray(Array.begin() + mid + 1, Array.begin() + end + 1);
     int idxLeft = 0, idxRight = 0;
@@ -62,15 +61,14 @@ void Merge(vector<int> &Array, int front, int mid, int end) {
     }
 }
 
-void MergeSort(vector<int> &Array, int front, int end) {
-    if (front >= end)
-        return;
-    int mid = (front + end) / 2;
-    MergeSort(Array, front, mid);
-    MergeSort(Array, mid + 1, end);
-    Merge(Array, front, mid, end);
+template <typename T>
+void merge_sort(vector<T> &a, int front, int end) {
+  if (front >= end) return;
+  int mid = front + (end - front) / 2;
+  merge_sort(a, front, mid);
+  merge_sort(a, mid + 1, end);
+  merge(a, front, mid, end);
 }
-
 ```
 
 ## 快速排序(Quick Sort)
@@ -79,34 +77,35 @@ void MergeSort(vector<int> &Array, int front, int end) {
 2. 分区：重新排序数列，所有比基准值小的元素放在基准前面，所有比基准值大的元素放在基准的后面（相同的数可以到任一边）；
 3. 对基准前后的两个子数组递归排序，即回到步骤1；
 
-示例(递归实现)
+示例(递归实现，综合文档2及5，C++改造)
 ``` C++
 template <typename T>
-void quick_sort_recursive(T arr[], int start, int end) {
-    if (start >= end)
-        return;
-    T mid = arr[end];
-    int left = start, right = end - 1;
-    while (left < right) { //在整个范围内搜寻比枢纽元值小或大的元素，然后将左侧元素与右侧元素交换
-        while (arr[left] < mid && left < right) //试图在左侧找到一个比枢纽元更大的元素
-            left++;
-        while (arr[right] >= mid && left < right) //试图在右侧找到一个比枢纽元更小的元素
-            right--;
-        std::swap(arr[left], arr[right]); //交换元素
-    }
-    if (arr[left] >= arr[end])
-        std::swap(arr[left], arr[end]);
-    else
-        left++;
-    quick_sort_recursive(arr, start, left - 1);
-    quick_sort_recursive(arr, left + 1, end);
+int partition(vector<T> &a, int low, int high)  // 严蔚敏《数据结构》标准分割函数
+{
+	int pivot = a[low];
+	while (low < high)
+	{
+		while (low < high && a[high] > pivot)
+			high--;
+		a[low] = a[high];
+		while (low < high && a[low] < pivot)
+			low++;
+		a[high] = a[low];
+	}
+
+	a[low] = pivot;
+	return low;
 }
 
 template <typename T>
-void quick_sort(T arr[], int len) {
-    quick_sort_recursive(arr, 0, len - 1);
+void quick_sort(vector<T> &a, int low,int high)
+{
+	if (low < high) {
+		int pivot = partition(a, low, high);
+		quick_sort(a, low, pivot - 1);
+		quick_sort(a, pivot + 1, high);
+	}
 }
-
 ```
 
 ## 应用
@@ -127,3 +126,4 @@ C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](h
 1. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 2. [十大经典排序算法](https://www.runoob.com/w3cnote/ten-sorting-algorithm.html)
 3. 算法图解(像小说一样有趣的算法入门书)，Aditya Bhargava(著)，袁国忠(译)，2017
+4. [OI Wiki:排序](https://oi-wiki.org/basic/sort-intro/)
