@@ -119,7 +119,7 @@ void merge_sort(vector<T> &a, int front, int end) {
 ```
 
 ## 算法比较
-各排序算法的比较参考文档1的“4.0 Algorithms”， 算法性能比较汇总如下
+各排序算法的性能比较[参考文档1的“4.0 Algorithms”]
 
 |算法|空间复杂度|时间复杂度(平均)|最好时间|最差时间|
 |--|--|--|--|--|
@@ -128,6 +128,11 @@ void merge_sort(vector<T> &a, int front, int end) {
 |选择排序|O(1)|O(n^2)|Already sorted, O(n^2)|Reverse sorted, O(n^2)|
 |归并排序|O(n)|O(nlog(n))|O(nlog(n))|Reverse sorted, O(nlog(n))|
 |快速排序|O(n)|O(nlog(n))|O(nlog(n))|All elements equal, O(n^2)|
+
+快速排序与归并排序比较：[参考文档3]    
+最差时间，归并优于快排。但
+> 快排的常量比归并小，因此，如果它们的运行时间都为O(nlog(n))，快排速度将更快。实际上，快排速度确实更快，因为遇上平均情况的可能性比遇上最糟情况可能性大得多。
+
 
 ## 参考文档
 1. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
