@@ -6,9 +6,23 @@
 - [图](graph.md)
 
 # 算法
+## [基础算法](base_algo.md)
+- 递归
+- 分治算法
+- 贪婪算法
+- 动态规划
+- 回溯法
+
+## [排序(sort)算法](sort.md)
+
+## 查找(或叫搜索)(search)算法
+- 二分查找
+- 深度优先搜索
+- 广度优先搜索
+
 ## 算法性能(大O表示法)
 #### 常见的算法性能
-![perf](../images/algo_perf.png)
+![perf](../images/algo_perf.png)  
 （汇总图综合文献1和2，注意文献2中的竖坐标有压缩）
 
 - 常数时间 O(1)
@@ -25,23 +39,6 @@
 - Omega (Ω()) describes the lower bound of the complexity.
 - Theta (Θ()) describes the exact bound of the complexity.
 - Little O (o()) describes the upper bound excluding the exact bound.
-
-## [基础算法](base_algo.md)
-
-- 递归
-- 分治算法
-- 贪婪算法
-- 动态规划
-- 回溯法
-
-## [排序(sort)算法](sort.md)
-
-## 查找(或叫搜索)(search)算法
-#### 二分查找
-
-#### 深度优先搜索
-
-#### 广度优先搜索
 
 ## 参考网站
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
