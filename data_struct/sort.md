@@ -13,10 +13,6 @@ void bubble_sort(T arr[], int len) {
 }
 ```
 
-## 插入排序(Insertion Sort)
-*扑克插牌：*
-
-
 ## 选择排序(Selection Sort)
 *歌单排序：将歌单中的歌曲按照播放次数最多的排序，遍历歌单，找出播放次数最多的歌，添加到新列表中。*  [参考文档3]
 
@@ -38,39 +34,8 @@ void selection_sort(std::vector<T>& arr) {
 }
 ```
 
-## 归并排序(Merge Sort)
-
-示例(递归实现，综合文档2及其它，C++改造)
-``` C++
-template <typename T>
-void merge(vector<T> &a, int front, int mid, int end) {
-    vector<T> LeftSubArray(a.begin() + front, a.begin() + mid + 1);
-    vector<T> RightSubArray(a.begin() + mid + 1, a.begin() + end + 1);
-    int idxLeft = 0, idxRight = 0;
- 
-    LeftSubArray.insert(LeftSubArray.end(), numeric_limits<int>::max());
-    RightSubArray.insert(RightSubArray.end(), numeric_limits<int>::max());
-
-    for (int i = front; i <= end; i++) {
-        if (LeftSubArray[idxLeft] < RightSubArray[idxRight]) {
-            a[i] = LeftSubArray[idxLeft];
-            idxLeft++;
-        } else {
-            a[i] = RightSubArray[idxRight];
-            idxRight++;
-        }
-    }
-}
-
-template <typename T>
-void merge_sort(vector<T> &a, int front, int end) {
-  if (front >= end) return;
-  int mid = front + (end - front) / 2;
-  merge_sort(a, front, mid);
-  merge_sort(a, mid + 1, end);
-  merge(a, front, mid, end);
-}
-```
+## 插入排序(Insertion Sort)
+*扑克插牌：*
 
 ## 快速排序(Quick Sort)
 数组实现的步骤：
@@ -108,10 +73,44 @@ void quick_sort(vector<T> &a, int low,int high)
 }
 ```
 
-## 应用
 C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](https://en.cppreference.com/w/cpp/algorithm/qsort)：
 > Despite the name, C++, C, and POSIX standards do not require this function to be implemented using quicksort or make any complexity or stability guarantees.
 
+## 归并排序(Merge Sort)
+
+示例(递归实现，综合文档2及其它，C++改造)
+``` C++
+template <typename T>
+void merge(vector<T> &a, int front, int mid, int end) {
+    vector<T> LeftSubArray(a.begin() + front, a.begin() + mid + 1);
+    vector<T> RightSubArray(a.begin() + mid + 1, a.begin() + end + 1);
+    int idxLeft = 0, idxRight = 0;
+ 
+    LeftSubArray.insert(LeftSubArray.end(), numeric_limits<int>::max());
+    RightSubArray.insert(RightSubArray.end(), numeric_limits<int>::max());
+
+    for (int i = front; i <= end; i++) {
+        if (LeftSubArray[idxLeft] < RightSubArray[idxRight]) {
+            a[i] = LeftSubArray[idxLeft];
+            idxLeft++;
+        } else {
+            a[i] = RightSubArray[idxRight];
+            idxRight++;
+        }
+    }
+}
+
+template <typename T>
+void merge_sort(vector<T> &a, int front, int end) {
+  if (front >= end) return;
+  int mid = front + (end - front) / 2;
+  merge_sort(a, front, mid);
+  merge_sort(a, mid + 1, end);
+  merge(a, front, mid, end);
+}
+```
+
+## 算法比较
 各排序算法的比较参考文档1的“4.0 Algorithms”， 算法性能比较汇总如下
 
 |算法|空间复杂度|时间复杂度(平均)|最好时间|最差时间|
