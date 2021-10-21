@@ -85,8 +85,9 @@ C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](h
 > Despite the name, C++, C, and POSIX standards do not require this function to be implemented using quicksort or make any complexity or stability guarantees.
 
 ## 归并排序(Merge Sort)
+*思路见参考文档2“归并排序”文末图示*
 
-示例(递归实现，综合文档2及其它，C++改造)
+#### 示例(递归实现，综合文档2及其它，C++改造)
 ``` C++
 template <typename T>
 void merge(vector<T> &a, int front, int mid, int end) {
