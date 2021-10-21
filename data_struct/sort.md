@@ -40,22 +40,23 @@ void selection_sort(std::vector<T>& arr) {
 
 ## 归并排序(Merge Sort)
 
-示例(递归实现)
+示例(递归实现，综合文档2及其它，C++改造)
 ``` C++
 template <typename T>
-void merge(vector<T> &Array, int front, int mid, int end) {
-    vector<int> LeftSubArray(Array.begin() + front, Array.begin() + mid + 1);
-    vector<int> RightSubArray(Array.begin() + mid + 1, Array.begin() + end + 1);
+void merge(vector<T> &a, int front, int mid, int end) {
+    vector<T> LeftSubArray(a.begin() + front, a.begin() + mid + 1);
+    vector<T> RightSubArray(a.begin() + mid + 1, a.begin() + end + 1);
     int idxLeft = 0, idxRight = 0;
+ 
     LeftSubArray.insert(LeftSubArray.end(), numeric_limits<int>::max());
     RightSubArray.insert(RightSubArray.end(), numeric_limits<int>::max());
 
     for (int i = front; i <= end; i++) {
         if (LeftSubArray[idxLeft] < RightSubArray[idxRight]) {
-            Array[i] = LeftSubArray[idxLeft];
+            a[i] = LeftSubArray[idxLeft];
             idxLeft++;
         } else {
-            Array[i] = RightSubArray[idxRight];
+            a[i] = RightSubArray[idxRight];
             idxRight++;
         }
     }
@@ -77,34 +78,33 @@ void merge_sort(vector<T> &a, int front, int end) {
 2. 分区：重新排序数列，所有比基准值小的元素放在基准前面，所有比基准值大的元素放在基准的后面（相同的数可以到任一边）；
 3. 对基准前后的两个子数组递归排序，即回到步骤1；
 
-示例(递归实现，综合文档2及5，C++改造)
+示例(递归实现，综合文档2及其它，C++改造)
 ``` C++
 template <typename T>
 int partition(vector<T> &a, int low, int high)  // 严蔚敏《数据结构》标准分割函数
 {
-	int pivot = a[low];
-	while (low < high)
-	{
-		while (low < high && a[high] > pivot)
-			high--;
-		a[low] = a[high];
-		while (low < high && a[low] < pivot)
-			low++;
-		a[high] = a[low];
-	}
+    int pivot = a[low];
+    while (low < high) {
+        while (low < high && a[high] > pivot)
+            high--;
+	a[low] = a[high];
+	while (low < high && a[low] < pivot)
+	    low++;
+        a[high] = a[low];
+    }
 
-	a[low] = pivot;
-	return low;
+    a[low] = pivot;
+    return low;
 }
 
 template <typename T>
 void quick_sort(vector<T> &a, int low,int high)
 {
-	if (low < high) {
-		int pivot = partition(a, low, high);
-		quick_sort(a, low, pivot - 1);
-		quick_sort(a, pivot + 1, high);
-	}
+    if (low < high) {
+        int pivot = partition(a, low, high);
+	quick_sort(a, low, pivot - 1);
+	quick_sort(a, pivot + 1, high);
+    }
 }
 ```
 
