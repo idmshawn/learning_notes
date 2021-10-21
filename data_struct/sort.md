@@ -43,6 +43,7 @@ void bubble_sort(T arr[], int len) {
 
 ## 快速排序(Quicksort)
 
+## 归并排序
 
 ## 应用
 C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](https://en.cppreference.com/w/cpp/algorithm/qsort)：
