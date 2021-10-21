@@ -40,14 +40,12 @@
 - Theta (Θ()) describes the exact bound of the complexity.
 - Little O (o()) describes the upper bound excluding the exact bound.
 
-## 参考网站
+## 参考文档
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
 2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
-3. 算法图解(像小说一样有趣的算法入门书)，Aditya Bhargava(著)，袁国忠(译)，2017
-4. 数据结构、算法与应用(C++语言描述)(第2版)，Sartaj Sahni(著)，王立柱/刘志红(译)，2014
-5. [算法可视](https://algorithm-visualizer.org)
-6. [可视化算法](https://visualgo.net/en)
-7. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
+3. [算法可视](https://algorithm-visualizer.org)
+4. [可视化算法](https://visualgo.net/en)
+5. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 
 
 # 常见面试题
