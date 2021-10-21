@@ -16,7 +16,7 @@ void bubble_sort(T arr[], int len) {
 ## 选择排序(Selection Sort)
 *歌单排序：将歌单中的歌曲按照播放次数最多的排序，遍历歌单，找出播放次数最多的歌，添加到新列表中。*  [参考文档3]
 
-思路上最直接的排序算法。数组实现的步骤(使用临时空间存储已排序元素)：
+思路上最直接的排序算法。实现步骤(数组实现，使用临时空间存储已排序元素)：
 1. 遍历未排序数组；
 2. 每次遍历从未排序的数组中找出最大(小)值，追加到已排序数组中。
 
@@ -38,12 +38,14 @@ void selection_sort(std::vector<T>& arr) {
 *扑克插牌：*
 
 ## 快速排序(Quick Sort)
-数组实现的步骤：
+#### 实现步骤(数组实现)
 1. 从待排序数组中选一个元素作为“基准值”(pivot)；
 2. 分区：重新排序数列，所有比基准值小的元素放在基准前面，所有比基准值大的元素放在基准的后面（相同的数可以到任一边）；
 3. 对基准前后的两个子数组递归排序，即回到步骤1；
 
-示例(递归实现，综合文档2及其它，C++改造)
+#### 分割函数
+
+#### 示例(递归实现，综合文档2及其它，C++改造)
 ``` C++
 template <typename T>
 int partition(vector<T> &a, int low, int high)  // 严蔚敏《数据结构》标准分割函数
@@ -72,7 +74,7 @@ void quick_sort(vector<T> &a, int low,int high)
     }
 }
 ```
-
+#### 应用
 C/C++中虽然有qsort库函数，但[其实现并不一定使用的是快排](https://en.cppreference.com/w/cpp/algorithm/qsort)：
 > Despite the name, C++, C, and POSIX standards do not require this function to be implemented using quicksort or make any complexity or stability guarantees.
 
