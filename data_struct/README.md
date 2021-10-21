@@ -43,7 +43,7 @@
 ## 参考文档
 1. [图解大 O 表示法](https://chinese.freecodecamp.org/news/big-o-notation/)
 2. [What is Big O Notation Explained: Space and Time Complexity](https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
-3. [OI Wiki:编程竞赛 (competitive programming) 知识整合站点](https://oi-wiki.org/basic/)
+3. [**OI Wiki**:编程竞赛 (competitive programming) 知识整合站点](https://oi-wiki.org/basic/)
 4. [C++ Data Structures and Algorithms Cheat Sheet](https://github.com/gibsjose/cpp-cheat-sheet/blob/master/Data%20Structures%20and%20Algorithms.md)
 5. [算法可视](https://algorithm-visualizer.org)
 6. [可视化算法](https://visualgo.net/en)
