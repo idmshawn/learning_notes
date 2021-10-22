@@ -18,14 +18,14 @@
 ## [排序(sort)算法](sort.md)
 
 ## [搜索(search)算法](search.md)
-*中文可以叫搜索算法或查找算法，英文只有Search algorithm，没有Find algorithm。即使常说的“二分查找”，英文也是Search。*
+*中文可以叫搜索算法或查找算法，英文只有Search algorithm，没有Find algorithm。即使常说的“二分查找”，英文也是Binary Search。*
 
 #### 基础搜索算法
 Wikipedia的“Search algorithm”词条：
 > Search algorithms can be classified based on their mechanism of searching into 3 types of algorithms: linear, binary, and hashing
 
 - 简单查找
-- 二分查找(binary search)：也称对数搜索(logarithmic search)，是一种在有序数组中查找某一特定元素的搜索算法。 ...如果在某一步骤数组为空，则代表找不到。
+- 二分查找：也称对数搜索(logarithmic search)，是一种在有序数组中查找某一特定元素的搜索算法。 ...如果在某一步骤数组为空，则代表找不到。
 - Hash查找
 #### 树和图的搜索
 - 深度优先搜索(BFS)
