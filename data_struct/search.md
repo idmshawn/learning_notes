@@ -1,6 +1,10 @@
 ## 广度优先搜索(Breadth First Search, BFS)
 “解决图算法中**最短路径问题**(shortest-path problem)的算法被称为广度优先搜索。”
 
+BFS回答两类问题：
+1. 从节点A出发，有前往B的路径吗？
+2. 从节点A出发，前往节点B的哪条路径最短？
+
 ## 深度优先搜索(Depth First Search, DFS)
 
 
