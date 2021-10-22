@@ -8,7 +8,7 @@
 # 算法
 算法实际分两大类，即排序算法和搜索算法；递归、迭代、分治等是算法的实现思路。
 
-## [基础算法](base_algo.md)
+## [算法思路](base_algo.md)
 - 递归
 - 分治算法
 - 贪婪算法
@@ -17,7 +17,7 @@
 
 ## [排序(sort)算法](sort.md)
 
-## 搜索(search)算法
+## [搜索(search)算法](search.md)
 *中文可以叫搜索算法或查找算法，英文只有Search algorithm，没有Find algorithm。即使常说的“二分查找”，英文也是Search。*
 
 #### 基础搜索算法
