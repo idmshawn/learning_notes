@@ -34,7 +34,7 @@ BFS性能为O(*V*+*E*)，其中V为顶点(vertice)，E为边数(Edge)
 > Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径的算法。  
 > Bellman-Ford 算法采用动态规划（Dynamic Programming）进行设计，实现的时间复杂度为 O(V*E)，其中 V 为顶点数量，E 为边的数量。Dijkstra 算法采用贪心算法（Greedy Algorithm）范式进行设计，普通实现的时间复杂度为 O(V2)，若基于 Fibonacci heap 的最小优先队列实现版本则时间复杂度为 O(E + VlogV)。
 
-[Dijkstra 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/dijkstra_algorithm.html)
+[Dijkstra 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/dijkstra_algorithm.html)  
 [Bellman-Ford 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/bellman_ford_algorithm.html)
 
 #### 应用场景
