@@ -30,7 +30,7 @@ BFS性能为O(*V*+*E*)，其中V为顶点(vertice)，E为边数(Edge)
 
 
 ## Dijkstra算法
-
+[Dijkstra 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/dijkstra_algorithm.html)
 
 #### 应用场景
 [参考文档1]
