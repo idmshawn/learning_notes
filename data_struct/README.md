@@ -1,6 +1,6 @@
 
 # [数据结构](data_struct.md)
-
+- 基础数据结构：数组、链表、队列、栈、散列等
 - [树](trees.md)
 - [堆](heap.md)
 - [图](graph.md)
