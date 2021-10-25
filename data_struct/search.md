@@ -32,12 +32,8 @@ BFS性能为O(*V*+*E*)，其中V为顶点(vertice)，E为边数(Edge)
 
 ## Dijkstra算法
 BFS用于在非加权图中查找最短路径；Dijkstra算法用于在加权图中查找最短路径。  
-Dijkstra算法由荷兰计算机科学家 E. W. Dijkstra 于1956年发现，1959年公开发表。是一种求解**非负权图**上单源最短路径的算法。  
+Dijkstra算法由荷兰计算机科学家 E. W. Dijkstra 于1956年发现，1959年公开发表。是一种求解**非负权图**上单源最短路径(SSSP：Single-Source Shortest Path)的算法。  
 ([参考文档1]：仅当权重为正时Dijkstra算法才管用；图中包含负权边，请使用贝尔曼-福德算法；)  
-
-Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径(SSSP：Single-Source Shortest Path)的算法。  
-> Bellman-Ford 算法采用[动态规划](base_algo.md#动态规划)进行设计，实现的时间复杂度为 O(V*E)，其中 V 为顶点数量，E 为边的数量。  
-> Dijkstra 算法采用[贪心算法](base_algo.md#贪婪算法)范式进行设计，普通实现的时间复杂度为 O(V2)，若基于 Fibonacci heap 的最小优先队列实现版本则时间复杂度为 O(E + VlogV)。
 
 #### 实现步骤
 - 创建源顶点 v 到图中所有顶点的距离的集合 distSet，为图中的所有顶点指定一个距离值，初始均为 Infinite，源顶点距离为 0；
@@ -47,6 +43,11 @@ Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径(SSSP：Sing
   - 将 u 包含进 sptSet；
   - 更新 u 的所有邻接顶点的距离值；
 [参考文档2]
+
+## Bellman-Ford算法
+Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径的算法。  
+> Dijkstra 算法采用[贪心算法](base_algo.md#贪婪算法)范式进行设计，普通实现的时间复杂度为 O(V2)，若基于 Fibonacci heap 的最小优先队列实现版本则时间复杂度为 O(E + VlogV)。
+> Bellman-Ford 算法采用[动态规划](base_algo.md#动态规划)进行设计，实现的时间复杂度为 O(V*E)，其中 V 为顶点数量，E 为边的数量。  
 
 ## 参考
 1. 算法图解
