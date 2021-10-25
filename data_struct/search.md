@@ -30,19 +30,15 @@ BFS性能为O(*V*+*E*)，其中V为顶点(vertice)，E为边数(Edge)
 
 
 ## Dijkstra算法
+BFS用于在非加权图中查找最短路径；Dijkstra算法用于在加权图中查找最短路径。
 
-> Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径的算法。  
-> Bellman-Ford 算法采用动态规划（Dynamic Programming）进行设计，实现的时间复杂度为 O(V*E)，其中 V 为顶点数量，E 为边的数量。Dijkstra 算法采用贪心算法（Greedy Algorithm）范式进行设计，普通实现的时间复杂度为 O(V2)，若基于 Fibonacci heap 的最小优先队列实现版本则时间复杂度为 O(E + VlogV)。
+Bellman-Ford 算法和 Dijkstra 算法同为解决单源最短路径的算法。  
+> Bellman-Ford 算法采用动态规划（Dynamic Programming）进行设计，实现的时间复杂度为 O(V*E)，其中 V 为顶点数量，E 为边的数量。  
+> Dijkstra 算法采用贪心算法（Greedy Algorithm）范式进行设计，普通实现的时间复杂度为 O(V2)，若基于 Fibonacci heap 的最小优先队列实现版本则时间复杂度为 O(E + VlogV)。
 
-[Dijkstra 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/dijkstra_algorithm.html)  
-[Bellman-Ford 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/bellman_ford_algorithm.html)
-
-#### 应用场景
-[参考文档1]
-- BFS用于在非加权图中查找最短路径；
-- Dijkstra算法用于在加权图中查找最短路径；
-- 仅当权重为正时Dijkstra算法才管用；
-- 图中包含负权边，请使用贝尔曼-福德算法；
+应用场景[参考文档1]：仅当权重为正时Dijkstra算法才管用；图中包含负权边，请使用贝尔曼-福德算法；
 
 ## 参考
 1、算法图解
+2、[Dijkstra 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/dijkstra_algorithm.html)  
+3、[Bellman-Ford 单源最短路径算法](https://www.cnblogs.com/gaochundong/p/bellman_ford_algorithm.html)
