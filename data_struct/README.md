@@ -1,5 +1,5 @@
 
-# 数据结构
+# [数据结构](data_struct.md)
 
 - [树](trees.md)
 - [堆](heap.md)
