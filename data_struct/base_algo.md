@@ -26,11 +26,11 @@ void countdown(int i)
 
 #### 例题
 
-## 动态规划
+## 动态规划(Dynamic Programming)
 
 
-## 贪婪算法
-
+## 贪婪算法(Greedy Algorithm)
+核心思想：每步都选择局部最优解，最终得到的就是全局最优解。
 
 ## 回溯法
 
