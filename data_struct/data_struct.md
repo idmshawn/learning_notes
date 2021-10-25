@@ -8,14 +8,20 @@
 队列：FIFO(First In First Out)
 栈：LIFO(Last In First Out)
 
-## 字典
-字典(dictionary)是由一些形如(*k*,*v*)的数对所组成的集合，其中*k*是**关键字**，*v*是与关键字*k*对应的**值**。任意两个数对，其关键字都不等。
+## 字典(dictionary)
+字典是由一些形如(*k*,*v*)的数对所组成的集合，其中*k*是**关键字**，*v*是与关键字*k*对应的**值**。任意两个数对，其关键字都不等。
 
 - C++实现[文档2]：C++中的关联容器`map`、`set`、`unordered_map`、`unordered_set`(unordered为hash实现的映射)等实现的就是字典。  
 - Python实现[文档3]：Python中的唯一映射类型便是字典；从python2.2起，可用库函数`dict()`创建字典。
 
-## 优先级队列
+## 优先级队列(priority queue)
 与普通FIFO队列不同，优先级队列中，元素出队列的顺序由元素的优先级决定。[堆](heap.md)(heap)是实现优先级队列效率很高的数据结构。
+
+- C++实现：STL类priority-queue是用堆实现了优先级队列。
+
+## [树](trees.md)
+
+## [图](graph.md)
 
 ## 其它
 ###### 跳表
