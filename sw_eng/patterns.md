@@ -117,6 +117,9 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 - 单例(singleton): 重构2 p318
 - 访问者(visitor)：重构2 p330
 - 模板方法(template method)：重构MOOC课程.ppt p33
+### 常用与不常用的设计模式
+极客时间 王争课程[《设计模式之美》](https://time.geekbang.org/column/intro/100039001)中提到的“常用”与“不常用”设计模式。
+
 
 # 参考
 1. 设计模式之禅(第2版), 秦小波 
