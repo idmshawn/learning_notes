@@ -25,6 +25,7 @@
 ###### 建议
 
 ###### 书源
+[《Effective Modern C++ 》翻译](github.com/kelthuzadx/EffectiveModernCppChinese)
 
 ## [领域驱动设计](ddd_notes.md)
 
