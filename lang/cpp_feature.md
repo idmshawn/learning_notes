@@ -112,6 +112,7 @@ C++使用抽象类实现接口。
 2. [C++那些事](https://light-city.club/sc/)
 3. [C++ STL与泛型编程（三）](https://blog.csdn.net/zl6481033/article/details/89465421?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=1328665.10354.16159908009496807&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control)
 4. [泛型编程、STL的概念、STL模板思想及其六大组件的关系，以及泛型编程(GP)、STL、面向对象编程（OOP）、C++之间的关系](https://blog.csdn.net/lsfreeing/article/details/77870275)
+5. [Effective Modern C++](https://github.com/kelthuzadx/EffectiveModernCppChinese)
 
 ### 面试参考
 * 指针与引用的区别？ 传值参数和传引用参数的差异点？
