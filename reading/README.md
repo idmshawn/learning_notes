@@ -20,8 +20,8 @@
 ###### 书源
 * 微信读书搜索“[设计模式之禅](https://weread.qq.com/web/reader/93d32960597d0d93d74344e)”即可。
 
-## Effective C++
-
+## Effective C++ & Effective Modern C++
+Scott Meyers关于C++的两本书。
 ###### 建议
 
 ###### 书源
