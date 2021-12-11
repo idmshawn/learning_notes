@@ -43,6 +43,8 @@ operator new就像operator + 一样，是可以重载的。如果类中没有重
 
 new operator(C++ Primer中称为new表达式)与delete operator的行为是不能够也不应该被改变，这是C++标准作出的承诺。而operator new与operator delete和C语言中的malloc与free对应，只负责分配及释放空间。但使用operator new分配的空间必须使用operator delete来释放，而不能使用free，因为它们对内存使用的登记方式不同。反过来亦是一样。
 
+综上，**new表达式是分配内存+调用构造；operator new仅分配内存，不调用构造；placement new仅调用构造，不分配内存(使用传入的内存地址)**[C++ Primer 19.1.2节]。
+
 ### 类
 ###### 类成员
 
