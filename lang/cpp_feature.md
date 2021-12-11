@@ -20,7 +20,7 @@
 **C语言常使用指针类型的形参访问函数外部的对象，C++中建议使用引用类型的形参代替指针**。
 
 ##### new和delete
-new operator/delete operator就是new和delete**操作符**，而operator new/operator delete是**函数**。
+new operator/delete operator就是new和delete**操作符**，而operator new/operator delete是**函数**。 [详见文档6]
 
 ###### new 、operator new 和 placement new 区别
 1. new ：不能被重载，其行为总是一致的。它先调用operator new分配内存，然后调用构造函数初始化那段内存。  
