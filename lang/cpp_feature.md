@@ -30,6 +30,14 @@ new operator/delete operator就是new和delete**操作符**，而operator new/op
     - 返回相应指针。
 2. operator new：要实现不同的内存分配行为，应该重载operator new，而不是new。  
 operator new就像operator + 一样，是可以重载的。如果类中没有重载operator new，那么调用的就是全局的::operator new来完成堆的分配。同理，operator new[]、operator delete、operator delete[]也是可以重载的。
+    - 只分配所要求的空间，不调用相关对象的构造函数。当无法满足所要求分配的空间时，则  
+        ->如果有new_handler，则调用new_handler，否则  
+        ->如果没要求不抛出异常（以nothrow参数表达），则执行bad_alloc异常，否则  
+        ->返回0  
+    - 可以被重载
+    - 重载时，返回类型必须声明为void*
+    - 重载时，第一个参数类型必须为表达要求分配空间的大小（字节），类型为size_t
+    - 重载时，可以带其它参数
 3. placement new：只是operator new重载的一个版本。它并不分配内存，只是返回指向已经分配好的某段内存的一个指针。因此不能删除它，但需要调用对象的析构函数。  
 如果你想在已经分配的内存中创建一个对象，使用new时行不通的。也就是说placement new允许你在一个已经分配好的内存中（栈或者堆中）构造一个新的对象。原型中void* p实际上就是指向一个已经分配好的内存缓冲区的的首地址。
 
