@@ -10,7 +10,7 @@
 - 搜索
 
 # 编程语言学习笔记
-* [C++](lang/cpp_feature.md)
+* [C](lang/c_feature.md)/[C++](lang/cpp_feature.md)
 * [Python](lang/py_feature.md)
 * [makefile&cmake](lang/mk_feature.md)
 * [shell](lang/sh_feature.md)
