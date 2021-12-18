@@ -142,7 +142,8 @@ C++使用抽象类实现接口。
 6. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
 
 ### 面试参考
-* 指针与引用的区别？ 传值参数和传引用参数的差异点？
-* 类和结构体的区别？  类的成员默认是private，结构体的成员默认是public；
-* C++如何实现多态？ 
-* 重载(Overload)与重写(Override)的区别？ 重载：同名的函数，参数等不同；重写：同样的函数重新定义；
+- 指针与引用的区别？ 传值参数和传引用参数的差异点？
+- 类和结构体的区别？  类的成员默认是private，结构体的成员默认是public；
+- C++如何实现多态？ 
+- 重载(Overload)与重写(Override)的区别？ 重载：同名的函数，参数等不同；重写：同样的函数重新定义；
+- [腾讯 C++ 笔试/面试题及答案](https://mp.weixin.qq.com/s/1tNQTab8m_CIxaepjwpQig)
