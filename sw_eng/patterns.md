@@ -118,13 +118,14 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 - 访问者(visitor)：重构2 p330
 - 模板方法(template method)：重构MOOC课程.ppt p33
 ### 附3，常用与不常用的设计模式
-极客时间 王争课程[《设计模式之美》](https://time.geekbang.org/column/intro/100039001)中提到的“常用”与“不常用”设计模式。
+[《设计模式之美》](https://time.geekbang.org/column/intro/100039001)中提到的“常用”与“不常用”设计模式。
 
 
 # 参考
 1. 设计模式之禅(第2版), 秦小波 
-2. [Design Patterns Cards](http://www.mcdonaldland.info/files/designpatterns/designpatternscard.pdf)(设计模式记忆卡片)
-3. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
-4. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
-5. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
-6. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
+2. 极客时间课程[《设计模式之美》-王争](https://time.geekbang.org/column/intro/100039001)  
+3. [Design Patterns Cards](http://www.mcdonaldland.info/files/designpatterns/designpatternscard.pdf)(设计模式记忆卡片)
+4. [写了这么多年代码，你真的了解设计模式么](https://insights.thoughtworks.cn/do-you-really-know-design-pattern/)
+5. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
+6. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
+7. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
