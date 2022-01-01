@@ -26,6 +26,7 @@ Scott Meyers关于C++的两本书。
 
 ###### 书源
 [《Effective Modern C++ 》翻译](https://github.com/kelthuzadx/EffectiveModernCppChinese)
+[Effective C++ 高阶笔记](https://mp.weixin.qq.com/s?__biz=MzAxNDI5NzEzNg==&mid=2651168193&idx=1&sn=de52028d24539944930f1a00b2d82f6d&chksm=80644c9eb713c58862bd086fa08cbc7a9a881fb01745110122b0202b25119815de997b01ba7a&scene=21#wechat_redirect)
 
 ## [领域驱动设计](ddd_notes.md)
 
