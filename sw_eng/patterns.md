@@ -37,7 +37,20 @@ Only talk to your immediate friends.
 # 设计模式
 (标题后的星表示难易度，星数量越多越困难)
 
-## 结构模式
+## 创建型
+### 工厂模式(Factory Method)
+### 单例模式(Singleton)  :star: 
+### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
+separate the construction of a complex object from its representation so that the same construction process can create different representations.
+###### 使用场景
+- 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
+- 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
+###### 比较
+建造者模式与工厂模式非常相似。  
+但Builer最主要功能是基本方法的调用顺序安排，即这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；  
+而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
+
+## 结构型
 ### 代理模式(Proxy)
 ### 适配器模式(Adapter Pattern)(也称包装模式, wrapper) :star: :star: 
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.  
@@ -55,20 +68,7 @@ Convert the interface of a class into another interface clients expect. Adapter 
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.  
 用户只看到一个门面类，不感知复杂的内部细节；
 
-## 创建模式
-### 工厂模式(Factory Method)
-### 单例模式(Singleton)  :star: 
-### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
-separate the construction of a complex object from its representation so that the same construction process can create different representations.
-###### 使用场景
-- 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
-- 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
-###### 比较
-建造者模式与工厂模式非常相似。  
-但Builer最主要功能是基本方法的调用顺序安排，即这些基本方法已经实现了，通俗地说就是零件的装配，顺序不同产生的对象也不同；  
-而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
-
-## 行为模式
+## 行为型
 ### 策略模式(Strategy Pattern)(也称政策模式, Policy) :star: :star: :star: 
 Define a family of algorithms, encapsulate each one, and make them interchangealbe.  
 (定义一组算法，将每个算法都封装起来，并且使它们之间可以互换)  
@@ -89,7 +89,6 @@ Define a one-to-many dependency between objects so that when one object changes 
 ### 访问者模式(Visitor Pattern) :star: :star: :star: :star: :star: 
 Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 ###### 使用场景
-
 
 ### 模板方法模式(Template Method Pattern)  :star: 
 Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
