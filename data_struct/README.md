@@ -59,6 +59,11 @@ Wikipedia的“Search algorithm”词条：
 5. [算法可视](https://algorithm-visualizer.org)
 6. [可视化算法](https://visualgo.net/en)
 
+#### 网课
+1. 北京大学 [高级数据结构与算法(北京大学)](https://www.bilibili.com/video/BV1Wx411U7Ls?p=1)
+2. 上海交大 [上海交大算法与数据结构（Data Structures Learning Video）檀晓红老师数据结构公开课程](https://www.bilibili.com/video/BV13W411W7KP?p=1)
+3. 清华大学 [【计算机】数据结构-严蔚敏/清华大学](https://www.bilibili.com/video/BV1db411Y7Lm?p=1)
+
 # 常见面试题
 #### 基础数据结构
 1. 数组和链表的性能比较？（查找、增/删元素两方面）
