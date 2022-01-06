@@ -21,7 +21,7 @@
 - [官网](https://www.danosproject.org/)
 
 ### CNOS(China Network Operating System)/司络
-- [发布新闻](https://baijiahao.baidu.com/s?id=1633476066483442179&wfr=spider&for=pc)  
+中国自主研发大网级网络操作系统，2019年发布。  
 - [CNOS（司络）- 中国网络操作系统：部分展示](https://www.zcool.com.cn/work/ZNDYyMTg1NjQ=.html)
 
 ## 网络抽象层
