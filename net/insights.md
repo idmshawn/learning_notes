@@ -23,6 +23,7 @@
 ### CNOS(China Network Operating System)/司络
 中国自主研发大网级网络操作系统，2019年发布。  
 - [CNOS（司络）- 中国网络操作系统：部分展示](https://www.zcool.com.cn/work/ZNDYyMTg1NjQ=.html)
+- [CENI(China Environment for Network Innovations)官网](https://www.fnic.cn/index.html)，未来网络试验设施项目，CNOS的承载项目
 
 ## 网络抽象层
 
@@ -58,5 +59,6 @@ SAI和SONiC为OCP Networking领域的两个开源子项目；
 - [ONF(Open Networking Foundation)](https://opennetworking.org/)  
 ONF的SDN基础设施包括ONOS(Open Network Operating System)和Stratum两种开源网络操作系统。
 
-- 未来网络xx联盟
+- [紫金山实验室,PML(Purple Mountain Laboratories)](https://www.pmlabs.com.cn/)及[江苏省未来网络创新研究院](https://www.fnii.cn/)  
+CENI和CNOS的承载单位
 
