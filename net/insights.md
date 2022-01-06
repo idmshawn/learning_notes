@@ -7,12 +7,10 @@
 
 #### Software for Open Networking in the Cloud(SONiC)
 - [Sonic官网](https://azure.github.io/SONiC/)
-- SONiC架构
- - [SONiC软件组成](sonic.md)
- - [官网Wiki](https://github.com/Azure/SONiC/wiki/Architecture)
- - [SONIC架构简要分析-数据库](https://blog.csdn.net/armlinuxww/article/details/97236788)
-- 内部资料
-数据通信/vFast/Docs/转发芯片SDK业务主干/05.DPFC/01.技术管理/01.架构/sonic初步分析.pptx
+- SONiC架构  
+  - [SONiC软件组成](sonic.md)
+  - [官网Wiki](https://github.com/Azure/SONiC/wiki/Architecture)
+  - [SONIC架构简要分析-数据库](https://blog.csdn.net/armlinuxww/article/details/97236788)
 
 #### Switch Abstraction Interface(SAI)
 微码等厂商发起的白盒交换机转发适配API，2015年作为OCP开源项目，apache许可；
