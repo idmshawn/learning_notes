@@ -54,10 +54,10 @@ forwarding abstraction layer (FAL) is responsible for taking high-level network 
 
 ## 网络组织或联盟
 - [OCP(Open Compute Project)](https://www.opencompute.org/)  
-SAI和SONiC为OCP Networking领域的两个开源子项目；
+SAI和SONiC为OCP Networking领域的两个开源子项目
 
 - [ONF(Open Networking Foundation)](https://opennetworking.org/)  
-ONF的SDN基础设施包括ONOS(Open Network Operating System)和Stratum两种开源网络操作系统。
+ONF的SDN基础设施包括ONOS(Open Network Operating System)和Stratum两种开源网络操作系统
 
 - [紫金山实验室,PML(Purple Mountain Laboratories)](https://www.pmlabs.com.cn/)及[江苏省未来网络创新研究院](https://www.fnii.cn/)  
 CENI和CNOS的承载单位
