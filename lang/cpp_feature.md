@@ -140,6 +140,7 @@ C++使用抽象类实现接口。
 4. [泛型编程、STL的概念、STL模板思想及其六大组件的关系，以及泛型编程(GP)、STL、面向对象编程（OOP）、C++之间的关系](https://blog.csdn.net/lsfreeing/article/details/77870275)
 5. [Effective Modern C++](https://github.com/kelthuzadx/EffectiveModernCppChinese)
 6. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
+7. [一些著名的软件都用什么语言编写？](https://mp.weixin.qq.com/s/-znPkfMc8f-2hvqCO0-1jQ) 趣味，多数业界软件为了性能，还是采用的C/C++；少部分java。
 
 ### 面试参考
 - 指针与引用的区别？ 传值参数和传引用参数的差异点？
