@@ -45,4 +45,3 @@
 </br>无法直接按语言段落内置plantuml或C语言，HUAWEI liteOS可以内置C语言的；可按链接方式链接plantUML server；
 </br>无法显示同仓库下的图片：PC网络问题，代理网络可查看到图片。
 - [常用命令行](os/freq_cmd.md)
-- [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
