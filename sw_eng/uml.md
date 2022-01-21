@@ -81,5 +81,6 @@ graph TD;
 4. [C++继承和派生简明教程](http://c.biancheng.net/view/2264.html)
 5. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
 6. [PlantText](https://www.planttext.com/)：UML在线绘制
-7. [mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
-8. [mermaid官网](https://mermaid-js.github.io/mermaid/#/)
+7. [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
+8. [Mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
+9. [Mermaid官网](https://mermaid-js.github.io/mermaid/#/)
