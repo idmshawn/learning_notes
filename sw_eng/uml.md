@@ -1,10 +1,6 @@
 # UML
 
-## UML图分类
-
-### 时序图
-
-### 状态图
+## UML图类型
 
 ### 类图
 [UML类图中的6大关系](https://blog.csdn.net/ruren1/article/details/81584232?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control)
@@ -23,34 +19,13 @@
 
 ![relation](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU8oVBPnxukzonHiQdHr5Oo2GyEi5DnJyrAB4dCogy3wk8mXqdfw2YOGjLOAddabgKLfYSaWqn4AJQ56vGDDCdknTzsBvZuh1SVqzABKT8W2ywUjQvxsxr3G0YgmUDcyukNq5LOAplcv1Vd5cM05bYyNjJrTlqV11gZ0qE3vWiQdRNEiW6ujIaqkIKrHS2mkpa_EX9XbQFoYVTMBXJrWnm7TPcW2LvvQa9gNafgNNCdb06G0Gm80)
 
-![relation](http://www.plantuml.com/plantuml/png/XO-xwy8m483t_1L7fj-33Ax5eM872uw2SsY33IPt9G-BgF-x1Wv5yB7b8r--tDKnwP2oTw9pEaPe9kESnHsS1C1_Ymcs5dkQOi43sHxMrEqtWsc8mi-lk0X-k1XrIDvWObvHZeRFI_8-8nC76Kf6YFklyxEwtQ5wv2feSJ319esTUI5o-vjMndadoPc4FvL71T9hF4gUi2hjaQ9Dbl23NLPuTaLjiC_UNG40)
+##### 组合和聚合关系
+都表示一对多的has a关系；但生命周期不同(见文档2)：  
+> 在组合关系中，整体与部分是不可分的，整体的生命周期结束也就意味着部分的生命周期结束。
 
-```plantuml
-title Relationships - Class Diagram
+> 聚合的整体和部分之间在生命周期上没有什么必然的联系，部分对象可以在整体对象创建之前创建，也可以在整体对象销毁之后销毁。
 
-class 1汽车
-class 2SUV
-class 3车
-class 4汽车
-class 5汽车
-class 6轮胎
-class 7公司
-class 8部门
-class 9领导
-class 10码农
-class 13自行车
-class 14码农
-
-1汽车 <|-- 2SUV: 泛化(Generalization)
-3车 <|.. 4汽车: 接口实现(Interface Realization)
-5汽车 o-- 6轮胎: 聚合(Aggregation)
-7公司 *-- 8部门: 组合(Composition)
-9领导 <-- 10码农: 直接关联(Directed Association)
-13自行车 <.. 14码农: 依赖(Dependency)
-
-```
-
-###### 类的派生和继承关系
+##### 类的派生和继承关系
 
 类的派生和继承是面向对象程序设计方法和C++语言最重要的特征之一。
 
@@ -61,6 +36,10 @@ class 14码农
 在C++中，派生（Derive）和继承(inheritance)是一个概念，只是站的角度不同。继承是儿子接收父亲的产业，派生是父亲把产业传承给儿子。
 
 被继承的类称为父类或基类，继承的类称为子类或派生类。“子类”和“父类”通常放在一起称呼，“基类”和“派生类”通常放在一起称呼。
+
+### 时序图
+
+### 状态图
 
 
 ## 工具
@@ -93,3 +72,35 @@ graph TD;
 7. [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
 8. [Mermaid中文说明书(github)](https://github.com/mingcheng/mermaid-gitbook-zh)
 9. [Mermaid官网](https://mermaid-js.github.io/mermaid/#/)
+
+
+----
+
+附：plantUML类图关系源码（github上暂无法直接渲染显示）  
+```plantuml
+title Relationships - Class Diagram
+
+class 1汽车
+class 2SUV
+class 3车
+class 4汽车
+class 5汽车
+class 6轮胎
+class 7公司
+class 8部门
+class 9领导
+class 10码农
+class 13自行车
+class 14码农
+
+1汽车 <|-- 2SUV: 泛化(Generalization)
+3车 <|.. 4汽车: 接口实现(Interface Realization)
+5汽车 o-- 6轮胎: 聚合(Aggregation)
+7公司 *-- 8部门: 组合(Composition)
+9领导 <-- 10码农: 直接关联(Directed Association)
+13自行车 <.. 14码农: 依赖(Dependency)
+
+```
+
+PlantUML类间关系绘制，如组合聚合一对多关系，详见文档6的类图示例
+![relation](http://www.plantuml.com/plantuml/png/XO-xwy8m483t_1L7fj-33Ax5eM872uw2SsY33IPt9G-BgF-x1Wv5yB7b8r--tDKnwP2oTw9pEaPe9kESnHsS1C1_Ymcs5dkQOi43sHxMrEqtWsc8mi-lk0X-k1XrIDvWObvHZeRFI_8-8nC76Kf6YFklyxEwtQ5wv2feSJ319esTUI5o-vjMndadoPc4FvL71T9hF4gUi2hjaQ9Dbl23NLPuTaLjiC_UNG40)
