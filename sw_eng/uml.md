@@ -17,13 +17,13 @@
 
 六种关系的耦合度大小是：泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖
 
-![relation](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU8oVBPnxukzonHiQdHr5Oo2GyEi5DnJyrAB4dCogy3wk8mXqdfw2YOGjLOAddabgKLfYSaWqn4AJQ56vGDDCdknTzsBvZuh1SVqzABKT8W2ywUjQvxsxr3G0YgmUDcyukNq5LOAplcv1Vd5cM05bYyNjJrTlqV11gZ0qE3vWiQdRNEiW6ujIaqkIKrHS2mkpa_EX9XbQFoYVTMBXJrWnm7TPcW2LvvQa9gNafgNNCdb06G0Gm80)
+![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3Wq3CeqHeYQeAWnHU6PlTYxxaLp7vHd_hHrpTF-7L2UnSlc5I-dhu3oB5ykQdkwVW_CNeFd2ngVjis1SOrVjAzwiR07OR2X2LG15zI92ZOrkhfW5refFDiy-sdFD2vZYB2U7io9LWfFryrxthU1onIgHybGII4Vg4qfDp6lKWdcMYk55uspdaxeu8Aw5wnC2wuCvd0hXUUxMq3Ae4vNiD7LXJiSQ5NhvXUDKxYGdAvWewS7T3XCmPDzSrzidSRba9gN0emL0000)
 
 ##### 组合和聚合关系
 都表示一对多的has a关系；但生命周期不同(见文档2)：  
-> 在组合关系中，整体与部分是不可分的，整体的生命周期结束也就意味着部分的生命周期结束。
+> 在组合(Composition)关系中，整体与部分是不可分的，整体的生命周期结束也就意味着部分的生命周期结束。
 
-> 聚合的整体和部分之间在生命周期上没有什么必然的联系，部分对象可以在整体对象创建之前创建，也可以在整体对象销毁之后销毁。
+> 聚合(Aggregation)的整体和部分之间在生命周期上没有什么必然的联系，部分对象可以在整体对象创建之前创建，也可以在整体对象销毁之后销毁。
 
 ##### 类的派生和继承关系
 
@@ -102,5 +102,5 @@ class 14码农
 
 ```
 
-PlantUML类间关系绘制，如组合聚合一对多关系，详见文档6的类图示例
+PlantUML类间关系绘制，如组合聚合一对多关系(见文档6的类图示例)   
 ![relation](http://www.plantuml.com/plantuml/png/XO-xwy8m483t_1L7fj-33Ax5eM872uw2SsY33IPt9G-BgF-x1Wv5yB7b8r--tDKnwP2oTw9pEaPe9kESnHsS1C1_Ymcs5dkQOi43sHxMrEqtWsc8mi-lk0X-k1XrIDvWObvHZeRFI_8-8nC76Kf6YFklyxEwtQ5wv2feSJ319esTUI5o-vjMndadoPc4FvL71T9hF4gUi2hjaQ9Dbl23NLPuTaLjiC_UNG40)
