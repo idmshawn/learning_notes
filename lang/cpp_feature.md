@@ -128,10 +128,49 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 
 # C++实现
 
-### C++接口类(Interface)实现
+### C++抽象类和接口类(Interface)实现
 设计模式书籍或很多类图中，会有类标以《Interface》，为面向对象语言中的接口类。  
-Java直接使用interface和abstract关键字定义接口类和抽象类，C++没有这种关键字。    
-C++使用抽象类实现接口。
+Java直接使用interface和abstract关键字定义接口类和抽象类，C++没有这种关键字，但可以间接实现这两个功能。
+##### 抽象类
+OOP中的抽象类：
+- 是一种只能定义类型，而不能产生对象的类；  
+如果一个类是父类，就要考虑它有没有必要成为一个抽象类，判断准则是这个父类有没有必要产生一个对象，没必要则做成抽象类；
+- 只能被继承并重写相关函数；
+
+C++通过纯虚函数(“=0”)实现抽象类
+- 存在纯虚函数的类是抽象类(如下面的shape类)
+- 如果子类没有实现所有的纯虚函数，则子类仍然是抽象类
+
+``` c++
+class Shape {
+public:
+    virtual double area() = 0;
+};
+
+class Rect : public Shape {
+public:
+    // ...
+
+    double area() { // 子类重写纯虚函数
+        // ...
+    }
+};
+```
+
+##### 接口类
+C++使用抽象类实现接口。满足下面条件的C++类称为接口
+- 类中没有定义任何变量；
+- 所有的成员函数都是纯虚函数，且是公有的;
+
+``` c++
+class Channel {
+public:
+    virtual bool open() = 0;
+    virtual void close() = 0;
+    virtual bool send(char* buf, int len) = 0;
+    virtual int receive(char* buf, int len) = 0;
+};
+```
 
 ## 参考
 1. C++手册：[cppreference](https://en.cppreference.com/w/)
@@ -141,6 +180,8 @@ C++使用抽象类实现接口。
 5. [Effective Modern C++](https://github.com/kelthuzadx/EffectiveModernCppChinese)
 6. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
 7. [一些著名的软件都用什么语言编写？](https://mp.weixin.qq.com/s/-znPkfMc8f-2hvqCO0-1jQ) (趣味，多数业界软件为了性能，还是采用的C/C++；少部分java)
+8. [C++中的抽象类和接口](https://www.programminghunter.com/article/1984129838/)
+9. [【C++深度解析】37、C++ 中的抽象类和接口](https://blog.51cto.com/u_15290941/3048773)
 
 ### 面试参考
 - 指针与引用的区别？ 传值参数和传引用参数的差异点？
