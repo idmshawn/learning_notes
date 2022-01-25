@@ -128,9 +128,9 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 
 # C++实现
 
-### C++抽象类和接口类(Interface)实现
+### C++抽象类和接口类实现
 设计模式书籍或很多类图中，会有类标以《Interface》，为面向对象语言中的接口类。  
-Java直接使用interface和abstract关键字定义接口类和抽象类，C++没有这种关键字，但可以间接实现这两个功能。
+Java直接使用Interface和Abstract关键字定义接口类和抽象类，C++没有这种关键字，但可以间接实现这两个功能。
 ##### 抽象类
 OOP中的抽象类：
 - 是一种只能定义类型，而不能产生对象的类；  
