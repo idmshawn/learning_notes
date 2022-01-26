@@ -46,7 +46,8 @@
 
 ### PlantUML
 
-github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。
+github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。  
+本地使用时，推荐VScode中安装PlantUML插件。
 
 ### Mermaid
 
