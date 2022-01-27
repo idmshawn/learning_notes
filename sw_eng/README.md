@@ -1,9 +1,11 @@
-## 软件工程
-- [简单设计原则](simple_design.md)
-- [领域驱动设计(DDD)](ddd.md)
+# 软件工程
 - [开发者测试(DT)](develop_test.md)
+
+# 软件设计
 - [设计模式](patterns.md)
 - [UML](uml.md)
+- [简单设计原则](simple_design.md)
+- [领域驱动设计(DDD)](ddd.md)
 
 ## 参考
 1. [软件教练王博简书主页：重构、领域驱动设计等](https://www.jianshu.com/u/92b7d9879f20)
