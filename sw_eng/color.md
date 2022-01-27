@@ -25,3 +25,4 @@ MI写法一般是名词+动词的被动态，比如Command Executed。
 ## 参考
 1. [WikiPedia:Object Modeling in Color](https://en.wikipedia.org/wiki/Object_Modeling_in_Color)
 2. [DDD-领域模型-四色原型](https://blog.csdn.net/wuzxc520/article/details/78897135)
+3. 《彩色UML建模》：Peter Coad。社区里经常提到的“四色建模方法”出自这本书；
