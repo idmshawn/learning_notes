@@ -1,5 +1,6 @@
 # 彩色UML建模(四色原型)(Object Modeling in Color)
 
+## 基本概念
 DDD领域模型建模推荐使用四色模型。  
 四色建模法是在UML建模的基础上增添了一些描述，把实体分为四类，并标注不同的颜色的一种建模方法。
 
@@ -17,6 +18,9 @@ MI写法一般是名词+动词的被动态，比如Command Executed。
 “人或组织或物品”就是PPT，  
 “角色”就是Role，  
 而”某个时刻或某段时间内的某个活动"就是MI。  
+
+## 建模工具
+
 
 ## 参考
 1. [WikiPedia:Object Modeling in Color](https://en.wikipedia.org/wiki/Object_Modeling_in_Color)
