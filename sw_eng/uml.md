@@ -3,9 +3,8 @@
 ## UML图类型
 
 ### 类图
-[UML类图中的6大关系](https://blog.csdn.net/ruren1/article/details/81584232?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control)
 
-|关系|UML符号|说明|逻辑表示|代码实现|
+|关系|UML符号|说明|逻辑表示|[代码实现](relation.md)|
 |--|--|--|--|--|
 |**泛化**(Generalization)|实线+空心箭头|就是面向对象语言中的**继承**关系|is a|子类继承父类|
 |**实现**(Realization)|虚线+空心箭头|和“泛化”相似，区别在于“实现”继承一个抽象类（abstract、interface），而“泛化”关系继承一个具体类。|is a|**实现接口**或继承某个抽象类|
@@ -15,7 +14,7 @@
 |关联(Association)|||has many||
 |**依赖**(Dependency)|虚线+箭头|是一种使用关系，即一个类的实现需要另一个类的协助。比"关联"更弱的关系，包含"关联"。尽量不使用双向依赖|use a|局部变量、方法的参数和静态方法的调用|
 
-六种关系的耦合度大小是：泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖
+六种关系的耦合度大小是：泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖  
 
 ![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3Wq3CeqHeYQeAWnHU6PlTYxxaLp7vHd_hHrpTF-7L2UnSlc5I-dhu3oB5ykQdkwVW_CNeFd2ngVjis1SOrVjAzwiR07OR2X2LG15zI92ZOrkhfW5refFDiy-sdFD2vZYB2U7io9LWfFryrxthU1onIgHybGII4Vg4qfDp6lKWdcMYk55uspdaxeu8Aw5wnC2wuCvd0hXUUxMq3Ae4vNiD7LXJiSQ5NhvXUDKxYGdAvWewS7T3XCmPDzSrzidSRba9gN0emL0000)
 
