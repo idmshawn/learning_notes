@@ -98,8 +98,15 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 - 重构时的常用模式，把相同的代码抽取到父类中，然后通过钩子函数(见“模板方法模式的拓展”)约束其行为。
 
 ## 拓展
-### MVC(Model View Controller)框架
+### 基于贫血模型的MVC三层架构开发模式
+MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模式，但它却违反了OOP。  
+只包含数据，不包含业务逻辑的类，就叫作贫血模型（Anemic Domain Model）。  
+这种贫血模型将数据与操作分离，破坏了面向对象的封装特性，是一种典型的面向过程的编程风格。
 
+### 基于充血模型的DDD开发模式
+充血模型（Rich Domain Model）正好相反，数据和对应的业务逻辑被封装到同一个类中。  
+基于贫血模型的传统的开发模式，比较适合业务比较简单的系统开发。  
+相对应的，基于充血模型的DDD开发模式，更适合业务复杂的系统开发。比如，包含各种利息计算模型、还款模型等复杂业务的金融系统。
 
 # 设计模式应用
 书籍或教程中提及的设计模式
@@ -127,7 +134,6 @@ Define the skeleton of an algorithm in an operation, deferring some steps to sub
 3.行为型  
 常用的有：观察者模式、模板模式、策略模式、职责链模式、迭代器模式、状态模式。  
 不常用的有：访问者模式、备忘录模式、命令模式、解释器模式、中介模式。  
-
 
 
 # 参考
