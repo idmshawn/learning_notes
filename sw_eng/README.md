@@ -13,7 +13,7 @@
 - [SOLID原则](simple_design.md)
 ### [设计模式](patterns.md)
 ### 设计建模
-- [UML](uml.md)
+- [UML及类间关系](uml.md)
 - [四色建模](color.md)
 
 ## 参考
