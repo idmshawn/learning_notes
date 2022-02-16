@@ -38,7 +38,7 @@ class Vehicle {
 public:
   Vehicle() {}
   ~Vehicle() {}
-  vitual void Run() = 0;  // 定义纯虚函数
+  virtual void Run() = 0;  // 定义纯虚函数
 };
 
 // 子类Car实现抽象类Vehicle
