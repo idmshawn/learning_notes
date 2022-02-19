@@ -41,8 +41,9 @@
 ### 状态图
 
 
-## 工具
+## UML工具
 
+PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。
 ### PlantUML
 
 github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。  
