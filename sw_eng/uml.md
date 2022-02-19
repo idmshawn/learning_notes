@@ -1,8 +1,8 @@
-# UML
+# UML图类型
 
-## UML图类型
+## 类图
 
-### 类图
+### 类间关系
 
 |关系|UML符号|说明|逻辑表示|[代码实现](relation.md)|
 |--|--|--|--|--|
@@ -17,7 +17,7 @@
 
 ![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3WqZ2ingRYaA36vH04YPeoGDa5HR8h2CtknTzsBvZuep_nfwvgd_JkWF8kNpIjUJby1vLc-NDJsTFqUc0CCdYzeVDes1yOrVj6-wiN27eJ1XYPG1LnGjohOrEZgWfrgfV1iy-odFTEuZ272Udem9refF5qtxtdV1YvJg1ubGoM5VA0sfTp4l4ebc6kj55uqpdeweOCBwbwmCYsuCfZ3hHIUxsu1AOCwNS56LnVkSA1LhPjVD4xXGdAwWesU7j3XC0LFzirziNKQbqDgNWemUW00)
 
-##### 类的派生和继承关系
+#### 类的派生和继承关系
 
 类的派生和继承是面向对象程序设计方法和C++语言最重要的特征之一。
 
@@ -29,7 +29,7 @@
 
 被继承的类称为父类或基类，继承的类称为子类或派生类。“子类”和“父类”通常放在一起称呼，“基类”和“派生类”通常放在一起称呼。
 
-##### 组合、聚合和关联的区别
+#### 组合、聚合和关联的区别
 - “关联”的两个对象是**平等关系**，“聚合”、“组合”是**整体和部分的关系**；
 - “聚合”整体和部分**生命周期不同**，“组合”的**整体和部分不可分**、生命周期相同；(见文档2)  
 > 在组合(Composition)关系中，整体与部分是不可分的，整体的生命周期结束也就意味着部分的生命周期结束。
@@ -38,12 +38,17 @@
 
 > 简单的可以认为，如果一个类作为了另外一个类的属性，那一定是关联关系。但你要知道，聚合是一种特殊的关联，而组合又是一种特殊的聚合。一般的关联我们认为是平级的、无整体部分关系的，如朋友关系。
 
-### 时序图
+#### 依赖关系的三种实现方式
+- 将一个类的对象作为另一个类中方法的参数
+- 在一个类的方法中将另一个类的对象作为其对象的局部变量
+- 在一个类的方法中调用另一个类的静态方法
 
-### 状态图
+## 时序图
+
+## 状态图
 
 
-## UML工具
+# UML工具
 
 PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。两者语法不完全相同。  
 - 前者尚未在github上支持嵌入，需引用外链；但其图形标识好于后者，比如类有“C”标识。  
@@ -69,7 +74,7 @@ graph TD;
     C-->D;
 ```
 
-## 参考文档
+# 参考文档
 1. [UML中类之间的六大关系](https://blog.csdn.net/ruren1/article/details/81584232?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control)
 2. [关联、聚合、组合的区别](https://zhuanlan.zhihu.com/p/359672087)
 3. [UML类图的箭头含义](https://www.jianshu.com/p/8969ab8c48c7)
