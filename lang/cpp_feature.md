@@ -165,7 +165,7 @@ class Circle{
 ``` c++
 class Shape {
 public:
-    virtual double area() = 0;
+    virtual double area() = 0;  // 抽象类定义纯虚函数
 };
 
 class Rect : public Shape {
@@ -183,6 +183,17 @@ C++使用抽象类实现接口。满足下面条件的C++类称为接口
 - 类中没有定义任何变量；(接口不能包含属性，也就是成员变量)  
 - 所有的成员函数都是纯虚函数，且是公有的；(接口只能声明方法，方法不能包含代码实现)
 - 类实现接口的时候，必须实现接口中声明的所有方法。
+
+``` mermaid
+classDiagram
+%% commit
+class Channel
+<<interface>> Channel
+Channel: +open()
+Channel: +close()
+Channel: +send()
+Channel: +receive()
+```
 
 ``` c++
 class Channel {
