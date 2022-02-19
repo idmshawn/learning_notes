@@ -129,9 +129,8 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 # C++实现
 
 ### 接口和抽象类(C++实现)
+"我们可以使用接口来实现面向对象的抽象特性、多态特性和基于接口而非实现的设计原则；使用抽象类来实现面向对象的继承特性和模板设计模式等。"   
 抽象类更多的是为了代码复用，而接口就更侧重于解耦。  
-"我们可以使用接口来实现面向对象的抽象特性、多态特性和基于接口而非实现的设计原则；使用抽象类来实现面向对象的继承特性和模板设计模式等。"  
-设计模式书籍或很多类图中，会有类标以《Interface》或《Abstract》，即标识的接口和抽象类。  
 Java直接使用Interface和Abstract关键字定义接口类和抽象类，C++没有这种关键字，但可以间接实现这两个功能。  
 ##### 抽象类
 OOP中的抽象类：
@@ -149,14 +148,17 @@ class Shape
 <<abstract>> Shape
 Shape <|.. Rect : Realization
 Shape <|.. Circle: Realization
+Shape: +int id
 Shape: +area()
 
 class Rect{
+  +int id
   -int a
   -int b
   +area()
 }
 class Circle{
+  +int id
   -int r
   +area()
 }
@@ -165,16 +167,19 @@ class Circle{
 ``` c++
 class Shape {
 public:
+    int id;
     virtual double area() = 0;  // 抽象类定义纯虚函数
 };
 
 class Rect : public Shape {
 public:
-    // ...
-
+    int id;    
     double area() { // 子类重写纯虚函数
         // ...
     }
+private:
+    int a;
+    int b;
 };
 ```
 
