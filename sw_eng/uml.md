@@ -6,7 +6,7 @@
 
 |关系|UML符号|说明|逻辑表示|[代码实现](relation.md)|
 |--|--|--|--|--|
-|**泛化**(Generalization)|实线+空心箭头|就是面向对象语言中的**继承**(Inheritance)关系(部分文档就叫继承)|is a|子类继承父类|
+|**泛化**(Generalization)|实线+空心箭头|就是面向对象语言中的**继承**(Inheritance)关系(部分文档直接叫继承)|is a|子类继承父类|
 |**实现**(Realization)|虚线+空心箭头|和“泛化”相似，区别在于“实现”继承一个抽象类（abstract、interface），而“泛化”关系继承一个具体类。|is a|**实现接口**或继承某个抽象类|
 |聚合(Aggregation)|实线+空心菱形|是整体与部分的关系，部分能脱离整体而独立存在，生命周期不绑定。|has a|成员变量|
 |**组合**(Composition)|实线+实心菱形|是整体与部分的关系，但部分不能脱离整体而独立存在，生命周期绑定。|has a|成员变量|
@@ -43,7 +43,10 @@
 
 ## UML工具
 
-PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。
+PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。两者语法不完全相同。  
+- 前者尚未在github上支持嵌入，需引用外链；但其图形标识好于后者，比如类有“C”标识。  
+- 后者已支持github嵌入，但图形标识过于简单。
+
 ### PlantUML
 
 github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。  
