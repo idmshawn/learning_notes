@@ -1,4 +1,4 @@
-# 类与类交互关系的代码实现
+# 类间关系的代码实现
 
 ## 泛化(Generalization)/继承(Inheritance)
 
