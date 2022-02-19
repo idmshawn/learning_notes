@@ -52,7 +52,7 @@ github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server�
 
 PlantText在github上只能使用外链，没法直接使用内嵌语法(实际markdown支持内嵌，但github未支持？)；
 
-Mermaid可以使用内嵌语法？
+Mermaid已支持github上直接使用markdown内嵌，如：
 
 ```mermaid
 graph TD;
