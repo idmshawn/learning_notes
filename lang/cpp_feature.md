@@ -142,6 +142,26 @@ C++通过纯虚函数(virtual + “=0”)实现抽象类
 - 存在纯虚函数的类是抽象类(如下面的shape类)
 - 如果子类没有实现所有的纯虚函数，则子类仍然是抽象类
 
+``` mermaid
+classDiagram
+%% commit
+class Shape
+<<abstract>> Shape
+Shape <|.. Rect : Realization
+Shape <|.. Circle: Realization
+Shape: +area()
+
+class Rect{
+  -int a
+  -int b
+  +area()
+}
+class Circle{
+  -int r
+  +area()
+}
+```
+
 ``` c++
 class Shape {
 public:
