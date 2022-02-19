@@ -2,9 +2,7 @@
 
 ## 泛化(Generalization)/继承(Inheritance)
 
-##### C++
 ``` c++
-// 具体类Car
 class Car {
 public:
   Car() {};
@@ -14,22 +12,20 @@ public:
   }
 };
 
-// 子类SUV为父类Car的泛化
+// 子类SUV继承父类Car
 class SUV : public Car {
 public:
   SUV() {};
   ~SUV() {};
-  void Run() { // 覆盖父类的实现
+  void Run() { // 继承父类的方法，覆盖父类的实现
     // ...
   }
 };
 ```
 
-##### C语言
-
 ## 实现(Realization)
 实现接口或继承某个抽象类 
-##### C++
+
 ``` c++
 // 抽象类Vehicle
 class Vehicle {
@@ -49,13 +45,11 @@ public:
   }
 };
 ```
-##### C语言
 
 ## 组合(Composition)
-生命周期绑定
 
-##### C++
 ``` c++
+// 组合关系：整体与部分的关系，但是整体与部分不可以分开
 class Department {
 public:
   Department() {};
@@ -64,31 +58,39 @@ public:
 
 class Company {
 public:
-  Company() {};
+  Company() {
+    departmentA = new Department;  // 生命周期绑定，直接new
+    departmentB = new Department;
+  };
   ~Company() {};
-private:
-  Department departmentA;  // 生命周期绑定
-  Department departmentB;
-  Department departmentC;
-};
 
+private:
+  Department departmentA;
+  Department departmentB;
+};
 ```
-##### C语言
 
 ## 聚合
 ``` c++
-class Tires {
+// 聚合关系, 整体和部分的关系，整体与部分可以分开
+class Wheel {
 public:
-  Tires() {};
-  ~Tires() {};
+  Wheel() {};
+  ~Wheel() {};
 };
 
 class Car {
 public:
   Car() {};
   ~Car() {};
+  void SetWheel(Wheel *front, Wheel *rear)  // 生命周期不绑定，通过set方法或者构造函数赋值到本类
+  {
+    this.frontWheel = front;
+    this.rearWheel = rear;
+  }
 private:
-  Tires *tires;  // 生命周期不绑定
+  Wheel *frontWheel;
+  Wheel *rearWheel;
 };
 
 ```
@@ -99,3 +101,9 @@ private:
 
 
 ##### C语言
+
+
+
+## 参考
+1. [UML类图（下）：关联、聚合、组合、依赖](https://www.cnblogs.com/xrq730/p/5533019.html)
+2. [Java 代码表示 UML 依赖/泛化/实现/关联/聚合/组合关系](https://www.zhangbj.com/p/478.html)
