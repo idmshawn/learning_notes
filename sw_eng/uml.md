@@ -16,7 +16,7 @@
 
 六种关系的耦合度大小是：泛化 = 实现 > 组合 > 聚合 > 关联 > 依赖  
 
-![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3Wq3CeqHeYQeAWnHU6PlTYxxaLp7vHd_hHrpTF-7L2UnSlc5I-dhu3oB5ykQdkwVW_CNeFd2ngVjis1SOrVjAzwiR07OR2X2LG15zI92ZOrkhfW5refFDiy-sdFD2vZYB2U7io9LWfFryrxthU1onIgHybGII4Vg4qfDp6lKWdcMYk55uspdaxeu8Aw5wnC2wuCvd0hXUUxMq3Ae4vNiD7LXJiSQ5NhvXUDKxYGdAvWewS7T3XCmPDzSrzidSRba9gN0emL0000)
+![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3WqZ2ingRYaA36vH04YPeoGDa5HR8h2CtknTzsBvZuep_nfwvgd_JkWF8kNpIjUJby1vLc-NDJsTFqUc0CCdYzeVDes1yOrVj6-wiN27eJ1XYPG1LnGjohOrEZgWfrgfV1iy-odFTEuZ272Udem9refF5qtxtdV1YvJg1ubGoM5VA0sfTp4l4ebc6kj55uqpdeweOCBwbwmCYsuCfZ3hHIUxsu1AOCwNS56LnVkSA1LhPjVD4xXGdAwWesU7j3XC0LFzirziNKQbqDgNWemUW00)
 
 ##### 组合和聚合关系
 都表示一对多的has a关系；但生命周期不同(见文档2)：  
@@ -82,11 +82,12 @@ graph TD;
 
 附：plantUML类图关系源码（github上暂无法直接渲染显示）  
 ```plantuml
+@startuml
 title Relationships - Class Diagram
 
 class 1汽车
 class 2SUV
-class 3车
+abstract class 3车
 class 4汽车
 class 5汽车
 class 6轮胎
@@ -97,12 +98,13 @@ class 10码农
 class 13自行车
 class 14码农
 
-1汽车 <|-- 2SUV: 泛化(Generalization)
-3车 <|.. 4汽车: 接口实现(Interface Realization)
-5汽车 o-- 6轮胎: 聚合(Aggregation)
-7公司 *-- 8部门: 组合(Composition)
-9领导 <-- 10码农: 直接关联(Directed Association)
-13自行车 <.. 14码农: 依赖(Dependency)
+1汽车 <|-- 2SUV: 泛化
+3车 <|.. 4汽车: 实现
+5汽车 "1" o-- "many" 6轮胎: 聚合
+7公司 "1" *-- "many" 8部门: 组合
+9领导 <-- 10码农: 关联
+13自行车 <.. 14码农: 依赖
+@enduml
 
 ```
 
