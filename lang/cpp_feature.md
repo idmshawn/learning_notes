@@ -221,8 +221,43 @@ public:
 而接口正好相反，它是一种自上而下的设计思路。我们在编程的时候，一般都是先设计接口，再去考虑具体的实现。”
 
 ### 异常处理
-C++默认支持异常处理，
+C++默认支持异常处理，C++异常处理包含(见C++ Primer)：
+###### 1. throw表达式
+异常检测使用；比如，使用throw表达式直接引发异常
+```c++
+if (xxx)
+  throw runtime_error("Data must xxx");
+```
+###### 2. try-catch语句块
+异常处理代码；
+```c++
+try {
+  // 代码块正常执行，其中可能抛出异常
+} catch (runtime_error err) {
+  // 异常处理
+}
+```
+###### 3. 一套异常类(exception class)
+用于在throw表达式和相关的catch子句之间传递异常的具体信息；
+
+标准库中定义了一些常用的异常类
+|异常类|头文件|说明|
+|--|--|--|
+|exception|exception|最通用的异常类，只报告异常的发生，不提供任何额外信息|
+|runtime_error|stdexcept|只有在运行时才能检测出的问题|
+|range_error|stdexcept|运行时错误，生成结果超出了有意义的值域范围|
+||stdexcept|上/下溢出运行错误，无效参数逻辑错误等其它|
+|bad_alloc|new|new不能分配要求的内存空间时，抛出此异常；可使用placement new禁止异常(见C++ primer p408、p729)|
+|bad_cast|type_info||
+
+
 #### noexcept
+C++ 11之后支持noexcept。  
+C++中的异常处理是在运行时而不是编译时检测的。为了实现运行时检测，编译器创建额外的代码。  
+noexcept告诉编译器，函数中不会发生异常,这有利于编译器对程序做更多的优化。  
+在新版本的编译器中，析构函数是默认加上关键字noexcept的。
+
+如果在运行时，noexecpt函数向外抛出了异常（如果函数内部捕捉了异常并完成处理，这种情况不算抛出异常），程序会**直接终止，调用std::terminate()函数，该函数内部会调用std::abort()终止程序**。
 
 ## 参考
 1. C++手册：[cppreference](https://en.cppreference.com/w/)
@@ -234,6 +269,7 @@ C++默认支持异常处理，
 7. [一些著名的软件都用什么语言编写？](https://mp.weixin.qq.com/s/-znPkfMc8f-2hvqCO0-1jQ) (趣味，多数业界软件为了性能，还是采用的C/C++；少部分java)
 8. [C++中的抽象类和接口](https://www.programminghunter.com/article/1984129838/)
 9. [【C++深度解析】37、C++ 中的抽象类和接口](https://blog.51cto.com/u_15290941/3048773)
+10. [C++11 带来的新特性 （3）—— 关键字noexcept](https://www.cnblogs.com/sword03/p/10020344.html)
 
 ### 面试参考
 - 指针与引用的区别？ 传值参数和传引用参数的差异点？
