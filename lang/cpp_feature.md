@@ -237,6 +237,7 @@ try {
   // 异常处理
 }
 ```
+栈展开的过程中，找不到任何匹配的catch时，则调用terminate终结程序。
 ###### 3. 一套异常类(exception class)
 用于在throw表达式和相关的catch子句之间传递异常的具体信息；
 
@@ -245,14 +246,12 @@ try {
 |--|--|--|
 |exception|exception|最通用的异常类，只报告异常的发生，不提供任何额外信息|
 |runtime_error|stdexcept|只有在运行时才能检测出的问题|
-|range_error|stdexcept|运行时错误，生成结果超出了有意义的值域范围|
-||stdexcept|上/下溢出运行错误，无效参数逻辑错误等其它|
+|logic_error|stdexcept|无效参数等其它逻辑错误|
 |bad_alloc|new|new不能分配要求的内存空间时，抛出此异常；可使用placement new禁止异常(见C++ primer p408、p729)|
 |bad_cast|type_info||
 
-
 #### noexcept
-C++ 11之后支持noexcept。  
+C++ 11之后支持noexcept，noexcept操作符的作用是阻止异常的传播。  
 C++中的异常处理是在运行时而不是编译时检测的。为了实现运行时检测，编译器创建额外的代码。  
 noexcept告诉编译器，函数中不会发生异常,这有利于编译器对程序做更多的优化。  
 在新版本的编译器中，析构函数是默认加上关键字noexcept的。
