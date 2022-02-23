@@ -45,7 +45,7 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 
 综上，**new表达式是分配内存+调用构造；operator new仅分配内存，不调用构造；placement new仅调用构造，不分配内存(使用传入的内存地址)**[C++ Primer 19.1.2节]。  
 
-附： [operator new](https://en.cppreference.com/w/cpp/memory/new/operator_new)公共库预定义的两种实现  
+##### 附1. [operator new](https://en.cppreference.com/w/cpp/memory/new/operator_new)公共库预定义的两种实现  
 
 `void* operator new  ( std::size_t count ); (1)`  
 申请内存失败时，函数抛出异常：
@@ -54,6 +54,10 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 `void* operator new  ( std::size_t count, const std::nothrow_t& tag ); (5)`  
 申请内存失败时，函数返回空指针，而不传播异常：  
 > 5) Called by the non-throwing non-array new-expressions. The standard library implementation calls the version (1) and returns a null pointer on failure instead of propagating the exception.
+
+##### 附2. new操作中的异常处理
+如上，new operator执行有3步，若第1步中的内存分配函数为不抛出异常，内存申请失败返回NULL时，不再继续执行第2步的调用构造函数，new operator立即返回，见[new expression](https://en.cppreference.com/w/cpp/language/new)：   
+> If a non-throwing allocation function (e.g. the one selected by new(std::nothrow) T) returns a null pointer because of an allocation failure, then the new-expression returns immediately, it does not attempt to initialize an object or to call a deallocation function. 
 
 ### 类
 ###### 类成员
