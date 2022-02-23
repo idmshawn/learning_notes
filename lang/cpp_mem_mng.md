@@ -45,8 +45,9 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 2. C++手册：[cppreference](https://en.cppreference.com/w/)
 
 # 智能指针
+C++标准库memory头文件提供了两种智能指针类型来管理动态对象，区别在于管理底层指针的方式不同：   
+- shared_ptr：允许多个指针指向同一个对象；内存资源共享。  
+- unique_ptr：“独占”所指向的对象；  
+- weak_ptr：伴随类，弱引用，指向shared_ptr所管理的对象。  
 
-shared_ptr：  
-unique_ptr：  
-weak_ptr：  
-
+主流使用的是shared_ptr。
