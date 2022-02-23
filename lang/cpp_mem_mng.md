@@ -45,11 +45,12 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 `::(optional) new (placement-params) ( type ) initializer(optional)`	(3)	  
 `::(optional) new (placement-params) new-type initializer(optional)`	(4)	  
 
-如`::new (mem-addr) T ConstructFunc`实现调用构造函数ConstructFunc将对象设置到内存mem-addr中。
+如`Foo* pfoo = ::new (buff)Foo;`实现调用类Foo的构造函数将创建的对象设置到buff内存中。[详见文档3]
 
 ## 参考
 1. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
 2. C++手册：[cppreference](https://en.cppreference.com/w/)
+3. [Placement new的用法及用途](http://www.cppblog.com/kongque/archive/2010/02/20/108093.html)
 
 # 智能指针
 C++标准库memory头文件提供了两种智能指针类型来管理动态对象，区别在于管理底层指针的方式不同：   
