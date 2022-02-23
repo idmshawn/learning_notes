@@ -19,13 +19,13 @@ operator new就像operator + 一样，是可以重载的。如果类中没有重
     - 重载时，第一个参数类型必须为表达要求分配空间的大小（字节），类型为size_t
     - 重载时，可以带其它参数
 3. placement new：只是operator new重载的一个版本。它并不分配内存，只是返回指向已经分配好的某段内存的一个指针。因此不能删除它，但需要调用对象的析构函数。  
-如果你想在已经分配的内存中创建一个对象，使用new时行不通的。也就是说placement new允许你在一个已经分配好的内存中（栈或者堆中）构造一个新的对象。原型中void* p实际上就是指向一个已经分配好的内存缓冲区的的首地址。[placement new使用场景](https://www.geeksforgeeks.org/placement-new-operator-cpp/)。
+如果你想在已经分配的内存中创建一个对象，使用new是行不通的。但placement new允许你在一个已经分配好的内存中（栈或者堆中）构造一个新的对象。原型中void* p实际上就是指向一个已经分配好的内存缓冲区的的首地址。[placement new使用场景](https://www.geeksforgeeks.org/placement-new-operator-cpp/)。
 
 new operator(C++ Primer中称为new表达式)与delete operator的行为是不能够也不应该被改变，这是C++标准作出的承诺。而operator new与operator delete和C语言中的malloc与free对应，只负责分配及释放空间。但使用operator new分配的空间必须使用operator delete来释放，而不能使用free，因为它们对内存使用的登记方式不同。反过来亦是一样。
 
 综上，**new表达式是分配内存+调用构造；operator new仅分配内存，不调用构造；placement new仅调用构造，不分配内存(使用传入的内存地址)**[C++ Primer 19.1.2节]。  
 
-##### 附1. [operator new](https://en.cppreference.com/w/cpp/memory/new/operator_new)公共库预定义的两种实现  
+### 附1. [operator new](https://en.cppreference.com/w/cpp/memory/new/operator_new)公共库预定义的两种实现  
 
 `void* operator new  ( std::size_t count ); (1)`  
 申请内存失败时，函数抛出异常：
@@ -35,10 +35,17 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 申请内存失败时，函数返回空指针，而不传播异常：  
 > 5) Called by the non-throwing non-array new-expressions. The standard library implementation calls the version (1) and returns a null pointer on failure instead of propagating the exception.
 
-##### 附2. new操作中的异常处理
+### 附2. new操作中的异常处理
 如上，new operator执行有3步，若第1步中的内存分配函数为不抛出异常，内存申请失败返回NULL时，不再继续执行第2步的调用构造函数，new operator立即返回，见[new expression](https://en.cppreference.com/w/cpp/language/new)：   
 > If a non-throwing allocation function (e.g. the one selected by new(std::nothrow) T) returns a null pointer because of an allocation failure, then the new-expression returns immediately, it does not attempt to initialize an object or to call a deallocation function. 
 
+### 附3. placement new实现
+
+[new expression](https://en.cppreference.com/w/cpp/language/new)中的示例  
+`::(optional) new (placement-params) ( type ) initializer(optional)`	(3)	  
+`::(optional) new (placement-params) new-type initializer(optional)`	(4)	  
+
+如`::new (mem-addr) T ConstructFunc`实现调用构造函数ConstructFunc将对象设置到内存mem-addr中。
 
 ## 参考
 1. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
