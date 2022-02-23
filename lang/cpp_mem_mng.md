@@ -45,3 +45,8 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 2. C++手册：[cppreference](https://en.cppreference.com/w/)
 
 # 智能指针
+
+shared_ptr：
+unique_ptr：
+weak_ptr：
+
