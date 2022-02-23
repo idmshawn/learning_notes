@@ -46,7 +46,7 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 
 # 智能指针
 
-shared_ptr：
-unique_ptr：
-weak_ptr：
+shared_ptr：  
+unique_ptr：  
+weak_ptr：  
 
