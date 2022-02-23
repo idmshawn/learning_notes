@@ -43,7 +43,17 @@ operator new就像operator + 一样，是可以重载的。如果类中没有重
 
 new operator(C++ Primer中称为new表达式)与delete operator的行为是不能够也不应该被改变，这是C++标准作出的承诺。而operator new与operator delete和C语言中的malloc与free对应，只负责分配及释放空间。但使用operator new分配的空间必须使用operator delete来释放，而不能使用free，因为它们对内存使用的登记方式不同。反过来亦是一样。
 
-综上，**new表达式是分配内存+调用构造；operator new仅分配内存，不调用构造；placement new仅调用构造，不分配内存(使用传入的内存地址)**[C++ Primer 19.1.2节]。
+综上，**new表达式是分配内存+调用构造；operator new仅分配内存，不调用构造；placement new仅调用构造，不分配内存(使用传入的内存地址)**[C++ Primer 19.1.2节]。  
+
+附： [operator new](https://en.cppreference.com/w/cpp/memory/new/operator_new)公共库预定义的两种实现  
+
+`void* operator new  ( std::size_t count ); (1)`  
+申请内存失败时，函数抛出异常：
+> In case of failure, the standard library implementation calls the function pointer returned by std::get_new_handler and repeats allocation attempts until new handler does not return or becomes a null pointer, at which time it throws std::bad_alloc.  
+
+`void* operator new  ( std::size_t count, const std::nothrow_t& tag ); (5)`  
+申请内存失败时，函数返回空指针，而不传播异常：  
+> 5) Called by the non-throwing non-array new-expressions. The standard library implementation calls the version (1) and returns a null pointer on failure instead of propagating the exception.
 
 ### 类
 ###### 类成员
