@@ -47,6 +47,8 @@ new operator(C++ Primer中称为new表达式)与delete operator的行为是不�
 `::(optional) new (placement-params) new-type initializer(optional)`	(4)	  
 
 如`Foo* pfoo = ::new (buff)Foo;`实现调用类Foo的构造函数将创建的对象设置到buff内存中。[详见文档3]
+new表达式中若分配内存返回NULL，不执行构造函数[见附2]；但**placement new表达式中，若返回NULL，行为未知**：
+> If a null pointer is passed as the argument to a non-allocating placement new-expression, which makes the selected standard non-allocating placement allocation function return a null pointer, the behavior is undefined.
 
 ## 参考
 1. [C++中的new、operator new与placement new](https://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html)
