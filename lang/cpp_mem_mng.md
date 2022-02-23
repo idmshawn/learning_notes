@@ -51,3 +51,7 @@ C++标准库memory头文件提供了两种智能指针类型来管理动态对�
 - weak_ptr：伴随类，弱引用，指向shared_ptr所管理的对象。  
 
 主流使用的是shared_ptr。[stackOverflow关于shared_ptr和unique_ptr的讨论](https://stackoverflow.com/questions/15648844/using-smart-pointers-for-class-members)。  
+
+### shared_ptr
+shared_ptr自动销毁锁管理的对象、自动释放相关联的内存。
+
