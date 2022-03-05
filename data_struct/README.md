@@ -27,6 +27,10 @@ Wikipedia的“Search algorithm”词条：
 - 简单查找
 - 二分查找：也称对数搜索(logarithmic search)，是一种在有序数组中查找某一特定元素的搜索算法。 ...如果在某一步骤数组为空，则代表找不到。
 - Hash查找
+
+##### 拓展搜索算法
+一致性Hash算法[1](https://www.cnblogs.com/onehm/p/14957078.html)、[2](https://www.cnblogs.com/lpfuture/p/5796398.html)
+
 #### 树和图的搜索
 - 深度优先搜索(BFS)
 - 广度优先搜索(DFS)
