@@ -29,7 +29,7 @@ Wikipedia的“Search algorithm”词条：
 - Hash查找
 
 ##### 拓展搜索算法
-一致性Hash算法[1](https://www.cnblogs.com/onehm/p/14957078.html)、[2](https://www.cnblogs.com/lpfuture/p/5796398.html)
+[一致性Hash算法](https://www.cnblogs.com/onehm/p/14957078.html)，[其它文献](https://www.cnblogs.com/lpfuture/p/5796398.html)
 
 #### 树和图的搜索
 - 深度优先搜索(BFS)
