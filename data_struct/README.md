@@ -28,12 +28,20 @@ Wikipedia的“Search algorithm”词条：
 - 二分查找：也称对数搜索(logarithmic search)，是一种在有序数组中查找某一特定元素的搜索算法。 ...如果在某一步骤数组为空，则代表找不到。
 - Hash查找
 
-##### 拓展搜索算法
-[一致性Hash算法](https://www.cnblogs.com/onehm/p/14957078.html)，[其它文献](https://www.cnblogs.com/lpfuture/p/5796398.html)
-
 #### 树和图的搜索
 - 深度优先搜索(BFS)
 - 广度优先搜索(DFS)
+
+## 典型算法及应用
+多服务器缓存使用的：一致性Hash算法；  
+参考文档
+- [一致性hash原理 看这一篇就够了](https://www.cnblogs.com/onehm/p/14957078.html) (推荐)
+- [一致性哈希算法原理](https://www.cnblogs.com/lpfuture/p/5796398.html)
+
+Linux内核page内存管理的经典算法：Buddy算法；  
+参考文档：
+- [内存管理算法--Buddy伙伴算法](https://blog.csdn.net/orange_os/article/details/7392986)
+- [Linux内核内存管理算法Buddy和Slab](https://zhuanlan.zhihu.com/p/36140017)
 
 ## 算法性能(大O表示法)
 #### 常见的算法性能
