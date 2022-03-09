@@ -1,13 +1,15 @@
 
-# [数据结构与算法](data_struct/README.md)
+# 数据结构与算法
 ### 基础数据结构
 
 - [树](data_struct/trees.md)
 - [图](data_struct/graph.md)
 
-### 算法
+### [算法](data_struct/README.md)
 - 排序
 - 搜索
+- 算法性能
+- 典型算法及应用
 
 # 编程语言学习笔记
 * [C](lang/c_feature.md)/[C++](lang/cpp_feature.md)
