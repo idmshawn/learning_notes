@@ -1,8 +1,9 @@
 
 # 数据结构与算法
-### 基础数据结构
-
+### [数据结构](data_struct/data_struct.md)
+基础数据结构：数组、链表、队列、栈、散列等
 - [树](data_struct/trees.md)
+- [堆](data_struct/heap.md)
 - [图](data_struct/graph.md)
 
 ### [算法](data_struct/README.md)
