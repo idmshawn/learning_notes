@@ -27,9 +27,8 @@ Wikipedia的“Search algorithm”词条：
 - 广度优先搜索(DFS)
 
 ## [典型算法及应用](freq_algo.md)
-多服务器缓存使用的：一致性Hash算法   
-Linux内核page内存管理的经典算法：Buddy算法   
-等
+- 多服务器缓存使用的：一致性Hash算法   
+- Linux内核page内存管理的经典算法：Buddy算法   
 
 ## 算法性能(大O表示法)
 #### 常见的算法性能
