@@ -9,3 +9,4 @@
 - [内存管理算法--Buddy伙伴算法](https://blog.csdn.net/orange_os/article/details/7392986)
 - [Linux内核内存管理算法Buddy和Slab](https://zhuanlan.zhihu.com/p/36140017)
 - [Buddy System 一种内存管理算法](https://blog.51cto.com/u_15351135/3726710)
+- [Linux内存管理—buddy算法](https://blog.csdn.net/qq_43313035/article/details/90690792)
