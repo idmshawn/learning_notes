@@ -35,3 +35,11 @@ sai_status_t sai_tam_telemetry_get_data(
 > SAI driver will provide data at a coarse granularity and NOS will be responsible for discarding data or keeping a local cache. 
 > This is in fact a better choice as NOS can keep a local copy for low frequency updated data.
 
+### TAM对象和绑定点
+
+数据由switch中的data source生成；TAM对象需绑定到数据源上。
+两种绑定方式：
+源绑定(Source binding)：源的属性中指定TAM对象；
+对象绑定(Object binding)：TAM对象自身
+![image](https://user-images.githubusercontent.com/61963619/158831768-eb74b9ef-17ac-4cf4-8ea0-b6fa123f6443.png)
+
