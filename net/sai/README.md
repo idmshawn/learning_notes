@@ -4,9 +4,6 @@
 # TAM
 [源文档](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
 
-### 数据模型
-Google Protocol Buffer(GPB)，.proto后缀的文件。
-
 ### 数据获取模型
 - Push：发布(publish)/订阅(subscribe)机制；
 - Pull：仍存在通过pull立即显示数据的需求。SAI提供一个API支持多种不同的数据。
@@ -39,7 +36,12 @@ sai_status_t sai_tam_telemetry_get_data(
 
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
 两种绑定方式：
-源绑定(Source binding)：源的属性中指定TAM对象；
-对象绑定(Object binding)：TAM对象自身
-![image](https://user-images.githubusercontent.com/61963619/158831768-eb74b9ef-17ac-4cf4-8ea0-b6fa123f6443.png)
+- 源绑定(Source binding)：源的属性中指定TAM对象；
+- 对象绑定(Object binding)：TAM对象自身包含源列表；  
+
+首选方式1的提示机制。
+
+### 数据模型及序列化/反序列化(Serialization/De-serialization)
+Google Protocol Buffer(GPB)，.proto后缀的文件。  
+
 
