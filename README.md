@@ -43,5 +43,5 @@
 [github开源](https://github.com/shadowsocks/ShadowsocksX-NG/releases/tag/v1.9.4)，可访问gmail，youtube，你懂的。
 - [阮一峰：如何选择开源许可证？](http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html)
 - [github markdown内置](tools/README.md)
-- [常用命令行](os/freq_cmd.md)
+- [常用命令行](tools/freq_cmd.md)
 - [本地电脑添加Github的ssh key](https://blog.csdn.net/Jexy_67/article/details/52954023)
