@@ -1,5 +1,10 @@
-# Data Plane Telemetry (DTEL)
-[源文档](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
+# 基本概念
+
+Telementry、INT、DTEL、TAM的区别？
+- Telementry：运维标准？
+- INT：Inband Network Telemetry，
+- DTEL：Data Plane Telemetry，SAI提出？
+- TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
 # TAM
 [源文档](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
@@ -63,4 +68,8 @@ INT是逐包逐流的数据收集。基于包的数据收集有两种构造形�
 - 初始化：创建监测报文的flow group。
 - 发送：基于IFA/IOAM/Extn配置识别报文，给识别出的报文插入metadata；
 - 终结：终结带metadata的报文。
+
+
+# Data Plane Telemetry (DTEL)
+[源文档](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
 
