@@ -42,6 +42,9 @@ sai_status_t sai_tam_telemetry_get_data(
 首选方式1的提示机制。
 
 ### 数据模型及序列化/反序列化(Serialization/De-serialization)
-Google Protocol Buffer(GPB)，.proto后缀的文件。  
+##### GPB(Google Protocol Buffer)
+- [ProtoBuf开源地址](https://github.com/protocolbuffers/protobuf/releases)
+- [ProtoBuf开发指南](https://developers.google.com/protocol-buffers/docs/proto)
 
+GPB文件，.proto后缀的文件。  
 
