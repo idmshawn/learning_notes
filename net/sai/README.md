@@ -4,7 +4,8 @@
 # TAM
 [源文档](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
 
-### 数据获取模型
+## 数据模型
+#### 数据获取模型
 - Push：发布(publish)/订阅(subscribe)机制；
 - Pull：仍存在通过pull立即显示数据的需求。SAI提供一个API支持多种不同的数据。
 
@@ -28,11 +29,11 @@ sai_status_t sai_tam_telemetry_get_data(
         _Out_ void *buffer);
 ```
 
-### 数据订阅粒度
+#### 数据订阅粒度
 > SAI driver will provide data at a coarse granularity and NOS will be responsible for discarding data or keeping a local cache. 
 > This is in fact a better choice as NOS can keep a local copy for low frequency updated data.
 
-### TAM对象和绑定点
+#### TAM对象和绑定点
 
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
 两种绑定方式：
@@ -41,10 +42,21 @@ sai_status_t sai_tam_telemetry_get_data(
 
 首选方式1的提示机制。
 
-### 数据模型及序列化/反序列化(Serialization/De-serialization)
+#### 数据模型及序列化/反序列化(Serialization/De-serialization)
 ##### GPB(Google Protocol Buffer)
 - [ProtoBuf开源地址](https://github.com/protocolbuffers/protobuf/releases)
 - [ProtoBuf开发指南](https://developers.google.com/protocol-buffers/docs/proto)
 
 GPB文件，.proto后缀的文件。  
+
+## 配置
+#### 如何新增数据属性
+
+#### 如何新增Event
+
+#### INT(Inband Network Telemetry)配置
+INT是逐包逐流的数据收集。基于包的数据收集有两种构造形式：
+- 插入metadata识别报文；
+- 插入metadata和metadata头；
+
 
