@@ -42,7 +42,7 @@ sai_status_t sai_tam_telemetry_get_data(
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节。   
 不同对象之间是聚合关系，创建时绑定。 
 
-##### 示例  
+##### 示例一  
 一个TAM对象中包含多个event和telementry对象时：
 - Flow stats: 流统计
 - Event1：丢包超比例触发事件；生成simple report；
@@ -84,6 +84,12 @@ graph TD;
     TAM_TELEMETRY-->TAM;
     TAM-->QUEUE
 ```
+
+"This will conclude the creation of a TAM SAI object which is responsible for managing event1, event2 and set of data attributes specified in telemetry type object. Telemetry data set is specified in the protobuf file. Here is an example of port data set." (数据源示例见10.1.5)
+
+##### 示例二
+![image](https://user-images.githubusercontent.com/61963619/159005650-52f7d71a-000d-4bef-9d02-d7bbfb02d775.png)
+
 
 #### 对象绑定
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
