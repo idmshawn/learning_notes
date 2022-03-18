@@ -39,6 +39,8 @@ sai_status_t sai_tam_telemetry_get_data(
 > This is in fact a better choice as NOS can keep a local copy for low frequency updated data.
 
 #### TAM对象和绑定点
+SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节：   
+![TAM_Obj](../../images/tam_obj.jpg)   
 
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
 两种绑定方式：
