@@ -42,7 +42,8 @@ sai_status_t sai_tam_telemetry_get_data(
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节：   
 ![TAM_Obj](../../images/tam_obj.jpg)   
 
-不同对象之间是聚合关系，创建时绑定。如文档示例中的TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中：
+不同对象之间是聚合关系，创建时绑定。  
+如文档示例中的TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象：
 ```c
 /* Step 1: Create a math function
 * ---------------------------------------- */
@@ -52,7 +53,7 @@ sai_attr_list[0].value.s32 = SAI_TAM_TEL_MATH_FUNC_TYPE_RATE;
 
 attr_count = 1;
 sai_create_tam_math_func_fn(
-                        &sai_tam_math_func_obj,  // math_fun对象创建
+                        &sai_tam_math_func_obj,  // TAM_MATH_FUNC对象创建
                         switch_id,
                         attr_count,
                         sai_attr_list);
@@ -66,17 +67,35 @@ sai_attr_list[1].id = SAI_TAM_TEL_TYPE_ATTR_FLOW_ID;
 sai_attr_list[1].value.u32 = 0x12345678;
 
 sai_attr_list[2].id = SAI_TAM_TEL_TYPE_ATTR_MATH_FUNC;
-sai_attr_list[2].value.oid = sai_tam_math_func_obj;   // math_fun聚合到sai_tam_flow_tel_type_obj
+sai_attr_list[2].value.oid = sai_tam_math_func_obj;   // TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象
 
 sai_attr_list[3].id = SAI_TAM_TEL_TYPE_ATTR_REPORT_ID;
 sai_attr_list[3].value.oid = sai_tam_report_obj; /* Report object created earlier and reused */
 
 attr_count = 3;
 sai_create_tam_tel_type_fn(
-                        &sai_tam_flow_tel_type_obj,
+                        &sai_tam_flow_tel_type_obj,  // TAM_TEL_TYPE对象创建
                         switch_id,
                         attr_count,
                         sai_attr_list);
+
+/* Step 3: Create telemetry object
+* ---------------------------------------- */
+sai_attr_list[0].id = SAI_TAM_TELEMETRY_ATTR_TAM_TYPE_LIST;
+sai_attr_list[0].value.objlist.count = 1;
+sai_attr_list[0].value.objlist.list[0] = sai_tam_flow_tel_type_obj;  // TAM_TEL_TYPE对象聚合到TAM_TELEMETRY
+
+sai_attr_list[1].id = SAI_TAM_TELEMETRY_ATTR_COLLECTOR_LIST;
+sai_attr_list[1].value.objlist.count = 1;
+sai_attr_list[1].value.objlist.list[0] = sai_tam_collector_obj; /* Collector object created earlier and reused */
+
+attr_count = 2;
+sai_create_tam_telemetry_fn(
+                        &sai_tam_telemetry_obj,  // TAM_TELEMETRY对象创建
+                        switch_id,
+                        attr_count,
+                        sai_attr_list);
+
 ```
 
 #### 对象绑定
