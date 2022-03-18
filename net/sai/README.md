@@ -39,8 +39,35 @@ sai_status_t sai_tam_telemetry_get_data(
 > This is in fact a better choice as NOS can keep a local copy for low frequency updated data.
 
 #### TAM对象
-SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节：   
-![TAM_Obj](../../images/tam_obj.jpg)   
+SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节。   
+
+示例
+一个TAM对象中包含多个event和telementry对象时：
+- Flow stats: 流统计
+- Event1：丢包超比例触发事件；生成simple report；
+- Event2：队列超阈值触发事件；生成histogram report；
+TAM对象附加到独立的port、vlan或队列上。
+![image](https://user-images.githubusercontent.com/61963619/159002308-db0cb390-8ebf-4cc6-9495-e1c289aeb66a.png)
+
+Event1构造
+```mermaid
+graph TD;
+    TAM_TRANSPORT-->TAM_COLLECTOR;
+    TAM_MATH_FUNC-->TAM_TEL_TYPE;
+    TAM_REPORT-->TAM_TEL_TYPE;
+    TAM_EVENT_THRESHOLD-->TAM_EVENT1;
+    TAM_COLLECTOR-->TAM_EVENT1;
+    TAM_EVENT_ACTION-->TAM_EVENT1;
+```
+
+Event2构造
+```mermaid
+graph TD;
+    TAM_EVENT_THRESHOLD-->TAM_EVENT2;
+    TAM_REPORT-->TAM_EVENT_ACTION2;
+    TAM_EVENT_ACTION-->TAM_EVENT2;
+```
+
 
 不同对象之间是聚合关系，创建时绑定。  
 SAI TAM文档第10章示例中给出的对象聚合：TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象。  
