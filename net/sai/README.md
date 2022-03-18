@@ -52,11 +52,10 @@ sai_attr_list[0].id = SAI_TAM_MATH_FUNC_ATTR_TAM_TEL_MATH_FUNC_TYPE;
 sai_attr_list[0].value.s32 = SAI_TAM_TEL_MATH_FUNC_TYPE_RATE;
 
 attr_count = 1;
-sai_create_tam_math_func_fn(
-                        &sai_tam_math_func_obj,  // TAM_MATH_FUNC对象创建
-                        switch_id,
-                        attr_count,
-                        sai_attr_list);
+sai_create_tam_math_func_fn(&sai_tam_math_func_obj,  // TAM_MATH_FUNC对象创建
+                            switch_id,
+                            attr_count,
+                            sai_attr_list);
 
 /* Step 2: Create a flow telemetry type object
 * ---------------------------------------- */
@@ -73,11 +72,10 @@ sai_attr_list[3].id = SAI_TAM_TEL_TYPE_ATTR_REPORT_ID;
 sai_attr_list[3].value.oid = sai_tam_report_obj; /* Report object created earlier and reused */
 
 attr_count = 3;
-sai_create_tam_tel_type_fn(
-                        &sai_tam_flow_tel_type_obj,  // TAM_TEL_TYPE对象创建
-                        switch_id,
-                        attr_count,
-                        sai_attr_list);
+sai_create_tam_tel_type_fn(&sai_tam_flow_tel_type_obj,  // TAM_TEL_TYPE对象创建
+                           switch_id,
+                           attr_count,
+                           sai_attr_list);
 
 /* Step 3: Create telemetry object
 * ---------------------------------------- */
@@ -90,12 +88,10 @@ sai_attr_list[1].value.objlist.count = 1;
 sai_attr_list[1].value.objlist.list[0] = sai_tam_collector_obj; /* Collector object created earlier and reused */
 
 attr_count = 2;
-sai_create_tam_telemetry_fn(
-                        &sai_tam_telemetry_obj,  // TAM_TELEMETRY对象创建
-                        switch_id,
-                        attr_count,
-                        sai_attr_list);
-
+sai_create_tam_telemetry_fn(&sai_tam_telemetry_obj,  // TAM_TELEMETRY对象创建
+                            switch_id,
+                            attr_count,
+                            sai_attr_list);
 ```
 
 #### 对象绑定
