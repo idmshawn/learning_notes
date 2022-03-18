@@ -33,3 +33,7 @@ graph TD;
 </br>可内嵌HTML，但HTML表格内部（tr/td标签对中）无法再使用markdown解析；
 </br>无法直接按语言段落内置plantuml或C语言，HUAWEI liteOS可以内置C语言的；可按链接方式链接plantUML server；
 </br>无法显示同仓库下的图片：PC网络问题，代理网络可查看到图片。
+
+# Git操作
+- [git操作学习(动画版)](https://learngitbranching.js.org)
+- [Git远程操作详解](https://www.ruanyifeng.com/blog/2014/06/git_remote.html)
