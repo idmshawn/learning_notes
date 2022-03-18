@@ -38,10 +38,48 @@ sai_status_t sai_tam_telemetry_get_data(
 > SAI driver will provide data at a coarse granularity and NOS will be responsible for discarding data or keeping a local cache. 
 > This is in fact a better choice as NOS can keep a local copy for low frequency updated data.
 
-#### TAM对象和绑定点
+#### TAM对象
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节：   
 ![TAM_Obj](../../images/tam_obj.jpg)   
 
+不同对象之间是聚合关系，创建时绑定。如文档示例中的TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中：
+```c
+/* Step 1: Create a math function
+* ---------------------------------------- */
+/* create math function for rate computation */
+sai_attr_list[0].id = SAI_TAM_MATH_FUNC_ATTR_TAM_TEL_MATH_FUNC_TYPE;
+sai_attr_list[0].value.s32 = SAI_TAM_TEL_MATH_FUNC_TYPE_RATE;
+
+attr_count = 1;
+sai_create_tam_math_func_fn(
+                        &sai_tam_math_func_obj,  // math_fun对象创建
+                        switch_id,
+                        attr_count,
+                        sai_attr_list);
+
+/* Step 2: Create a flow telemetry type object
+* ---------------------------------------- */
+sai_attr_list[0].id = SAI_TAM_TEL_TYPE_ATTR_TAM_TELEMETRY_TYPE;
+sai_attr_list[0].value.s32 = SAI_TAM_TELEMETRY_TYPE_FLOW;
+
+sai_attr_list[1].id = SAI_TAM_TEL_TYPE_ATTR_FLOW_ID;
+sai_attr_list[1].value.u32 = 0x12345678;
+
+sai_attr_list[2].id = SAI_TAM_TEL_TYPE_ATTR_MATH_FUNC;
+sai_attr_list[2].value.oid = sai_tam_math_func_obj;   // math_fun聚合到sai_tam_flow_tel_type_obj
+
+sai_attr_list[3].id = SAI_TAM_TEL_TYPE_ATTR_REPORT_ID;
+sai_attr_list[3].value.oid = sai_tam_report_obj; /* Report object created earlier and reused */
+
+attr_count = 3;
+sai_create_tam_tel_type_fn(
+                        &sai_tam_flow_tel_type_obj,
+                        switch_id,
+                        attr_count,
+                        sai_attr_list);
+```
+
+#### 对象绑定
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
 两种绑定方式：
 - 源绑定(Source binding)：源的属性中指定TAM对象；
