@@ -40,8 +40,9 @@ sai_status_t sai_tam_telemetry_get_data(
 
 #### TAM对象
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节。   
+不同对象之间是聚合关系，创建时绑定。 
 
-示例
+##### 示例  
 一个TAM对象中包含多个event和telementry对象时：
 - Flow stats: 流统计
 - Event1：丢包超比例触发事件；生成simple report；
@@ -49,77 +50,39 @@ SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系�
 TAM对象附加到独立的port、vlan或队列上。
 ![image](https://user-images.githubusercontent.com/61963619/159002308-db0cb390-8ebf-4cc6-9495-e1c289aeb66a.png)
 
-Event1构造
+SAI TAM文档第10章示例中给出的对象聚合：TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象。  
+对象、聚合最大程度实现了模块复用，如10.1.3复用了collector和report对象、10.1.4复用了collector对象。  
+
+###### Event1构造(见10.1.1~10.1.3)
 ```mermaid
 graph TD;
     TAM_TRANSPORT-->TAM_COLLECTOR;
     TAM_MATH_FUNC-->TAM_TEL_TYPE;
     TAM_REPORT-->TAM_TEL_TYPE;
+    TAM_TEL_TYPE-->TAM_TELEMETRY;
+    TAM_COLLECTOR-->TAM_TELEMETRY;
+ 
     TAM_EVENT_THRESHOLD-->TAM_EVENT1;
-    TAM_COLLECTOR-->TAM_EVENT1;
     TAM_EVENT_ACTION-->TAM_EVENT1;
+    TAM_COLLECTOR-->|reuse|TAM_EVENT1;
 ```
 
-Event2构造
+###### Event2构造(见10.1.4)
 ```mermaid
 graph TD;
+    TAM_COLLECTOR-->|reuse|TAM_EVENT2;
     TAM_EVENT_THRESHOLD-->TAM_EVENT2;
-    TAM_REPORT-->TAM_EVENT_ACTION2;
+    TAM_REPORT-->TAM_EVENT_ACTION;
     TAM_EVENT_ACTION-->TAM_EVENT2;
 ```
 
-
-不同对象之间是聚合关系，创建时绑定。  
-SAI TAM文档第10章示例中给出的对象聚合：TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象。  
-对象、聚合最大程度实现了模块复用，如10.1.3复用了collector和report对象、10.1.4复用了collector对象。  
-```c
-/* Step 1: Create a math function
-* ---------------------------------------- */
-/* create math function for rate computation */
-sai_attr_list[0].id = SAI_TAM_MATH_FUNC_ATTR_TAM_TEL_MATH_FUNC_TYPE;
-sai_attr_list[0].value.s32 = SAI_TAM_TEL_MATH_FUNC_TYPE_RATE;
-
-attr_count = 1;
-sai_create_tam_math_func_fn(&sai_tam_math_func_obj,  // TAM_MATH_FUNC对象创建
-                            switch_id,
-                            attr_count,
-                            sai_attr_list);
-
-/* Step 2: Create a flow telemetry type object
-* ---------------------------------------- */
-sai_attr_list[0].id = SAI_TAM_TEL_TYPE_ATTR_TAM_TELEMETRY_TYPE;
-sai_attr_list[0].value.s32 = SAI_TAM_TELEMETRY_TYPE_FLOW;
-
-sai_attr_list[1].id = SAI_TAM_TEL_TYPE_ATTR_FLOW_ID;
-sai_attr_list[1].value.u32 = 0x12345678;
-
-sai_attr_list[2].id = SAI_TAM_TEL_TYPE_ATTR_MATH_FUNC;
-sai_attr_list[2].value.oid = sai_tam_math_func_obj;   // TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象
-
-sai_attr_list[3].id = SAI_TAM_TEL_TYPE_ATTR_REPORT_ID;
-sai_attr_list[3].value.oid = sai_tam_report_obj; /* Report object created earlier and reused */
-
-attr_count = 3;
-sai_create_tam_tel_type_fn(&sai_tam_flow_tel_type_obj,  // TAM_TEL_TYPE对象创建
-                           switch_id,
-                           attr_count,
-                           sai_attr_list);
-
-/* Step 3: Create telemetry object
-* ---------------------------------------- */
-sai_attr_list[0].id = SAI_TAM_TELEMETRY_ATTR_TAM_TYPE_LIST;
-sai_attr_list[0].value.objlist.count = 1;
-sai_attr_list[0].value.objlist.list[0] = sai_tam_flow_tel_type_obj;  // TAM_TEL_TYPE对象聚合到TAM_TELEMETRY
-
-sai_attr_list[1].id = SAI_TAM_TELEMETRY_ATTR_COLLECTOR_LIST;
-sai_attr_list[1].value.objlist.count = 1;
-sai_attr_list[1].value.objlist.list[0] = sai_tam_collector_obj; /* Collector object created earlier and reused */
-
-attr_count = 2;
-sai_create_tam_telemetry_fn(&sai_tam_telemetry_obj,  // TAM_TELEMETRY对象创建
-                            switch_id,
-                            attr_count,
-                            sai_attr_list);
+###### Event1、Event2和telmentry聚合为TAM(见10.1.5)
+```mermaid
+graph TD;
+    TAM_EVENT1-->TAM;
+    TAM_EVENT2-->TAM;
+    TAM_TELEMETRY-->TAM;
+    TAM-->QUEUE
 ```
 
 #### 对象绑定
