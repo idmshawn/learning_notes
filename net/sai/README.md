@@ -59,4 +59,8 @@ INT是逐包逐流的数据收集。基于包的数据收集有两种构造形�
 - 插入metadata识别报文；
 - 插入metadata和metadata头；
 
+设备主要执行三种操作
+- 初始化：创建监测报文的flow group。
+- 发送：基于IFA/IOAM/Extn配置识别报文，给识别出的报文插入metadata；
+- 终结：终结带metadata的报文。
 
