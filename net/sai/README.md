@@ -7,7 +7,7 @@ Telementry、INT、DTEL、TAM的区别？
 - TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
 # TAM
-[源文档](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
+[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
 
 ## 数据模型
 #### 数据获取模型
@@ -43,7 +43,8 @@ SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系�
 ![TAM_Obj](../../images/tam_obj.jpg)   
 
 不同对象之间是聚合关系，创建时绑定。  
-如文档示例中的TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象：
+SAI TAM文档第10章示例中给出的对象聚合：TAM_MATH_FUNC对象聚合到TAM_TEL_TYPE对象中，TAM_TEL_TYPE对象又聚合到TAM_TELEMETRY对象。  
+对象、聚合最大程度实现了模块复用，如10.1.3复用了collector和report对象、10.1.4复用了collector对象。  
 ```c
 /* Step 1: Create a math function
 * ---------------------------------------- */
