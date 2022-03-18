@@ -61,29 +61,7 @@
 
 # UML工具
 
-PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。两者语法不完全相同。  
-- 前者尚未在github上支持嵌入，需引用外链；但其图形标识好于后者，比如类有“C”标识。  
-- 后者已支持github嵌入，但图形标识过于简单，尤其是类图标识主观感受较差。   
-不强依赖github的话，建议还是使用plantUML。
-
-### PlantUML
-
-PlantUML在github上只能使用外链，没法直接使用内嵌语法(实际markdown支持内嵌，但github未支持？)。
-
-github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。  
-本地使用时，推荐VScode中安装PlantUML插件。
-
-### Mermaid
-
-Mermaid已支持github上直接使用markdown内嵌，如：
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+[plantUML及Mermaid](../tools/README.md)
 
 # 参考文档
 1. [UML中类之间的六大关系](https://blog.csdn.net/ruren1/article/details/81584232?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control)
@@ -91,10 +69,6 @@ graph TD;
 3. [UML类图的箭头含义](https://www.jianshu.com/p/8969ab8c48c7)
 4. [C++继承和派生简明教程](http://c.biancheng.net/view/2264.html)
 5. [C++ UML关系总结](https://www.daimajiaoliu.com/daima/47192348b900403)
-6. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
-7. [PlantText](https://www.planttext.com/)：UML在线绘制
-8. [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
-9. [Mermaid官网](https://mermaid-js.github.io/mermaid/#/)
 
 ----
 
