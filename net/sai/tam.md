@@ -145,3 +145,11 @@ graph TD;
         TAM_INT-->TAM;
 ```
 
+#### 数据获取API调用实例
+继续借用示例一中的模型：两个event、一个telementry绑定到TAM，TAM对象attach到queue对象。  
+调用数据获取API有两种方式
+- Query on a TAM object：返回绑定到TAM的所有源对象(port，vlan和queue)的数据；属于粗粒度的查询。
+- Query on a source object：只返回指定的源对象的数据；属于细粒度的查询。
+
+
+
