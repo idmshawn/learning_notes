@@ -4,12 +4,6 @@
 SONIC或NOS如何调用SAI API创建对象、绑定数据源对象以及调用`sai_tam_telemetry_get_data`获取源对象或TAM对象的telementry数据。  
 适配SAI API的厂商也可从文档的示例中揣摩出厂商应如何实现SAI的API。
 
-Telementry、INT、DTEL、TAM的区别？
-- Telementry：运维标准及协议；
-- INT：Inband Network Telemetry，INT对象包含IFA、IOAM等？
-- DTEL：Data Plane Telemetry，Barefoot于2017年提出，SAI支持DTEL相关接口；
-- TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
-
 # 数据模型
 #### 数据获取模型
 - Push：发布(publish)/订阅(subscribe)机制；
