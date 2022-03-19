@@ -2,7 +2,7 @@
 
 Telementry、INT、DTEL、TAM的区别？
 - Telementry：运维标准？
-- INT：Inband Network Telemetry，
+- INT：Inband Network Telemetry，INT对象包含IFA、IOAM等；
 - DTEL：Data Plane Telemetry，SAI提出？
 - TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
@@ -40,18 +40,19 @@ sai_status_t sai_tam_telemetry_get_data(
 
 #### TAM对象
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节。   
-不同对象之间是聚合关系，创建时绑定。 
+不同对象之间是聚合关系，创建时绑定。   
+
 ##### 对象功能
 |对象|功能描述|成员举例|
 |--|--|--|
 |TAM_MATH_FUNC|计算公式|几何平均值/代数平均值/均值/报文速率计算等|
-|TAM_TEL_TYPE|telementry类型|网元/交换/网板/逐流/逐包|
-|TAM_TRANSPORT|传输方式|UDP or GRPC|
-|TAM_COLLECTOR|数据收集||
+|TAM_TEL_TYPE|telementry类型|网元(如热、光、交换连接)/交换(如路由、端口、队列统计)/网板/逐流/逐包|
+|TAM_TRANSPORT|传输方式|UDP/gRPC/Mirror|
+|TAM_COLLECTOR|数据收集|可设置SIP/DIP/DSCP值|
 |TAM_EVENT|超出阈值后上报事件||
-|TAM_REPORT|报告类型|histogram/GPB/JSON/THRIFT|
+|TAM_REPORT|报告类型|histogram/GPB/JSON/THRIFT等|
 
-##### 示例一  
+##### 示例一：一个TAM对象含多个Event和Telementry对象  
 一个TAM对象中包含多个event和telementry对象时：
 - Flow stats: 流统计
 - Event1：丢包超比例触发事件；生成simple report；
@@ -85,7 +86,7 @@ graph TD;
     TAM_EVENT_ACTION-->TAM_EVENT2;
 ```
 
-###### Event1、Event2和telmentry聚合为TAM(见10.1.5)
+###### Event1、Event2和telmentry聚合为TAM(见10.1.5)，TAM对象attach到队列对象
 ```mermaid
 graph TD;
     TAM_EVENT1-->TAM;
@@ -95,10 +96,6 @@ graph TD;
 ```
 
 "This will conclude the creation of a TAM SAI object which is responsible for managing event1, event2 and set of data attributes specified in telemetry type object. Telemetry data set is specified in the protobuf file. Here is an example of port data set." (数据源示例见10.1.5)
-
-##### 示例二
-![image](https://user-images.githubusercontent.com/61963619/159005650-52f7d71a-000d-4bef-9d02-d7bbfb02d775.png)
-
 
 #### 对象绑定
 数据由switch中的data source生成；TAM对象需绑定到数据源上。
@@ -130,6 +127,24 @@ INT是逐包逐流的数据收集。基于包的数据收集有两种构造形�
 - 发送：基于IFA/IOAM/Extn配置识别报文，给识别出的报文插入metadata；
 - 终结：终结带metadata的报文。
 
+##### 示例二：创建INT会话
+![image](https://user-images.githubusercontent.com/61963619/159005650-52f7d71a-000d-4bef-9d02-d7bbfb02d775.png)
+
+- SAI_ACL_ACTION_TYPE_INT_INSERT可用于以下场景  
+"ACL group specifies the action on the matched traffic. If the incoming traffic has IFA/IOAM header present then pipeline will **insert metadata** only. If the incoming traffic is without IOAM/IFA header then pipeline will **insert IOAM/IFA header plus metadata**."
+- SAI_ACL_ACTION_TYPE_INT_DELETE用于终结INT处理的流量
+
+###### TAM_INT构造(见10.3)
+```mermaid
+graph TD;
+        ACL_TABLE-->ACL_ENTRY;
+        TAM_TRANSPORT-->TAM_COLLECTOR;
+        ACL_ENTRY-->TAM_INT;
+        TAM_INT_SAMPLEPACKET-->TAM_INT;
+        TAM_COLLECTOR-->TAM_INT;
+        TAM_REPORT-->TAM_INT;
+        TAM_INT-->TAM;
+```
 
 # Data Plane Telemetry (DTEL)
 [源文档](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
