@@ -1,4 +1,6 @@
-# 基本概念
+
+# TAM基本概念
+[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
 
 Telementry、INT、DTEL、TAM的区别？
 - Telementry：运维标准？
@@ -6,10 +8,7 @@ Telementry、INT、DTEL、TAM的区别？
 - DTEL：Data Plane Telemetry，SAI提出？
 - TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
-# TAM
-[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
-
-## 数据模型
+# 数据模型
 #### 数据获取模型
 - Push：发布(publish)/订阅(subscribe)机制；
 - Pull：仍存在通过pull立即显示数据的需求。SAI提供一个API支持多种不同的数据。
@@ -112,7 +111,7 @@ graph TD;
 
 GPB文件，.proto后缀的文件。  
 
-## 配置
+# 配置
 #### 如何新增数据属性
 
 #### 如何新增Event
@@ -145,8 +144,4 @@ graph TD;
         TAM_REPORT-->TAM_INT;
         TAM_INT-->TAM;
 ```
-
-# Data Plane Telemetry (DTEL)
-[源文档](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
-
 
