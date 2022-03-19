@@ -7,7 +7,7 @@ SONIC或NOS如何调用SAI API创建对象、绑定数据源对象以及调用`s
 Telementry、INT、DTEL、TAM的区别？
 - Telementry：运维标准及协议；
 - INT：Inband Network Telemetry，INT对象包含IFA、IOAM等？
-- DTEL：Data Plane Telemetry，业界概念；
+- DTEL：Data Plane Telemetry，Barefoot于2017年提出，SAI支持DTEL相关接口；
 - TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
 # 数据模型
