@@ -41,6 +41,15 @@ sai_status_t sai_tam_telemetry_get_data(
 #### TAM对象
 SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系见3.2节。   
 不同对象之间是聚合关系，创建时绑定。 
+##### 对象功能
+|对象|功能描述|成员举例|
+|--|--|--|
+|TAM_MATH_FUNC|计算公式|几何平均值/代数平均值/均值/报文速率计算等|
+|TAM_TEL_TYPE|telementry类型|网元/交换/网板/逐流/逐包|
+|TAM_TRANSPORT|传输方式|UDP or GRPC|
+|TAM_COLLECTOR|数据收集||
+|TAM_EVENT|超出阈值后上报事件||
+|TAM_REPORT|报告类型|histogram/GPB/JSON/THRIFT|
 
 ##### 示例一  
 一个TAM对象中包含多个event和telementry对象时：
