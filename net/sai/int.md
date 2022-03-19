@@ -1,4 +1,5 @@
 # INT
+P4.org与2015年提出，Alibaba, Arista, CableLabs, Cisco Systems, Dell, Intel, Marvell, Netronome, VMware等公司均有贡献。最新版2.1标准2020-11-11发布。
 
 ## 参考
 1. [In-band Network Telemetry (INT) Dataplane Specification](https://p4.org/p4-spec/docs/INT_v2_1.pdf)
