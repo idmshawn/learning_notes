@@ -1,11 +1,13 @@
 
 # TAM基本概念
-[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)
+[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)介绍了SAI的API如何组织TAM对象。  
+SONIC或NOS如何调用SAI API创建对象、绑定数据源对象以及调用`sai_tam_telemetry_get_data`获取源对象或TAM对象的telementry数据。  
+适配SAI API的厂商也可从文档的示例中揣摩出厂商应如何实现SAI的API。
 
 Telementry、INT、DTEL、TAM的区别？
-- Telementry：运维标准？
-- INT：Inband Network Telemetry，INT对象包含IFA、IOAM等；
-- DTEL：Data Plane Telemetry，SAI提出？
+- Telementry：运维标准及协议；
+- INT：Inband Network Telemetry，INT对象包含IFA、IOAM等？
+- DTEL：Data Plane Telemetry，业界概念；
 - TAM：SAI Telemetry and Monitoring (TAM)，SAI提出；
 
 # 数据模型
