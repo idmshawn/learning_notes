@@ -42,10 +42,12 @@ SAI提供的API均是按TAM各层次对象粒度的，各层次间对象关系�
 |--|--|--|
 |TAM_MATH_FUNC|计算公式|几何平均值/代数平均值/均值/报文速率计算等|
 |TAM_TEL_TYPE|telementry类型|网元(如热、光、交换连接)/交换(如路由、端口、队列统计)/网板/逐流/逐包|
-|TAM_TRANSPORT|传输方式|UDP/gRPC/Mirror|
-|TAM_COLLECTOR|数据收集|可设置SIP/DIP/DSCP值|
-|TAM_EVENT|超出阈值后上报事件||
+|**TAM_TELEMETRY**|||
 |TAM_REPORT|报告类型|histogram/GPB/JSON/THRIFT等|
+|TAM_TRANSPORT|传输方式|UDP/gRPC/Mirror|
+|**TAM_COLLECTOR**|也叫Monitor，数据收集端|可设置SIP/DIP/DSCP值|
+|**TAM_EVENT**|超出阈值后上报事件||
+|**TAM_INT**|IFA/iOAM功能实现||
 
 ##### 示例一：一个TAM对象含多个Event和Telementry对象  
 一个TAM对象中包含多个event和telementry对象时：
