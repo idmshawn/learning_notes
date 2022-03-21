@@ -6,11 +6,14 @@ DTEL由以下三部分组成(三个部分可以不局限在一台switch中)：
 
 ### DTEL的telemetry报告
 - Flow Report
-  - In-band Telemetry
-  - Packet Postcard
-- Drop report
-- Queue Report
+  - In-band Telemetry：转发路径上的节点switch设备添加各自的metadata到telemetry头中，报文从source节点、经过transit节点，到sink节点；sink节点提取telemetry信息，转换为telemetry报告后给Monitor；
+  - Packet Postcard：每个switch设备自行判决，并独立地将报文上报到monitor；Postcard方式无需改报文(不需要插入metadata)；
+- Drop report：switch将上行pipe、下行pipe或交换网fabric的丢包信息发到monitor，信息包含原始报文头、switch metadata和Drop reason；
+- Queue Report：可配置指定队列上报拥塞或尾丢弃消息；根据队列深度或时延阈值判断是否拥塞。   
 
+**DTEL的queue report可以作为TAM snapshot的互补**：
+- TAM snapshot在超阈值时上报成块的队列统计数据；
+- DTEL的queue report可以基于每个报文在拥塞开始时发送消息，以便monitor能看到队列构造的逐包信息。
 
 
 ## 参考
