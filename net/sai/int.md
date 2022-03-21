@@ -11,6 +11,12 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 # IFA(Inband Flow Analyzer)
 2018年提出，Broadcom, Arista, Alibaba, Huawei, Fujian Ruijie等公司参与贡献。最新版至2022年。
 
+实现
+- IFA delivers Inband Telemetry;
+- Each hop adds its metadata to the user packet in the dataplane;
+- Metadata is gathered from each node in a cumulative manner;
+- Last network node removes the metadata and sends one consolidated report to the collector application;
+
 ## 参考
 1. [IFA的IETF草案](https://datatracker.ietf.org/doc/draft-kumar-ippm-ifa/)
 2. [Inband Flow Analyzer (IFA) 2.0 Probe for Real-Time Flow Monitoring](https://www.juniper.net/documentation/us/en/software/junos/flow-monitoring/topics/topic-map/ifa2.0-probe-for-real-time-performance-monitoring.html)
