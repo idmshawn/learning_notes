@@ -25,7 +25,7 @@ Telemetry的管理面、控制面实现一般由OTT厂商或运营商实现；�
 不同的芯片厂商主推根据各自的数据面Telementry实现，SAI上主要支持了博通的TAM和Barefoot的DTEL：
 - [DTEL](dtel.md)：Data Plane Telemetry，Barefoot于2017年提出的数据面telementry适配方案，SAI支持DTEL相关API；
 - [TAM](tam.md)：SAI Telemetry and Monitoring，Broadcom于2017年提出的数据面telementry适配方案，SAI支持TAM相关API；
-- [IPFIX](ipfix.md)：IETF标准，基于思科提出的NetFlow v9，只能基于流做telemetry；SAI的`sai_tam_report_type_t`支持IPFIX和sFlow；
+- [NetFlow(IPFIX)](ipfix.md)：IETF标准，基于思科提出的NetFlow v9，只能基于流做telemetry；SAI的`sai_tam_report_type_t`支持IPFIX和sFlow；
 
 ## 参考
 1. TELEMETRY AND MONITORING 2.0 PROPOSAL DISCUSSION OCP SAI；
