@@ -29,5 +29,8 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 ### 参考
 
 ## IFIT(In-situ Flow Information Telemetry)
+华为及中国移动于2018年提出的逐流监测方案。
 
 ### 参考
+1. [In-situ Flow Information Telemetry Framework](https://tools.ietf.org/id/draft-song-opsawg-ifit-framework-00.html)
+2. [Overview of iFIT](https://support.huawei.com/enterprise/en/doc/EDOC1100125460/8d3f9465/overview-of-ifit)
