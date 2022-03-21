@@ -16,12 +16,12 @@ INT vs. Postcard，或见DTEL中的例子[见文档2]；
   - Analyzer needs additional steps to correlate mirrored packet of same flow acress multiple hops.
 
 常见的[Inband Telemetry](int.md)标准含以下几种：
-|标准|全称|主导厂商|提出时间|最后更新时间|
-|--|--|--|--|--|
-|INT|Inband Network Telemetry|Barefoot|2015|2020.11|
-|iOAM|Inband OAM，后更名为In-situ OAM|Cisco|2016.11||
-|IFA|Inband Flow Analyzer|BroadComm|2018|2022|
-|iFIT|In-situ Flow Information Telemetry|Huawei|2018||
+|标准|全称|主导厂商|提出时间|最后更新时间|Collector(Monitor)端软件|
+|--|--|--|--|--|--|
+|INT|Inband Network Telemetry|Barefoot|2015|2020.11|Deep Insight Analytics|
+|iOAM|Inband OAM，后更名为In-situ OAM|Cisco|2016.11||Tetration Analytics|
+|IFA|Inband Flow Analyzer|BroadComm|2018|2022|AIOps|
+|iFIT|In-situ Flow Information Telemetry|Huawei|2018||iMaster NCE|
 
 ## Data Plane Telemetry
 Telemetry的管理面、控制面实现一般由OTT厂商或运营商实现；芯片厂商提供数据面的物理芯片和SDK软件，主要关心数据面Telemetry，提供部分控制面支持。  
