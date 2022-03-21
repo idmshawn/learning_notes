@@ -30,7 +30,7 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 
 ## iFIT(In-situ Flow Information Telemetry)
 华为及中国移动于2018年提出的in-band telemtry方案。支持逐包的高精度监测。  
-上报方式为postcard形式，而非stack metadata形式。
+上报方式为Postcard模式，而非INT、IFA和iOAM的stack metadata形式(或称Passport模式)。
 
 ### 参考
 1. [In-situ Flow Information Telemetry Framework](https://tools.ietf.org/id/draft-song-opsawg-ifit-framework-00.html)
