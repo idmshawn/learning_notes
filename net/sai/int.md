@@ -11,7 +11,7 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 3. [Improving Network Monitoring and Management with Programmable Data Planes](https://opennetworking.org/news-and-events/blog/improving-network-monitoring-and-management-with-programmable-data-planes/)
 
 ## iOAM(In-Situ OAM)
-Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交INT的IETF草案，后更名为In-situ OAM；  
+Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交Inband OAM的IETF草案，后更名为In-situ OAM；  
 
 ### 参考
 1. [CiscoDevNet/iOAM](https://github.com/CiscoDevNet/iOAM)
