@@ -1,11 +1,20 @@
 
 # Telementry
 Telementry：运维标准及协议；完整的Telementry实现涵盖管理面(Management Plane)、控制面(Control Plane)和数据面(Data Plane)。
+![image](https://user-images.githubusercontent.com/61963619/159226989-2ec8f512-4828-47af-b6af-c0b9e9e1188c.png)
 
 Telementry、INT、DTEL、TAM的区别？
 ### Inband Telemetry
 在转发路径设备的报文中插入metadata数据或in-band telemtry报文头，路径上的每个设备节点都将自己的metadata信息依次插入到报文中，终点设备再统一剥掉metadata及报文头，并将相关信息上报monitor[见文档1]；  
-Inband Telemetry和postcard的区别见DTEL中的例子[见文档2]；  
+
+INT vs. Postcard，或见DTEL中的例子[见文档2]；  
+- INT: Event detect on sink node 
+  - Stack metadata according to instruction hop by hop
+  - Drop events needs special handling   
+- Postcard: Event detect on each node 
+  - Trigger report as a mirrored packet on each hop
+  - Analyzer needs additional steps to correlate mirrored packet of same flow acress multiple hops.
+
 常见的Inband Telemetry标准含以下几种：
 - [INT](int.md)：In-band Network Telemetry，P4.org于2015年提出；
 - [IFA](https://datatracker.ietf.org/doc/draft-kumar-ippm-ifa/)；
