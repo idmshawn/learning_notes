@@ -27,3 +27,7 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 ## iOAM(In-Situ OAM)
 
 ### 参考
+
+## IFIT(In-situ Flow Information Telemetry)
+
+### 参考
