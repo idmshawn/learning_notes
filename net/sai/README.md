@@ -1,6 +1,6 @@
 
 # Telementry
-Telementry：运维标准及协议；完成的Telementry实现涵盖管理面、控制面和转发面。
+Telementry：运维标准及协议；完成的Telementry实现涵盖管理面、控制面(Control Plane)和数据面(Data Plane)。
 
 Telementry、INT、DTEL、TAM的区别？
 ### Inband Telemetry
