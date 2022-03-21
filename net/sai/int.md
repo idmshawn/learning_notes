@@ -34,4 +34,4 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 
 ### 参考
 1. [In-situ Flow Information Telemetry Framework](https://tools.ietf.org/id/draft-song-opsawg-ifit-framework-00.html)
-2. [Overview of iFIT](https://support.huawei.com/enterprise/en/doc/EDOC1100125460/8d3f9465/overview-of-ifit)
+2. [（IPv6+系列电子书）IFIT](https://support.huawei.com/enterprise/zh/doc/EDOC1100195086?idPath=24030814%7C9856750%7C22715517%7C23708778%7C252772223)
