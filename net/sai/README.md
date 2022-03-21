@@ -21,7 +21,7 @@ INT vs. Postcard，或见DTEL中的例子[见文档2]；
 - [IOAM](https://github.com/CiscoDevNet/iOAM)，IETF于2019年提出；  
 
 ### Data Plane Telemetry
-Telemetry的管理面、控制面实现一般由OTT厂商或运营商独自实现；芯片厂商只提供数据面的物理芯片和SDK软件，因此，只关心数据面Telemetry。  
+Telemetry的管理面、控制面实现一般由OTT厂商或运营商实现；芯片厂商提供数据面的物理芯片和SDK软件，主要关心数据面Telemetry，提供部分控制面支持。  
 不同的芯片厂商主推根据各自的数据面Telementry实现，SAI上主要支持了博通的TAM和Barefoot的DTEL：
 - [DTEL](dtel.md)：Data Plane Telemetry，Barefoot于2017年提出的数据面telementry适配方案，SAI支持DTEL相关API；
 - [TAM](tam.md)：SAI Telemetry and Monitoring，Broadcom于2017年提出的数据面telementry适配方案，SAI支持TAM相关API；
