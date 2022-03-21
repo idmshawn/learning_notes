@@ -17,8 +17,8 @@ INT vs. Postcard，或见DTEL中的例子[见文档2]；
 
 常见的Inband Telemetry标准含以下几种：
 - [INT](int.md)：In-band Network Telemetry，Barefoot及P4.org于2015年提出INT规范；
-- [IFA](https://datatracker.ietf.org/doc/draft-kumar-ippm-ifa/)；
-- [iOAM](https://github.com/CiscoDevNet/iOAM)，Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交IETF的INT草案，后更名为In-situ OAM；  
+- IFA；
+- iOAM，Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交IETF的INT草案，后更名为In-situ OAM；  
 
 ### Data Plane Telemetry
 Telemetry的管理面、控制面实现一般由OTT厂商或运营商实现；芯片厂商提供数据面的物理芯片和SDK软件，主要关心数据面Telemetry，提供部分控制面支持。  
