@@ -11,7 +11,7 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 # IFA(Inband Flow Analyzer)
 2018年提出，Broadcom, Arista, Alibaba, Huawei, Fujian Ruijie等公司参与贡献。最新版至2022年。
 
-实现
+实现原理类似INT：
 - IFA delivers Inband Telemetry;
 - Each hop adds its metadata to the user packet in the dataplane;
 - Metadata is gathered from each node in a cumulative manner;
