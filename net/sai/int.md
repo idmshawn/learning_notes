@@ -12,6 +12,7 @@ Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方
 
 ## iOAM(In-Situ OAM)
 Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交Inband OAM的IETF草案，后更名为In-situ OAM；  
+丢包检测仅支持端到端，不支持逐跳。  
 
 ### 参考
 1. [CiscoDevNet/iOAM](https://github.com/CiscoDevNet/iOAM)
@@ -33,7 +34,8 @@ Cisco联合Facebook、Mellanox、Marvell、Barefoot于2016.11提交Inband OAM的
 
 ## iFIT(In-situ Flow Information Telemetry)
 华为及中国移动于2018年提出的in-band telemtry方案。支持逐包的高精度监测。  
-上报方式为Postcard模式，而非INT、IFA和iOAM的stack metadata形式(或称Passport模式)。
+上报方式为Postcard模式，而非INT、IFA和iOAM的stack metadata形式(或称Passport模式)。  
+支持端到端及逐跳的丢包检测。  
 
 ### 参考
 1. [In-situ Flow Information Telemetry Framework](https://tools.ietf.org/id/draft-song-opsawg-ifit-framework-00.html)
