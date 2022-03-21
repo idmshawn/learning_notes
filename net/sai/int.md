@@ -1,6 +1,6 @@
 # INT(Inband Network Telemetry)
 P4.org与2015年提出，Alibaba, Arista, CableLabs, Cisco Systems, Dell, Intel, Marvell, Netronome, VMware等公司均有贡献。最新版2.1标准2020-11-11发布。  
-Barefoot的SPRINT解决方案：**S**mart、**P**rogrammable、**R**eal Time **INT**，转发面与SDK软件结合的，针对白盒生态系统的解决方案；转发面使用P4实现可编程，SDK适配SAI的DTEL。
+Barefoot的SPRINT(**S**mart、**P**rogrammable、**R**eal Time **INT**)解决方案：转发面与SDK软件结合的，针对白盒生态系统的解决方案；转发面使用P4实现可编程，SDK适配SAI的DTEL。
 
 
 ## 参考
