@@ -15,6 +15,29 @@ DTEL由以下三部分组成(三个部分可以不局限在一台switch中)：
 - TAM snapshot在超阈值时上报成块的队列统计数据；
 - DTEL的queue report可以基于每个报文在拥塞开始时发送消息，以便monitor能看到队列构造的逐包信息。
 
+### 示例
+
+
+##### WatchList创建
+```mermaid
+graph TD;
+    INT_CFG_SESSION-->INT_WATCHLIST_ENTRY;
+    FLOW_WATCHLIST-->INT_WATCHLIST_ENTRY;
+```
+
+##### Event创建
+```mermaid
+graph TD;
+    DTEL_REPORT_SESSION-->FLOW_STATE_EVENT;
+    DTEL_REPORT_SESSION-->QUEUE_THRESHOLD_EVENT;
+    DTEL_REPORT_SESSION-->DROP_EVENT;   
+```
+
+##### DTEL对象创建
+使能endpoint  
+设置sink端口  
+
+
 
 ## 参考
 1. [SAI-Proposal-Data-Plane-Telemetry.md](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
