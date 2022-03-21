@@ -1,6 +1,6 @@
 
 # Telementry
-Telementry：运维标准及协议；完成的Telementry实现涵盖管理面、控制面(Control Plane)和数据面(Data Plane)。
+Telementry：运维标准及协议；完成的Telementry实现涵盖管理面(Management Plane)、控制面(Control Plane)和数据面(Data Plane)。
 
 Telementry、INT、DTEL、TAM的区别？
 ### Inband Telemetry
@@ -12,7 +12,8 @@ Inband Telemetry和postcard的区别见DTEL中的例子[见文档2]；
 - [IOAM](https://github.com/CiscoDevNet/iOAM)，IETF于2019年提出；  
 
 ### Data Plane Telemetry
-不同的厂商主推根据各自芯片实现的数据面Telementry，SAI上主要支持了TAM和DTEL：
+Telemetry的管理面、控制面实现一般由OTT厂商或运营商独自实现；芯片厂商只提供数据面的物理芯片和SDK软件，因此，只关心数据面Telemetry。  
+不同的芯片厂商主推根据各自的数据面Telementry实现，SAI上主要支持了博通的TAM和Barefoot的DTEL：
 - [DTEL](dtel.md)：Data Plane Telemetry，Barefoot于2017年提出的数据面telementry适配方案，SAI支持DTEL相关API；
 - [TAM](tam.md)：SAI Telemetry and Monitoring，Broadcom于2017年提出的数据面telementry适配方案，SAI支持TAM相关API；
 
