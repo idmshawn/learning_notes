@@ -40,9 +40,9 @@
 关注inc下的头文件和doc下文档即可，无子库
 
 ###### BCM适配SAI代码
-- [BCM的SAI适配(开源)](https://github.com/Broadcom-Switch/SAI/releases)  
-- [BCM OpenNSL(开源)](https://github.com/Broadcom-Switch/OpenNSL)  
-[API手册](http://broadcom-switch.github.io/OpenNSL/doc/html/index.html)
+- [BCM的SAI适配(开源)](https://github.com/Broadcom-Switch/SAI/releases)
+- [BRCM SDK开源](https://github.com/Broadcom-Network-Switching-Software/OpenBCM)  
+- [OpenNSL API手册](http://broadcom-switch.github.io/OpenNSL/doc/html/index.html)
 
 ###### Mellanox适配SAI代码
 - [Mellanox的SAI适配(开源)](https://github.com/Mellanox/SAI-Implementation)
