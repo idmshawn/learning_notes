@@ -1,7 +1,7 @@
 
 # TAM基本概念
-[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)介绍了SAI的API如何组织TAM对象。  
-SONIC或NOS如何调用SAI API创建对象、绑定数据源对象以及调用`sai_tam_telemetry_get_data`获取源对象或TAM对象的telementry数据。  
+最早由Broadcom Inc于2016.12提出SAI Telemetry and Monitoring 1.0；2018年支持到TAM 2.0；2019年Broadcom与Barefoot添加支持了IFA、iOAM作为INT的API。  
+官方文档[SAI-Proposal-TAM2.0-v2.0.docx](https://github.com/opencomputeproject/SAI/tree/master/doc/TAM)介绍了SAI的API如何组织TAM对象；SONIC或NOS如何调用SAI API创建对象、绑定数据源对象以及调用`sai_tam_telemetry_get_data`获取源对象或TAM对象的telementry数据。  
 适配SAI API的厂商也可从文档的示例中揣摩出厂商应如何实现SAI的API。
 
 # 数据模型
