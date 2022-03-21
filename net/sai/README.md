@@ -18,14 +18,14 @@ INT vs. Postcard，或见DTEL中的例子[见文档2]；
 常见的Inband Telemetry标准含以下几种：
 - [INT](int.md)：In-band Network Telemetry，P4.org于2015年提出；
 - [IFA](https://datatracker.ietf.org/doc/draft-kumar-ippm-ifa/)；
-- [IOAM](https://github.com/CiscoDevNet/iOAM)，IETF于2019年提出；  
+- [iOAM](https://github.com/CiscoDevNet/iOAM)，IETF于2019年提出；  
 
 ### Data Plane Telemetry
 Telemetry的管理面、控制面实现一般由OTT厂商或运营商实现；芯片厂商提供数据面的物理芯片和SDK软件，主要关心数据面Telemetry，提供部分控制面支持。  
 不同的芯片厂商主推根据各自的数据面Telementry实现，SAI上主要支持了博通的TAM和Barefoot的DTEL：
 - [DTEL](dtel.md)：Data Plane Telemetry，Barefoot于2017年提出的数据面telementry适配方案，SAI支持DTEL相关API；
 - [TAM](tam.md)：SAI Telemetry and Monitoring，Broadcom于2017年提出的数据面telementry适配方案，SAI支持TAM相关API；
-- [NetFlow(IPFIX)](ipfix.md)：IETF标准，基于思科提出的NetFlow v9，只能基于流做telemetry；SAI的`sai_tam_report_type_t`支持IPFIX和sFlow；
+- [NetFlow(IPFIX)](ipfix.md)：IETF标准，基于思科2016提出的NetFlow v9，早期技术，只能基于流做telemetry；SAI的`sai_tam_report_type_t`支持IPFIX和sFlow；
 
 ## 参考
 1. TELEMETRY AND MONITORING 2.0 PROPOSAL DISCUSSION OCP SAI；
