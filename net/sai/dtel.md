@@ -17,6 +17,15 @@ DTEL由以下三部分组成(三个部分可以不局限在一台switch中)：
 
 ### 示例
 
+##### 对象功能
+|对象|功能描述|成员举例|
+|--|--|--|
+|DTEL|DTEL对象属性|含绑定的switchID，endpoint使能，sink节点端口号等|
+|REPORT_SESSION|消息上报会话属性，主要含monitor目的地址|含monitor的IP、端口号、上报消息截断字节数等|
+|EVENT|指定监测事件的类型|含flow、queue和drop三种event类型|
+|QUEUE_REPORT|队列上报时的队列属性|含队列ID、时延阈值、是否尾丢弃等|
+|INT|flow上报时，INT配置属性|含INT会话最大跳数、INT头收集哪些信息等|
+|WatchList|无专用对象，直接使用ACL table和ACL entry创建watchlist|||
 
 ##### WatchList创建
 ```mermaid
@@ -36,8 +45,6 @@ graph TD;
 ##### DTEL对象创建
 使能endpoint  
 设置sink端口  
-
-
 
 ## 参考
 1. [SAI-Proposal-Data-Plane-Telemetry.md](https://github.com/opencomputeproject/SAI/blob/master/doc/DTEL/SAI-Proposal-Data-Plane-Telemetry.md)
