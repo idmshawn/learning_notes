@@ -8,7 +8,7 @@
 [AutoTest](http://autotest.github.io/)是用于测试linux内核的开源软件，依赖python。  
 [AutoTest白皮书](https://github.com/autotest/autotest)。
 
-### Docker下直接插ko
+### Docker下直接插ko?
 
 
 ### 参考
