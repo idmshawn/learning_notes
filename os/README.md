@@ -14,6 +14,8 @@
 - [内存映射](memory.md)
 - [线程通信:epoll](epoll.md)
 
+### [Linux内核测试](selftest.md)
+
 ### 参考
 1. 在线课程：[Linux内核分析及应用 陈莉君(西电)](https://www.xuetangx.com/course/XIYOU08091001441/1516763)
 2. Linux内核参考书：Linux内核设计与实现
