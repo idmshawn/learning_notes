@@ -8,7 +8,7 @@
 [AutoTest](http://autotest.github.io/)是用于测试linux内核的开源软件，依赖python。  
 [AutoTest白皮书](https://github.com/autotest/autotest)。
 
-缺点：完整测试框架，较重型，适合集成测试，而非白盒测试。
+缺点：完整自动化测试框架，略重型，适合集成测试，而非白盒测试。
 
 ### Docker下直接插ko?
 
