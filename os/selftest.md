@@ -13,3 +13,4 @@
 
 ### 参考
 1. [Linux 内核的测试和调试](https://www.cnblogs.com/sophiascpn/p/13735820.html)
+2. [Autotest自动化测试框架研究](https://m.fx361.com/news/2016/0514/8704404.html)
