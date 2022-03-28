@@ -8,6 +8,8 @@
 ### 设计思路
 - 面向对象设计
 - [领域驱动设计(DDD)](ddd.md)
+- [领域专用语言(DSL)](dsl.md)
+
 ### 设计原则
 - [简单设计原则](simple_design.md)
 - [SOLID原则](simple_design.md)
