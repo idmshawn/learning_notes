@@ -2,35 +2,33 @@
 |用途|命令|详细说明|
 |----|-----|----|
 |查找|`grep -rn --color funcName *` | |
-|查找|`find -name "*.[c.h]" ! xargs grep funcName` |！替换为竖杠 |
+|查找|`find -name "*.[c.h]" \| xargs grep funcName` | |
 |增强版查找| ||
-|查找并替换|find -name "*.lua" ! xargs sed -i 's/require("FeiBaseComm")/require("nphal_base")/g' |！替换为竖杠. 将所有lua文件中的require("FeiBaseComm")替换为require("nphal_base") |
-|文件传输|scp /home/mydirecoty/log.txt root@10.137.81.26:/home/remotedirecoty|将本地文件拷贝到远程机器 |
-|文件传输|scp 10.137.81.26:/home/remotedirecoty/log.txt /home/mydirecoty|将远程服务器上的文件复制到本机 |
+|查找并替换|`find -name "*.lua" \| xargs sed -i 's/require("FeiBaseComm")/require("nphal_base")/g'` |将所有lua文件中的require("FeiBaseComm")替换为require("nphal_base") |
+|文件传输|`scp /home/mydirecoty/log.txt root@10.111.81.25:/home/remotedirecoty`|将本地文件拷贝到远程机器 |
+|文件传输|`scp 10.111.81.25:/home/remotedirecoty/log.txt /home/mydirecoty`|将远程服务器上的文件复制到本机 |
 |文件传输|scp -r |拷贝整个目录 |
-|文件ftp|mget *.log.zip | 拷贝多个以log.zip为后缀的文件|
-|so依赖|objdump -x libfeilfeagt_cortexa15le.so ! grep NEED |！替换为竖杠 |
-|so依赖|readelf -d xxx.so ||
-|so依赖|ldd /usr/local/php/bin/php |利用ldd查看可执行程序的依赖库|
-|查看文件头|readelf -h libnp_xxx.so  |查看二进制文件文件头，可看出是32位还是64位 |
-|反汇编|objdump -lG libfei_drv_srv_nphal_588x.dbg  -S libfei_drv_srv_nphal_588x_arm64.so -m arm > disammble.txt | |
-|反汇编|objdump -d -l -S xxx.so  | |
-|格式转换|find -type f ! xargs dos2unix | ！替换为竖杠. winddows文件格式批量转换为linux格式|
-|查看磁盘空间|du -s * ！sort -rn ！head -10|！替换为竖杠.“-a” ：显示每一个文件的磁盘使用量;“-s”：仅显示汇总的使用量;“-k”：报告结果以K字节为单位 |
-|查看目录下空间|du -sh|查看当前目录下各目录占用的文件大小 |
-|创建快捷方式|ln -s /usr1/code/release release|usr1下为源目录， 第二个参数为新建的快捷方式目录|
-|统计文件计数|ls -l ！ grep "^-" ！ wc -l|ls -l长列表输出该目录下文件信息(注意这里的文件，不同于一般的文件，可能是目录、链接、设备文件等)；grep "^-"将长列表输出信息过滤一部分，只保留一般文件，如果只保留目录就是 ^d； wc -l统计输出信息的行数，因为已经过滤得只剩一般文件了，所以统计结果就是一般文件信息的行数，又由于一行信息对应一个文件，所以也就是文件的个数。|
-|so调用方式查看是否有未定义符号|gcc -o test test.c -lenp_pacific5 -L./ |libenp_pacific5.so为被依赖的so，test.c中main函数为主调函数 |
-|编译携带符号表命令|gcc -o test -g test.c | -g参数指定编译时携带符号表，编译出的二进制便于gdb调试；[其它常用参数](compile_make.md) |
-|g++按C++11标准编译| g++ -std=c++11 test.cpp -o test | 即使支持了c++11的gcc 4.8以上版本，默认仍按c++98编译，vector不支持按列表初始化，添加-std参数指定按c++11编译。[link](http://3ms.huawei.com/km/blogs/details/6488211) |
+|文件ftp|`mget *.log.zip` | 拷贝多个以log.zip为后缀的文件|
+|so依赖|`objdump -x libxxx.so \| grep NEED` ||
+|so依赖|`readelf -d libxxx.so` ||
+|so依赖|`ldd /usr/local/php/bin/php`|利用ldd查看可执行程序的依赖库|
+|查看文件头|`readelf -h libxxx.so`|查看二进制文件文件头，可看出是32位还是64位 |
+|反汇编|`objdump -lG libxxx.dbg  -S libxxx.so -m arm > disammble.txt`| |
+|反汇编|`objdump -d -l -S xxx.so`| |
+|格式转换|`find -type f \| xargs dos2unix` | winddows文件格式批量转换为linux格式|
+|查看磁盘空间|`du -s * \|sort -rn \|head -10`|“-a” ：显示每一个文件的磁盘使用量;“-s”：仅显示汇总的使用量;“-k”：报告结果以K字节为单位 |
+|查看目录下空间|`du -sh`|查看当前目录下各目录占用的文件大小 |
+|创建快捷方式|`ln -s /usr1/code/release release`|usr1下为源目录， 第二个参数为新建的快捷方式目录|
+|统计文件计数|`ls -l \| grep "^-" \| wc -l`|ls -l长列表输出该目录下文件信息(注意这里的文件，不同于一般的文件，可能是目录、链接、设备文件等)；grep "^-"将长列表输出信息过滤一部分，只保留一般文件，如果只保留目录就是 ^d； wc -l统计输出信息的行数，因为已经过滤得只剩一般文件了，所以统计结果就是一般文件信息的行数，又由于一行信息对应一个文件，所以也就是文件的个数。|
+|so调用方式查看是否有未定义符号|`gcc -o test test.c -lxxx -L./` |libxxx.so为被依赖的so，test.c中main函数为主调函数|
+|编译携带符号表命令|`gcc -o test -g test.c` | -g参数指定编译时携带符号表，编译出的二进制便于gdb调试；[其它常用参数](compile_make.md) |
+|g++按C++11标准编译|`g++ -std=c++11 test.cpp -o test` | 即使支持了c++11的gcc 4.8以上版本，默认仍按c++98编译，vector不支持按列表初始化，添加-std参数指定按c++11编译。[link](http://3ms.huawei.com/km/blogs/details/6488211) |
 |独立so编译| gcc -fPIC -shared -o libapp.so -g app.c |  |
 |依赖独立so的二进制编译| gcc main.c -L. -lapp  | 生成a.out，其中-lapp表示要链接libapp.so。-L.表示搜索要链接的库文件时包含当前路径。 |
-|查找符号所在so| `nm -A -D *.so ! grep iof_bootinfo_printf` | ！替换为竖杠 |
-|搜索多个日志压缩包中的指定字符| zgrep "CMIC" *.zip|  |
-
+|查找符号所在so| `nm -A -D *.so \| grep foo` ||
+|搜索多个日志压缩包中的指定字符| `zgrep "ZHANGSAN" *.zip`|  |
 
 # VIM常用命令
-
 
 |用途|命令格式|详细说明|
 |----|-----|----|
@@ -58,13 +56,13 @@
 
 |用途|命令格式|详细说明|
 |----|-----|----|
-|下载代码|git clone ssh://git@source.huawei.com:2222/Router_V8/nw_router_v8_main.git| NA|
+|下载代码|git clone ssh://git@xxx.com:2222/xxx/xxx.git| NA|
 |子仓下载|git submodule update --init --recursive --remote --merge| NA|
 |子仓更新|git submodule update --init --“repoName”| 指定某个子仓|
 |分支切换|git checkout -b branchName remotes/origin/branchName | NA|
 |放弃修改|git checkout -- xxxx | 放弃本地修改的文件或目录|
 |撤销文件|git rm -r --cached fileName | 撤销git add的文件|
-|强制同步|git fetch origin; git reset --hard origin/master; git push -f origin br_lxy_0709 | 在本地主仓目录下依次执行三个命令，清除本地残留的主子仓关系，强制与master同步。|
+|强制同步|git fetch origin; git reset --hard origin/master; git push -f origin br_0709 | 在本地主仓目录下依次执行三个命令，清除本地残留的主子仓关系，强制与master同步。|
 |分支删除|git branch -d branchName | 删除本地分支|
 |同步主线|git merge origin/OrigName | 先切换到本地分支，执行merge命令，同步OrigName后提交|
 |同步xxx分支代码|git submodule foreach git pull origin 被同步分支名；git submodule foreach git push origin 自己的分支名 | |
@@ -79,12 +77,12 @@
 # GDB常用命令
 |用途|命令格式|详细说明|
 |----|-----|----|
-|条件断点|b FEI_TBLM_ADD if $r0==0x55e| 函数第一个入参uiTblId为0x55e时断点|
-|指定线程断点|b osm_chrparse.cpp thread 69| 默认断点所有线程均设置， 多线程调用同一函数可能会在其它线程断住。需要指定线程断点跟踪。|
-|寄存器显示|info reg| 函数断点后查看函数入参， R0对应第一个参数; finish退出函数时， R0为函数返回值|
-|寄存器显示|x /4x 0xb037899| 十六进制显示指定地址中的4个word|
-|变量监控|(gdb) watch *(int*)0x3786aa30| 监控0x3786aa30地址的内容变化|
-|watch查看与删除|info watchpoints ； 删除del break| 没有删除watchpoint，删除断点即可|
-|查看so地址|info sharedlibra![image.png](https://rnd-isourceb.huawei.com/images/NJ/20210313/9d2034c2-221d-4217-a556-4bbbcd718629/image.png)ry| |
-|手动加载符号表|add-symbol-file /opt/vrpv8/tmp/libfeisrv5883_ne5ke_ppc.dbg 0x09516810| |
+|条件断点|`b FuncA if $r0==0x55e`| 函数第一个入参devId为0x55e时断点|
+|指定线程断点|`b test.cpp thread 69`| 默认断点所有线程均设置， 多线程调用同一函数可能会在其它线程断住。需要指定线程断点跟踪。|
+|寄存器显示|`info reg`| 函数断点后查看函数入参， R0对应第一个参数; finish退出函数时， R0为函数返回值|
+|寄存器显示|`x /4x 0xb037899`| 十六进制显示指定地址中的4个word|
+|变量监控|`(gdb) watch *(int*)0x3786aa30`| 监控0x3786aa30地址的内容变化|
+|watch查看与删除|`info watchpoints`; 删除del break| 没有删除watchpoint，删除断点即可|
+|查看so地址|`info sharedlibrary`| |
+|手动加载符号表|`add-symbol-file /opt/xxx/xxx/libxxx.dbg 0x09516810`| |
 |信号不中断|handle SIG39 nostop noprint|gdb执行中遇到SIG39信号时不中断|
