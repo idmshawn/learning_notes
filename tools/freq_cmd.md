@@ -1,4 +1,4 @@
-# linux常用命令
+# LINUX常用命令
 |用途|命令|详细说明|
 |----|-----|----|
 |查找|`grep -rn --color funcName *` | |
@@ -27,6 +27,7 @@
 |依赖独立so的二进制编译| gcc main.c -L. -lapp  | 生成a.out，其中-lapp表示要链接libapp.so。-L.表示搜索要链接的库文件时包含当前路径。 |
 |查找符号所在so| `nm -A -D *.so \| grep foo` ||
 |搜索多个日志压缩包中的指定字符| `zgrep "ZHANGSAN" *.zip`|  |
+|LINUX服务查看|`service smb status`|status替换为restart表示重启服务|
 
 # VIM常用命令
 
