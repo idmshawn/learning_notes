@@ -2,19 +2,29 @@
 # Shell
 
 ### 常用符号
-|符号|含义|示例|说明|
-|--|--|--|--|
-|`<`|重定向符(redirector)，输入重定向|||
-|`>`|重定向符(redirector)，输出重定向||`program > file`可将program的标准输出修改为file[注1]|
-|`>>`|附加到文件||`program >> file`可将program的标准输出附加到file的结尾处|
-|`\|`|管道符||`program1 \| program2`可将program1的标准输出修改为program2的标准输入|
-|`&`||||
-|`/dev/null`|位桶(bit bucket)，传送到此文件的数据都会被系统丢掉|||
-|`/dev/tty`|当程序打开此文件时，UNIX会自动将它重定向到一个终端|||
+|符号|含义|使用说明|
+|--|--|--|
+|`<`|重定向符(redirector)，输入重定向||
+|`>`|重定向符(redirector)，输出重定向|`program > file`可将program的标准输出修改为file[注1]|
+|`>>`|附加到文件|`program >> file`可将program的标准输出附加到file的结尾处|
+|`\|`|管道符|`program1 \| program2`可将program1的标准输出修改为program2的标准输入|
+|`&`|后台执行|`&`符号一般放在指令行的最后端，表示将该指令列放入后台中工作|
+|`/dev/null`|位桶(bit bucket)，传送到此文件的数据都会被系统丢掉||
+|`/dev/tty`|当程序打开此文件时，UNIX会自动将它重定向到一个终端||
+|`0`|文件描述符[注2]，标准输入stdin|默认值为 键盘|
+|`1`|文件描述符，标准输出stdout|默认值为 屏幕|
+|`2`|文件描述符，标准错误输出stderr|默认值为 屏幕|
 
 注：
 1. 重定向符在目的文件不存在时，会新建一个；若目的文件已存在，它就会被覆盖掉，原本的数据都会丢失。
+2. 文件描述符(File Descriptor)，用一个数字（通常为0-9）来表示一个文件；
 
+示例  
+通常在执行一个命令时，如果不想打印命令执行的结果(包括正确或错误的结果信息)，则通常使用`command >/dev/null 2>&1`。  
+如`tar -zvcf test1.tar.gz test1 > /dev/null 2>&1`代表将stdout导向到/dev/null，而后者代表将stderr重定向到stdout，或者说stderr的输出等同于stdout。由于stdout已经被重定向到/dev/null，那么这意味着stderr也被重定向到了这个位置。  
+
+### 参考
+1. [Shell脚本中常用的特殊符号](https://www.cnblogs.com/kevingrace/p/5896386.html)
 
 # 正则表达式(Regular Expression)
 UNIX中sed和grep命令都支持正则表达式，主要用于字符串和特殊字符的匹配和处理。
