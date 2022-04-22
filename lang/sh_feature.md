@@ -1,6 +1,20 @@
 
 # Shell
 
+### 常用符号
+|符号|含义|示例|说明|
+|--|--|--|--|
+|`<`|重定向符(redirector)，输入重定向|||
+|`>`|重定向符(redirector)，输出重定向||`program > file`可将program的标准输出修改为file[注1]|
+|`>>`|附加到文件||`program >> file`可将program的标准输出附加到file的结尾处|
+|`\|`|管道符||`program1 \| program2`可将program1的标准输出修改为program2的标准输入|
+|`&`||||
+|`/dev/null`|位桶(bit bucket)，传送到此文件的数据都会被系统丢掉|||
+|`/dev/tty`|当程序打开此文件时，UNIX会自动将它重定向到一个终端|||
+
+注：
+1. 重定向符在目的文件不存在时，会新建一个；若目的文件已存在，它就会被覆盖掉，原本的数据都会丢失。
+
 
 # 正则表达式(Regular Expression)
 UNIX中sed和grep命令都支持正则表达式，主要用于字符串和特殊字符的匹配和处理。
