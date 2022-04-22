@@ -25,6 +25,7 @@
 
 ### 参考
 1. [Shell脚本中常用的特殊符号](https://www.cnblogs.com/kevingrace/p/5896386.html)
+2. [Linux Shell 1>/dev/null 2>&1 含义](https://blog.csdn.net/ithomer/article/details/9288353)
 
 # 正则表达式(Regular Expression)
 UNIX中sed和grep命令都支持正则表达式，主要用于字符串和特殊字符的匹配和处理。
