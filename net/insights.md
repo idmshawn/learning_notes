@@ -29,8 +29,9 @@
 
 ### SAI(Switch Abstraction Interface)
 微码等厂商发起的白盒交换机转发适配API，2015年作为OCP开源项目，apache许可；
-- [OCP官网SAI介绍](https://www.opencompute.org/wiki/Networking/SAI)
 - [SAI介绍(推荐)](https://www.design-reuse.com/articles/44519/switch-abstraction-interface-sai.html)
+- [SAI: Releasing the Potential of Switch ASIC. by Xin Liu](https://www.youtube.com/watch?v=7fbDsK2yE2I)
+- [OCP官网SAI介绍](https://www.opencompute.org/wiki/Networking/SAI)
 - SAI文档
 代码库doc目录下对应特性文档帮助理解SAI接口
 - **[SAI知识汇总](sai/README.md)**
