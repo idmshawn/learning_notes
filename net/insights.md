@@ -4,6 +4,7 @@
 
 ### SONiC(Software for Open Networking in the Cloud)
 - [Sonic官网](https://azure.github.io/SONiC/)
+- [Breakout SONiC Software Architecture](https://www.youtube.com/watch?v=wU-j68wYB0Q)
 - SONiC架构  
   - [SONiC软件组成](sonic.md)
   - [官网Wiki](https://github.com/Azure/SONiC/wiki/Architecture)
