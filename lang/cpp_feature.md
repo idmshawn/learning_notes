@@ -89,7 +89,10 @@
 |c.\[n\]|按下标索引||
 
 ###### 关联容器
-根据关键字的值存储元素；如map、pair、set。
+根据关键字的值存储元素；如map、pair、set。  
+map与unordered_map对比[文档11]：  
+- 前者为红黑树实现，有序，操作时间O(lgn)，缺点是空间占用率高；
+- 后者为hash实现，hash映射，查找时间O(1)，缺点建立耗费时间；
 
 关联容器常用方法
 |方法|说明|备注|
@@ -266,6 +269,7 @@ noexcept告诉编译器，函数中不会发生异常,这有利于编译器对�
 8. [C++中的抽象类和接口](https://www.programminghunter.com/article/1984129838/)
 9. [【C++深度解析】37、C++ 中的抽象类和接口](https://blog.51cto.com/u_15290941/3048773)
 10. [C++11 带来的新特性 （3）—— 关键字noexcept](https://www.cnblogs.com/sword03/p/10020344.html)
+11. [unordered_map 简介](https://blog.csdn.net/qq_40838478/article/details/114664223)
 
 ### 面试参考
 - 指针与引用的区别？ 传值参数和传引用参数的差异点？
