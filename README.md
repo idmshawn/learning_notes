@@ -33,6 +33,7 @@
 # 网络技术
 - [网络技术洞察](net/insights.md)
 - [网络及协议知识](net/README.md)
+- [网络设备](net/device.md)
 
 # [读书笔记](reading/README.md)
 
