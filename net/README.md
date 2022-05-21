@@ -6,7 +6,7 @@
 ![osi_net](../images/osi.jpeg)
 
 ### Bridging(桥接)
-##### .1D Bridging(桥接)
+##### .1D Bridging
 IEEE 802.1D提出MAC bridge标准，**桥接(Ethernet bridging)是基于MAC地址的二层(数据链路层)转发**，基本操作含：  
 - 泛洪(Flooding)：是交换机和网桥使用的一种数据流传递技术，将某个接口收到的数据流从除该接口之外的所有接口发送出去。[泛洪和广播的区别](https://blog.51cto.com/tingfeng/795612)：泛洪操作广播的是普通数据帧而不是广播帧。
 - 转发(Forwarding)
