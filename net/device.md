@@ -29,6 +29,7 @@
 　对于网桥来说，一个网桥就只有一个生成树实例。而对于交换机来说，一个交换机往往对应着多个生成树实例。  
   生成树协议用于阻止在第二层网络上产生网路环路。协议监视网络中所有可用的链路，并在必要的时候关闭任何冗余的接口来确保在网络中不会发生任何的环路。生成树算法会创建一个拓扑数据库，然后搜索并破坏掉冗余的链路。如果不能够有效的阻止网络环路的话，就会遇到广播风暴、多帧复制等问题。
  
- ## 参考
- 1. [网桥与交换机的区别](https://blog.csdn.net/fivedoumi/article/details/51746798)
- 2. [集线器、网桥、交换机的区别](https://blog.csdn.net/dwj_daiwenjie/article/details/108636144)
+## 参考
+1. [网桥与交换机的区别](https://blog.csdn.net/fivedoumi/article/details/51746798)
+2. [集线器、网桥、交换机的区别](https://blog.csdn.net/dwj_daiwenjie/article/details/108636144)
+3. [桥接、交换和路由的区别](README.md)
