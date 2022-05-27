@@ -264,7 +264,7 @@ noexcept告诉编译器，函数中不会发生异常,这有利于编译器对�
 3. [C++ STL与泛型编程（三）](https://blog.csdn.net/zl6481033/article/details/89465421?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control&dist_request_id=1328665.10354.16159908009496807&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.control)
 4. [泛型编程、STL的概念、STL模板思想及其六大组件的关系，以及泛型编程(GP)、STL、面向对象编程（OOP）、C++之间的关系](https://blog.csdn.net/lsfreeing/article/details/77870275)
 5. [Effective Modern C++](https://github.com/kelthuzadx/EffectiveModernCppChinese)
-6. 
+6. [五万字长文总结 C/C++ 知识](https://mp.weixin.qq.com/s/HdfS_pOWJgj3RVuRcVoVWw)
 7. [一些著名的软件都用什么语言编写？](https://mp.weixin.qq.com/s/-znPkfMc8f-2hvqCO0-1jQ) (趣味，多数业界软件为了性能，还是采用的C/C++；少部分java)
 8. [C++中的抽象类和接口](https://www.programminghunter.com/article/1984129838/)
 9. [【C++深度解析】37、C++ 中的抽象类和接口](https://blog.51cto.com/u_15290941/3048773)
