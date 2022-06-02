@@ -17,6 +17,8 @@
 
 ![relation](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIh9BCb9LGXApKaioSpFAyx8B2XMq5LmpaaiBbPmoKnCBqhCvU9A1dCDdstS-sBlCYZFA3WqZ2ingRYaA36vH04YPeoGDa5HR8h2CtknTzsBvZuep_nfwvgd_JkWF8kNpIjUJby1vLc-NDJsTFqUc0CCdYzeVDes1yOrVj6-wiN27eJ1XYPG1LnGjohOrEZgWfrgfV1iy-odFTEuZ272Udem9refF5qtxtdV1YvJg1ubGoM5VA0sfTp4l4ebc6kj55uqpdeweOCBwbwmCYsuCfZ3hHIUxsu1AOCwNS56LnVkSA1LhPjVD4xXGdAwWesU7j3XC0LFzirziNKQbqDgNWemUW00)
 
+> Tips: 类图关系连线的箭头，指向内容和范围较小的类  
+
 #### 类的派生和继承关系
 
 类的派生和继承是面向对象程序设计方法和C++语言最重要的特征之一。
