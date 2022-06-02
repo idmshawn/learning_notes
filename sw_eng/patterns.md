@@ -38,8 +38,13 @@ Only talk to your immediate friends.
 (标题后的星表示难易度，星数量越多越困难)
 
 ## 创建型
-### 工厂模式(Factory Method)
+
 ### 单例模式(Singleton)  :star: 
+
+### 工厂方法(Factory Method)
+
+### 抽象工厂(Abstract Factory)
+
 ### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ###### 使用场景
@@ -60,9 +65,6 @@ Convert the interface of a class into another interface clients expect. Adapter 
 ###### 注意事项
 适配器是一个“补救”模式。软件设计阶段最好不要使用此模式，它不是为了解决还在开发阶段的问题，而是为了解决正在服役的项目问题。  
 项目一定要遵循依赖倒置和里氏替换原则，否则即使再适合使用适配器的场合下，也会迎来大的改造。
-
-### 工厂(Factory)
-### 抽象工厂(Abstract Factory)
 
 ### 门面模式(Facade Pattern)(也称外观模式) :star: :star: 
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.  
