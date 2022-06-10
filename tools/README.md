@@ -37,3 +37,57 @@ graph TD;
 # Git操作
 - [git操作学习(动画版)](https://learngitbranching.js.org)
 - [Git远程操作详解](https://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+
+
+
+# temp
+```plantuml
+@startuml
+
+class TbaMng {
+  -map<tblId, TblHandle* hd> handle
+  +TbaDB* CreateTbl(tblId);
+  +void DestroyTbl(tblId);
+}
+note left: 单例
+
+abstract TbaDB {
+ - int tblId;
+ - int entrySize;
+ - int capacity;
+ + int Create(tblId, entrySize, capacity);
+ + void Destroy();
+ + int ReadEntry(key, *ad);
+ + int WriteEntry(key, ad);
+ + int DeleteEntry(key);
+}
+note left: 工厂方法创建具体TBA
+
+class RegTba {
+ - uint32 *data;
+}
+
+class LinTba {
+ - vector<entrySize> data;
+}
+
+class HashTba {
+ - unodered_map<entrySize, entrySize> data;
+ + int SearchEntry(key);
+ + int UpdateEntry(key);
+}
+
+class UnitTestGlobalInit
+
+TbaMng "1" *-- "many" TbaDB: Composition
+
+TbaDB <|-down- RegTba: Inheritance
+TbaDB <|-down- LinTba: Inheritance
+TbaDB <|-down- HashTba: Inheritance
+
+UnitTestGlobalInit ..> TbaMng
+
+@enduml
+
+```
+
