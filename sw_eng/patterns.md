@@ -52,7 +52,7 @@ Define an interface for creating an object, but let subclass decide which class 
 C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参考下图：
 ![factory method](https://www.plantuml.com/plantuml/png/nPB1Jkim44Nt_egxV0-KV41ReZP8x118RBjndIcDb7YgyGI4qluxbDGb9IKisKNspVKvcfa7jQ9DNHbNsH1mAsIL1Qq1hWFNzB0biLgo__V_S0IqTXLKhDCz7eMBnkaLxgnJbhTxqWqN7y6zyQo4YjQA2PxEQ-3O1qMBfGVmLRBjFd03tPGXoRwLJhjyZ2LPhtAwz7iJ3TWx8QMZoQ9J-GrrnQfSO_AJKwJc5n8f2qBRqGXf8nwUNayF7niMerZvNs7b4QlqIhAsZc8tPhFJMPPzulM7tL-4WLLqxgpEenUJ-OKaZ8dhDziboN2IezSvZ3cPxD9qm3PwU_XxK9YcKZvlD1k4pPnyqTJLEm00)
 
-工厂方法的关键在Creator类。  
+工厂方法的关键在Creator类，或称工厂类。  
 Creator类声明一个抽象的工厂方法FactoryMethod()，返回一个product类的对象；  
 SomeOperation()中调用工厂方法创建产品，并可以使用产品的Operation()方法。    
 ```c++
@@ -114,13 +114,21 @@ class ConcreteCreator1 : public Creator {
 3. 测试驱动开发(TDD)框架下使用；例如，测试一个类A，就需要把与类A有关联关系的类B也同时产生出来，使用工厂方法把类B虚拟出来，避免类A与类B的耦合。  
 
 
-### 抽象工厂(Abstract Factory)
+### 抽象工厂(Abstract Factory) :star: :star: :star: 
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.  
+用于**多个工厂**(或产品线)，每个工厂都能生产**多种类别产品**的二维生产场景。  
+对于系列产品的每个变体，都基于抽象工厂接口创建不同的工厂类。**每个工厂类都只能返回特定类别的产品**。
 
-
+![abs factory](https://www.plantuml.com/plantuml/png/fPDHQuCm58NVyolkep8Yw6CfeSrWhzjVoFGAWaqakJA6xNzVNDL1Oih6tgBdE-SaLtDof2oDbvxLlN8EdliEDS7403YqgYPZFm_dTqVMhr_kprvxkdDP6shvB3fpmTS1hQBEw2ndDyOwJMXz7a9WWEDnquIOPZjCQc5kK5jKX6_MD6DDvom_hCk7eFm1fMzVpsQqfmYNvXA-snus_3sr-czgjCkYCH-wk8fmSYngBiPXZsDi7TCcRRj9AJ8ytkee4--hX44c3D8RM1GEV3uilufufr4Xy77O9KDKfcDbnAPYvTwNAKGydrzXiepYgjsuAeq5mrnkBk-n9Hx_12VKZR_cNm00)
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
+###### 使用场景
+一个对象族都有相同的约束，则可以使用抽象工厂模式。
 
-### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
+###### 注意事项
+缺点：产品族的拓展非常困难。抽象类abstractCreator要增加一个方法createProductC()，两个实现类都要修改，严重违反开闭原则。
+
+### 建造者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
 ###### 使用场景
 - 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
