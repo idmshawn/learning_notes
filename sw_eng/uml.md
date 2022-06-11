@@ -71,36 +71,3 @@
 3. [UML类图的箭头含义](https://www.jianshu.com/p/8969ab8c48c7)
 4. [C++继承和派生简明教程](http://c.biancheng.net/view/2264.html)
 5. [C++ UML关系总结](https://www.daimajiaoliu.com/daima/47192348b900403)
-
-----
-
-附：plantUML类图关系源码（github上暂无法直接渲染显示）  
-```plantuml
-@startuml
-title Relationships - Class Diagram
-
-class 1汽车
-class 2SUV
-abstract class 3车
-class 4汽车
-class 5汽车
-class 6轮胎
-class 7公司
-class 8部门
-class 9领导
-class 10码农
-class 13自行车
-class 14码农
-
-1汽车 <|-- 2SUV: 泛化
-3车 <|.. 4汽车: 实现
-5汽车 "1" o-- "many" 6轮胎: 聚合
-7公司 "1" *-- "many" 8部门: 组合
-9领导 <-- 10码农: 关联
-13自行车 <.. 14码农: 依赖
-@enduml
-
-```
-
-PlantUML类间关系绘制，如组合聚合一对多关系(见文档6的类图示例)   
-![relation](http://www.plantuml.com/plantuml/png/XO-xwy8m483t_1L7fj-33Ax5eM872uw2SsY33IPt9G-BgF-x1Wv5yB7b8r--tDKnwP2oTw9pEaPe9kESnHsS1C1_Ymcs5dkQOi43sHxMrEqtWsc8mi-lk0X-k1XrIDvWObvHZeRFI_8-8nC76Kf6YFklyxEwtQ5wv2feSJ319esTUI5o-vjMndadoPc4FvL71T9hF4gUi2hjaQ9Dbl23NLPuTaLjiC_UNG40)
