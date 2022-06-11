@@ -30,6 +30,7 @@ High level modules should not depend upon low level modules. Both should depend 
 高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。
 
 ## 其它原则
+参考[文档9]  
 #### 迪米特法则/最小知识原则(Law of Demeter, aka. Least Knowledge Principle,**LKP**)
 Only talk to your immediate friends.  
 
@@ -37,8 +38,6 @@ Only talk to your immediate friends.
 美国海军在1960年提出的设计原则。KISS原则指出，大多数系统如果保持简单而不是变得复杂，则效果最佳。因此，简单性应该是设计的主要目标，并且应该避免不必要的复杂性。
 
 #### DRY(Don't Repeat Yourself)原则
-
-参考[文档9]  
 
 # 设计模式
 (标题后的星表示难易度，星数量越多越困难)
@@ -117,10 +116,43 @@ class ConcreteCreator1 : public Creator {
 
 ### 抽象工厂(Abstract Factory) :star: :star: 
 Provides an interface for creating families of related or dependent objects without specifying their concrete classes.  
-用于**多个工厂**(或产品线)，每个工厂都能生产**多种类别产品**的二维生产场景。  
+抽象工厂模式用于**多个工厂**(或产品线)、且每个工厂都能生产**多种类别产品**的二维生产场景。  
 对于系列产品的每个变体，都基于抽象工厂接口创建不同的工厂类。**每个工厂类都只能返回特定类别的产品**。
 
 ![abs factory](https://www.plantuml.com/plantuml/png/fPF1QeGm48RlUOevAYN2UbmMsKsXr_OLKXr1S1E98wMu--vDkjf2nWYbj-Xy___FZEOyadOqNNjHzteSuRdlq13C0a12gskoxlDuUH_9-VFBuzdNdXvSriQrF1H7UyNN0Pscpfei5tSXEaFel1z2983JwQTMLNEGmwmNvWwrGqtuvcmprNJ9ykDwt0NLBwX2-ZARDPuYN98Fy9ssc_1tr_A_hgpBeh4VfhXLyUO4IowcOOlRslxQJhgauW5NoI7nlam8L4AWl40mSv1XN7chUAii4EGqR98ngjAsYh4fMxNrRNfigQZuZj8etqxCbadRSWVbortkiWo4vB_56KtZB_uN)
+
+抽象工厂的关键在AbstractFactory类和ConcreteFactory类，**ConcreteFactory的方法返回AbstractProduct，方法中实例化ConcreteProduct**：
+```c++
+/**
+ * The Abstract Factory interface declares a set of methods that return
+ * different abstract products. These products are called a family and are
+ * related by a high-level theme or concept. Products of one family are usually
+ * able to collaborate among themselves. A family of products may have several
+ * variants, but the products of one variant are incompatible with products of
+ * another.
+ */
+class AbstractFactory {
+ public:
+  virtual AbstractProductA *CreateProductA() const = 0;
+  virtual AbstractProductB *CreateProductB() const = 0;
+};
+
+/**
+ * Concrete Factories produce a family of products that belong to a single
+ * variant. The factory guarantees that resulting products are compatible. Note
+ * that signatures of the Concrete Factory's methods return an abstract product,
+ * while inside the method a concrete product is instantiated.
+ */
+class ConcreteFactory1 : public AbstractFactory {
+ public:
+  AbstractProductA *CreateProductA() const override {
+    return new ConcreteProductA1();
+  }
+  AbstractProductB *CreateProductB() const override {
+    return new ConcreteProductB1();
+  }
+};
+```
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
 - 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂通常没有子类。
