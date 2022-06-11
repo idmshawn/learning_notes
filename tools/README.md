@@ -5,7 +5,7 @@ PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、�
 - 后者已支持github嵌入，但图形标识过于简单，尤其是类图标识主观感受较差。   
 不强依赖github的话，建议还是使用plantUML。
 
-### PlantUML
+## PlantUML
 
 PlantUML在github上只能使用外链，没法直接将markdown内嵌的plantuml代码渲染为图。  
 但可使用PlantUML官网的Online Server存储UML，github中按引用图片的方式引用存储外链：  
@@ -17,7 +17,7 @@ PlantUML在github上只能使用外链，没法直接将markdown内嵌的plantum
 
 本地使用时，推荐VScode中安装PlantUML插件。
 
-### Mermaid
+## Mermaid
 
 Mermaid已支持github上直接使用markdown内嵌，如：
 
@@ -28,7 +28,7 @@ graph TD;
     B-->D;
     C-->D;
 ```
-### 参考文档
+## 参考文档
 1. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
 2. [PlantText](https://www.planttext.com/)：UML在线绘制
 3. [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
