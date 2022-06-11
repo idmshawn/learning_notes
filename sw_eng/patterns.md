@@ -47,6 +47,8 @@ Only talk to your immediate friends.
 ### 单例模式(Singleton)  :star: 
 Ensure a class only has one instance and provide a global point of access to it.
 
+![singleton](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWZEp4lFIIt9prEevb9Gq5K0IfTa9YkKvcKMbgPwvW6vUScf41cOIfV4aaG5e90sJ74cL9c69aWKOQH_GMeHK45-7b2YbiiXDIy5Q2y0)
+
 ### 工厂方法(Factory Method) :star: :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
 C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参考下图：
@@ -193,6 +195,8 @@ class ConcreteFactory1 : public AbstractFactory {
 
 ### 建造者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
 Separate the construction of a complex object from its representing so that the same construction process can create different representations.
+
+![builder](https://www.plantuml.com/plantuml/png/POzV3i8m28VVEGMF_abli3IBUW3Z3IfZfabj3OKdzUvkYLsYUmI-3_ZrLOEetHF4h2nZ8CQ3nJImODSjFU_n2OXxlCwpywHijl06e1HgnMF99ApSn3KwrpVM2rTBF-ef2fEMvb39LSNeoxI5Bl6eRhVGy7_HsSEzVFiSUix3bEa3)
 ###### 使用场景
 - 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
 - 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
@@ -203,6 +207,10 @@ Separate the construction of a complex object from its representing so that the 
 
 ## 结构型
 ### 代理模式(Proxy)
+Provide a surrogate or placeholder for another object to control access to it.
+
+![proxy](https://www.plantuml.com/plantuml/png/TOzH2i8m44J_znJxgKWk82KKl83e2MASGYN6cjs0ejxTG6qeehypE--nhQXBci-1V70Yl0azeXBrKP4wvy7xV3Z1ApTDpQpb1p6lEE6Q8RfOqei-W1rSc2P_ZxRfShl_gaSz6sEhb-P4amVph1sDdAzmIWCwBPpvV5riGu8KXr2BU2oFlm40)
+
 ### 适配器模式(Adapter Pattern)(也称包装模式, wrapper) :star: :star: 
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.  
 (将一个类的接口变换成用户所期待的另一种接口，从而使原本因接口不匹配而无法在一起工作的两个类能够在一起工作)
