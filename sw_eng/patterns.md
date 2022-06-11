@@ -119,7 +119,7 @@ Provide an interface for creating families of related or dependent objects witho
 用于**多个工厂**(或产品线)，每个工厂都能生产**多种类别产品**的二维生产场景。  
 对于系列产品的每个变体，都基于抽象工厂接口创建不同的工厂类。**每个工厂类都只能返回特定类别的产品**。
 
-![abs factory](https://www.plantuml.com/plantuml/png/fPDHQuCm58NVyolkep8Yw6CfeSrWhzjVoFGAWaqakJA6xNzVNDL1Oih6tgBdE-SaLtDof2oDbvxLlN8EdliEDS7403YqgYPZFm_dTqVMhr_kprvxkdDP6shvB3fpmTS1hQBEw2ndDyOwJMXz7a9WWEDnquIOPZjCQc5kK5jKX6_MD6DDvom_hCk7eFm1fMzVpsQqfmYNvXA-snus_3sr-czgjCkYCH-wk8fmSYngBiPXZsDi7TCcRRj9AJ8ytkee4--hX44c3D8RM1GEV3uilufufr4Xy77O9KDKfcDbnAPYvTwNAKGydrzXiepYgjsuAeq5mrnkBk-n9Hx_12VKZR_cNm00)
+![abs factory](https://www.plantuml.com/plantuml/png/fPF1QeGm48RlUOevAYN2UbmMsKsXr_OLKXr1S1E98wMu--vDkjf2nWYbj-Xy___FZEOyadOqNNjHzteSuRdlq13C0a12gskoxlDuUH_9-VFBuzdNdXvSriQrF1H7UyNN0Pscpfei5tSXEaFel1z2983JwQTMLNEGmwmNvWwrGqtuvcmprNJ9ykDwt0NLBwX2-ZARDPuYN98Fy9ssc_1tr_A_hgpBeh4VfhXLyUO4IowcOOlRslxQJhgauW5NoI7nlam8L4AWl40mSv1XN7chUAii4EGqR98ngjAsYh4fMxNrRNfigQZuZj8etqxCbadRSWVbortkiWo4vB_56KtZB_uN)
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
 - 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂通常没有子类。
