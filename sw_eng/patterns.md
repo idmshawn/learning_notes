@@ -114,7 +114,7 @@ class ConcreteCreator1 : public Creator {
 3. 测试驱动开发(TDD)框架下使用；例如，测试一个类A，就需要把与类A有关联关系的类B也同时产生出来，使用工厂方法把类B虚拟出来，避免类A与类B的耦合。  
 
 
-### 抽象工厂(Abstract Factory) :star: :star: :star: 
+### 抽象工厂(Abstract Factory) :star: :star: 
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.  
 用于**多个工厂**(或产品线)，每个工厂都能生产**多种类别产品**的二维生产场景。  
 对于系列产品的每个变体，都基于抽象工厂接口创建不同的工厂类。**每个工厂类都只能返回特定类别的产品**。
@@ -122,8 +122,16 @@ Provide an interface for creating families of related or dependent objects witho
 ![abs factory](https://www.plantuml.com/plantuml/png/fPDHQuCm58NVyolkep8Yw6CfeSrWhzjVoFGAWaqakJA6xNzVNDL1Oih6tgBdE-SaLtDof2oDbvxLlN8EdliEDS7403YqgYPZFm_dTqVMhr_kprvxkdDP6shvB3fpmTS1hQBEw2ndDyOwJMXz7a9WWEDnquIOPZjCQc5kK5jKX6_MD6DDvom_hCk7eFm1fMzVpsQqfmYNvXA-snus_3sr-czgjCkYCH-wk8fmSYngBiPXZsDi7TCcRRj9AJ8ytkee4--hX44c3D8RM1GEV3uilufufr4Xy77O9KDKfcDbnAPYvTwNAKGydrzXiepYgjsuAeq5mrnkBk-n9Hx_12VKZR_cNm00)
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
+- 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂通常没有子类。
+- 工厂方法：在父类中提供一个创建对象的方法，允许子类决定实例化对象的类型。如果在基类及其扩展的子类中都有一个构建方法的话， 那它可能就是工厂方法。
+- 抽象工厂：能创建一系列相关或相互依赖的对象，而无需指定其具体类。  
+什么是 “系列对象”？ 例如有这样一组的对象：`运输工具+ 引擎+ 控制器`。 它可能会有几个变体：`汽车+ 内燃机+ 方向盘`，或`飞机+ 喷气式发动机+ 操纵杆`。如果你的程序中并不涉及产品系列的话， 那就不需要抽象工厂。
+
+> 再次重申， 许多人分不清抽象工厂模式和声明为`abstract`的简单工厂。不要犯这个错误！
+
 ###### 使用场景
-一个对象族都有相同的约束，则可以使用抽象工厂模式。
+一个对象族都有相同的约束，则可以使用抽象工厂模式。  
+如果代码需要与多个不同系列的相关产品交互， 但是由于无法提前获取相关信息， 或者出于对未来扩展性的考虑， 你不希望代码基于产品的具体类进行构建， 在这种情况下， 你可以使用抽象工厂。
 
 ###### 注意事项
 缺点：产品族的拓展非常困难。抽象类abstractCreator要增加一个方法createProductC()，两个实现类都要修改，严重违反开闭原则。
