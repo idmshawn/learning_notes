@@ -42,17 +42,27 @@ Only talk to your immediate friends.
 ### 单例模式(Singleton)  :star: 
 
 ### 工厂方法(Factory Method) :star: :star: 
-Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.
+Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
+[文档8]的UML图比[文档1]更好理解。
+
+![factory method](https://www.plantuml.com/plantuml/png/VOz13e8m44NtSufPGWmzW346y02QU89Q1YM1raodA_JksbZY0j8T-O__NwVsebd2D8A-UM5j1CselSSJanR7E0FYphk9pazYBOEpHHaZ4pbTs7N1I57kqnUy0GOhnBqsX2dyZNJkAg7lYpB-aoJE6YQX96jmpavljzfiQorBeDcEMmI0vVZ3gwhMZypYs4zJNwxKMfkZBVxbIl5mVyWHbqjgibsOnWy0)
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
 - 符合依赖倒置原则：只依赖产品类的抽象；
 - 符合里氏替换原则：使用产品子类替换产品父类。
+- 开闭原则。无需更改现有客户端代码，你就可以在程序中引入新的产品类型。
+- 单一职责原则。你可以将产品创建代码放在程序的单一位置，从而使得代码更容易维护。
 
 ###### 使用场景
-
+1. 工厂方法是new一个对象的替代品，所有需要生成对象的地方都可以使用。
+2. 需要灵活
 
 
 ### 抽象工厂(Abstract Factory)
+
+
+
+[工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
 
 ### 构建者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
 separate the construction of a complex object from its representation so that the same construction process can create different representations.
@@ -155,3 +165,4 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 5. [写了这么多年代码，你真的了解SOLID吗](https://insights.thoughtworks.cn/what-is-solid-principle/)
 6. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
 7. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
+8. [Refactoring Guru:设计模式](https://refactoringguru.cn/design-patterns/catalog)
