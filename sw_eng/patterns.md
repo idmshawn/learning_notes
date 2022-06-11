@@ -44,7 +44,7 @@ Only talk to your immediate friends.
 ### 工厂方法(Factory Method) :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
 [文档8]的UML图比[文档1]更好理解：
-![factory method](https://www.plantuml.com/plantuml/png/VOz13e8m44NtSufPGWmzW346y02QU89Q1YM1raodA_JksbZY0j8T-O__NwVsebd2D8A-UM5j1CselSSJanR7E0FYphk9pazYBOEpHHaZ4pbTs7N1I57kqnUy0GOhnBqsX2dyZNJkAg7lYpB-aoJE6YQX96jmpavljzfiQorBeDcEMmI0vVZ3gwhMZypYs4zJNwxKMfkZBVxbIl5mVyWHbqjgibsOnWy0)
+![factory method](https://www.plantuml.com/plantuml/png/VP5DJiCm48NtSugtR8Ng0vGVjU408B5bOvm9H4fjQpnP5UwEeuv0QYhlalVD-v5yAEf5vzD4_gEe-A08aoy5py9Ua-1Cm5r99tx9B5x753VRHGeBvrT9_HnqiztR5_rGJCgOU53iaIygCXvnvRZ7UyokJsyw3qFz9HgZiWm-CEpeKlvtKhF9ngLOqvHjv17dzgIRhgxfMfSPEDwMEn2H9UFXUxTRZspYnMzHbJkthctH3l_bpidu-QLFC4O7ZdrzuLy0)
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
 - 符合依赖倒置原则：只依赖产品类的抽象；
