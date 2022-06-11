@@ -46,6 +46,7 @@ Only talk to your immediate friends.
 ## 创建型
 
 ### 单例模式(Singleton)  :star: 
+Ensure a class only has one instance and provide a global point of access to it.
 
 ### 工厂方法(Factory Method) :star: :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
@@ -115,7 +116,7 @@ class ConcreteCreator1 : public Creator {
 
 
 ### 抽象工厂(Abstract Factory) :star: :star: 
-Provide an interface for creating families of related or dependent objects without specifying their concrete classes.  
+Provides an interface for creating families of related or dependent objects without specifying their concrete classes.  
 用于**多个工厂**(或产品线)，每个工厂都能生产**多种类别产品**的二维生产场景。  
 对于系列产品的每个变体，都基于抽象工厂接口创建不同的工厂类。**每个工厂类都只能返回特定类别的产品**。
 
@@ -137,7 +138,7 @@ Provide an interface for creating families of related or dependent objects witho
 缺点：产品族的拓展非常困难。抽象类abstractCreator要增加一个方法createProductC()，两个实现类都要修改，严重违反开闭原则。
 
 ### 建造者模式(Builder Pattern)(也称生成器模式) :star: :star: :star: 
-separate the construction of a complex object from its representation so that the same construction process can create different representations.
+Separate the construction of a complex object from its representing so that the same construction process can create different representations.
 ###### 使用场景
 - 相同的方法，不同的执行顺序，产生不同的事件结果时，可使用Builer；
 - 多个部件或零件，都可以装配到一个对象中，但是产生的运行结果又不相同时，则可使用Builer；
