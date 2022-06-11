@@ -49,7 +49,6 @@ C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参�
 工厂方法的关键在Creator类。  
 Creator类声明一个抽象的工厂方法FactoryMethod()，返回一个product类的对象；  
 SomeOperation()中调用工厂方法创建产品，并可以使用产品的Operation()方法。    
-Creator的子类实现具体的工厂方法，返回不同类型的product对象。
 ```c++
 class Creator {
   /**
@@ -74,6 +73,25 @@ class Creator {
     std::string result = "Creator: The same creator's code has just worked with " + product->Operation();
     delete product;
     return result;
+  }
+};
+```
+
+Creator的子类实现具体的工厂方法，返回不同类型的product对象。  
+```c++
+/**
+ * Concrete Creators override the factory method in order to change the
+ * resulting product's type.
+ */
+class ConcreteCreator1 : public Creator {
+  /**
+   * Note that the signature of the method still uses the abstract product type,
+   * even though the concrete product is actually returned from the method. This
+   * way the Creator can stay independent of concrete product classes.
+   */
+ public:
+  Product* FactoryMethod() const override {
+    return new ConcreteProduct1();
   }
 };
 ```
