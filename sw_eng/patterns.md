@@ -1,17 +1,17 @@
 
 # 设计原则
-
-### (S)单一职责原则(Single Responsibility Principle, **SRP**) 
+## SOLID原则
+#### (S)单一职责原则(Single Responsibility Principle, **SRP**) 
 There should never be more than one reason for a class to change  
 “一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中”
 ###### 适用场景
 SRP适用于接口、类、方法。接口一定要做到单一职责，类的设计尽量做到只有一个原因引起变化。
 
-### (O)开闭原则(Open-Closed Principle, **OCP**)
+#### (O)开闭原则(Open-Closed Principle, **OCP**)
 Software entities like classes, modules and functions should be open for extension but closed for modifications.  
 软件实现应该对拓展开放，对修改关闭；即，应设计可以在不被修改的前提下易于拓展的模块；
 
-### (L)里氏替换原则(The Liskov Substitution Principle, **LSP**)
+#### (L)里氏替换原则(The Liskov Substitution Principle, **LSP**)
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.  
 “子类应该是可替换父类的，也就是说任何父类可以出现的地方，子类一定可以出现”   
 (反之不一定行，有子类出现的地方，父类未必就可以胜任)  
@@ -21,17 +21,22 @@ Functions that use pointers or references to base classes must be able to use ob
 3. 子类覆盖或实现父类的方法时输入参数可以被放大；
 4. 子类覆写或实现父类的方法时输出结果可以被缩小；
 
-### (I)接口隔离原则(Interface Segregation Principle, **ISP**)
+#### (I)接口隔离原则(Interface Segregation Principle, **ISP**)
 Clients should not be forced to depend upon interfaces that they dont't use. The dependency of one class to another one should depend on the smallest possible interface.  
 “用户不应该被迫依赖他们不使用的方法”，接口要尽量小、接口要高内聚、定制服务、接口设计是有限度的
 
-### (D)依赖倒置原则(Dependence Inversion Principle, **DIP**)
+#### (D)依赖倒置原则(Dependence Inversion Principle, **DIP**)
 High level modules should not depend upon low level modules. Both should depend upon abstractions. Abstractions should not depend upon details. Details should depend upon abstractions.  
 高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。
 
-
-### 迪米特法则(Law of Demeter, aka. Least Knowledge Principle,**LKP**)
+## 其它原则
+#### 迪米特法则/最小知识原则(Law of Demeter, aka. Least Knowledge Principle,**LKP**)
 Only talk to your immediate friends.  
+
+#### KISS(Keep It Simple and Stupid)原则
+美国海军在1960年提出的设计原则。KISS原则指出，大多数系统如果保持简单而不是变得复杂，则效果最佳。因此，简单性应该是设计的主要目标，并且应该避免不必要的复杂性。
+
+#### DRY(Don't Repeat Yourself)原则
 
 
 # 设计模式
