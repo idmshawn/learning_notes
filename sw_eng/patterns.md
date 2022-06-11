@@ -42,6 +42,7 @@ Only talk to your immediate friends.
 ### 单例模式(Singleton)  :star: 
 
 ### 工厂方法(Factory Method) :star: :star: 
+Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
 - 符合依赖倒置原则：只依赖产品类的抽象；
