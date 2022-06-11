@@ -52,7 +52,7 @@ Define an interface for creating an object, but let subclass decide which class 
 C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参考下图：
 ![factory method](https://www.plantuml.com/plantuml/png/nPB1Jkim44Nt_egxV0-KV41ReZP8x118RBjndIcDb7YgyGI4qluxbDGb9IKisKNspVKvcfa7jQ9DNHbNsH1mAsIL1Qq1hWFNzB0biLgo__V_S0IqTXLKhDCz7eMBnkaLxgnJbhTxqWqN7y6zyQo4YjQA2PxEQ-3O1qMBfGVmLRBjFd03tPGXoRwLJhjyZ2LPhtAwz7iJ3TWx8QMZoQ9J-GrrnQfSO_AJKwJc5n8f2qBRqGXf8nwUNayF7niMerZvNs7b4QlqIhAsZc8tPhFJMPPzulM7tL-4WLLqxgpEenUJ-OKaZ8dhDziboN2IezSvZ3cPxD9qm3PwU_XxK9YcKZvlD1k4pPnyqTJLEm00)
 
-工厂方法的关键在Creator类，或称工厂类。  
+工厂方法的**关键在Creator类，或称工厂类**。  
 Creator类声明一个抽象的工厂方法FactoryMethod()，返回一个product类的对象；  
 SomeOperation()中调用工厂方法创建产品，并可以使用产品的Operation()方法。    
 ```c++
