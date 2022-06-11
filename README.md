@@ -22,7 +22,7 @@
 
 # [软件工程](sw_eng/README.md)
 - 软件工程
-- 设计模式
+- [设计模式](sw_eng/patterns.md)
 - [UML](sw_eng/uml.md)
 
 # [操作系统](os/README.md)
