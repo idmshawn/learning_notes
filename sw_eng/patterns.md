@@ -43,8 +43,7 @@ Only talk to your immediate friends.
 
 ### 工厂方法(Factory Method) :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
-[文档8]的UML图比[文档1]更好理解。
-
+[文档8]的UML图比[文档1]更好理解：
 ![factory method](https://www.plantuml.com/plantuml/png/VOz13e8m44NtSufPGWmzW346y02QU89Q1YM1raodA_JksbZY0j8T-O__NwVsebd2D8A-UM5j1CselSSJanR7E0FYphk9pazYBOEpHHaZ4pbTs7N1I57kqnUy0GOhnBqsX2dyZNJkAg7lYpB-aoJE6YQX96jmpavljzfiQorBeDcEMmI0vVZ3gwhMZypYs4zJNwxKMfkZBVxbIl5mVyWHbqjgibsOnWy0)
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
@@ -166,3 +165,4 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 6. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
 7. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
 8. [Refactoring Guru:设计模式](https://refactoringguru.cn/design-patterns/catalog)
+
