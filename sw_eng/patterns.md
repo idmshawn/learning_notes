@@ -41,10 +41,42 @@ Only talk to your immediate friends.
 
 ### 单例模式(Singleton)  :star: 
 
-### 工厂方法(Factory Method) :star: :star: 
+### 工厂方法(Factory Method) :star: :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
-[文档8]的UML图比[文档1]更好理解：
-![factory method](https://www.plantuml.com/plantuml/png/VP5DJiCm48NtSugtR8Ng0vGVjU408B5bOvm9H4fjQpnP5UwEeuv0QYhlalVD-v5yAEf5vzD4_gEe-A08aoy5py9Ua-1Cm5r99tx9B5x753VRHGeBvrT9_HnqiztR5_rGJCgOU53iaIygCXvnvRZ7UyokJsyw3qFz9HgZiWm-CEpeKlvtKhF9ngLOqvHjv17dzgIRhgxfMfSPEDwMEn2H9UFXUxTRZspYnMzHbJkthctH3l_bpidu-QLFC4O7ZdrzuLy0)
+C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参考下图：
+![factory method](https://www.plantuml.com/plantuml/png/nPB1Jkim44Nt_egxV0-KV41ReZP8x118RBjndIcDb7YgyGI4qluxbDGb9IKisKNspVKvcfa7jQ9DNHbNsH1mAsIL1Qq1hWFNzB0biLgo__V_S0IqTXLKhDCz7eMBnkaLxgnJbhTxqWqN7y6zyQo4YjQA2PxEQ-3O1qMBfGVmLRBjFd03tPGXoRwLJhjyZ2LPhtAwz7iJ3TWx8QMZoQ9J-GrrnQfSO_AJKwJc5n8f2qBRqGXf8nwUNayF7niMerZvNs7b4QlqIhAsZc8tPhFJMPPzulM7tL-4WLLqxgpEenUJ-OKaZ8dhDziboN2IezSvZ3cPxD9qm3PwU_XxK9YcKZvlD1k4pPnyqTJLEm00)
+
+工厂方法的关键在Creator类。  
+Creator类声明一个抽象的工厂方法FactoryMethod()，返回一个product类的对象；  
+SomeOperation()中调用工厂方法创建产品，并可以使用产品的Operation()方法。    
+Creator的子类实现具体的工厂方法，返回不同类型的product对象。
+```c++
+class Creator {
+  /**
+   * Note that the Creator may also provide some default implementation of the
+   * factory method.
+   */
+ public:
+  virtual ~Creator(){};
+  virtual Product* FactoryMethod() const = 0;
+  /**
+   * Also note that, despite its name, the Creator's primary responsibility is
+   * not creating products. Usually, it contains some core business logic that
+   * relies on Product objects, returned by the factory method. Subclasses can
+   * indirectly change that business logic by overriding the factory method and
+   * returning a different type of product from it.
+   */
+
+  std::string SomeOperation() const {
+    // Call the factory method to create a Product object.
+    Product* product = this->FactoryMethod();
+    // Now, use the product.
+    std::string result = "Creator: The same creator's code has just worked with " + product->Operation();
+    delete product;
+    return result;
+  }
+};
+```
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
 - 符合依赖倒置原则：只依赖产品类的抽象；
