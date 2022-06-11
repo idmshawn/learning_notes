@@ -38,6 +38,7 @@ Only talk to your immediate friends.
 
 #### DRY(Don't Repeat Yourself)原则
 
+参考[文档9]  
 
 # 设计模式
 (标题后的星表示难易度，星数量越多越困难)
@@ -221,4 +222,5 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 6. [Github: Design Patterns For Humans](https://github.com/Leon0X/design-patterns-for-humans-cn)
 7. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
 8. [Refactoring Guru:设计模式](https://refactoringguru.cn/design-patterns/catalog)
+9. [经典永不过时！重温设计模式](http://www.360doc.com/content/21/0601/08/32196507_979923182.shtml)
 
