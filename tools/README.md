@@ -7,9 +7,14 @@ PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、�
 
 ### PlantUML
 
-PlantUML在github上只能使用外链，没法直接使用内嵌语法(实际markdown支持内嵌，但github未支持？)。
+PlantUML在github上只能使用外链，没法直接将markdown内嵌的plantuml代码渲染为图。  
+但可使用PlantUML官网的Online Server存储UML，github中按引用图片的方式引用存储外链：  
+拷贝server上的链接后，添加`https:`前缀，markdown中按`![](https:server URL)`方式引用。比如：
+![sample](https://www.plantuml.com/plantuml/png/JP31QiCm44Jl-eeXvzhG74C8wQLGACcbnroszZfrK7UBTciQwCTNbcem23GQQJHFEffJyk_F6Bf8PZY_txXpxFUuid2YYCCXBEPlqpHuIedkhwDv2ABESFs23ajmXnV1ZIPw04-SxYZNNeH_dAKt-CTeKE7sFxrvcuqy24DKyb6kc3Ss8CFfSNseo3ntAfAhkB-8AuodWgcbtzeQt2xCRJilJjiirkJriS-gjI3ou3kS1Tbsz3oCmdr53-6OmVC7_G40)
 
-github上的markdwon内嵌plantuml方法，使用PlantUML官网的Online Server存储UML，github中引用存储的外链。  
+同时，可以将引用的存储外链在Online server的解码为plantuml代码：  
+从markdown内嵌的`![](https:Servel URL)`中拷出serverl URL，点击server网站的“Decode URL”按钮。  
+
 本地使用时，推荐VScode中安装PlantUML插件。
 
 ### Mermaid
@@ -41,53 +46,4 @@ graph TD;
 
 
 # temp
-```plantuml
-@startuml
-
-class TbaMng {
-  -map<tblId, TblHandle* hd> handle
-  +TbaDB* CreateTbl(tblId);
-  +void DestroyTbl(tblId);
-}
-note left: 单例
-
-abstract TbaDB {
- - int tblId;
- - int entrySize;
- - int capacity;
- + int Create(tblId, entrySize, capacity);
- + void Destroy();
- + int ReadEntry(key, *ad);
- + int WriteEntry(key, ad);
- + int DeleteEntry(key);
-}
-note left: 工厂方法创建具体TBA
-
-class RegTba {
- - uint32 *data;
-}
-
-class LinTba {
- - vector<entrySize> data;
-}
-
-class HashTba {
- - unodered_map<entrySize, entrySize> data;
- + int SearchEntry(key);
- + int UpdateEntry(key);
-}
-
-class UnitTestGlobalInit
-
-TbaMng "1" *-- "many" TbaDB: Composition
-
-TbaDB <|-down- RegTba: Inheritance
-TbaDB <|-down- LinTba: Inheritance
-TbaDB <|-down- HashTba: Inheritance
-
-UnitTestGlobalInit ..> TbaMng
-
-@enduml
-
-```
-
+![DB](//www.plantuml.com/plantuml/png/VPBFRjD04CRl-nIZd18thWJSqYY2DeX6WakRYYEQU8TwnNhNMa-Bp9yB4X8IWWig5yuy0OSA43nDtUTWxMwTLI9nyyxt-yRppUxzYj7nMQ65o3HM5InN-CISmci1a1POJdcb5tBio_eGZTIKG2vda7VVdjdn_7m_WGD7oEIfOMSOxRNQkLKIvbInitKilHN6Ce6cvpo1vjF5rT-FGk3ASvWnT1tR0L9GXg4pxTsUoB2hZzKhwYiPbfWfhdrXfos4KOPXyDumxibHXyR33KUz-uXGFcmzmnTKZo51kTQUEiKKYR4s9qsHk9Noydlp-Ttrrv_NFowQ3z-Qtx-QzvTNVxuizn_SRlw8Jdtqc-1dlkMzkv18P6mx1UInCZroJXbRD-tppM03FiGgNpSqLf8Z-QozqsWdM_OGvvZGPNaS9mWdfSGuP_J34wDuIHK_qdQ5Uk5FGeJdDBWpW2HDOL2WgGStLpo10rkKjbAih16Ygy7qJIhjIvE6RKnWON9oYj5aj864RVmF2JlOOCJseB2xEmjFN_m3)
