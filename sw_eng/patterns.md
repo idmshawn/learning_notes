@@ -55,6 +55,7 @@ C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参�
 工厂方法的**关键在Creator类，或称工厂类**。  
 Creator类声明一个抽象的工厂方法FactoryMethod()，返回一个product类的对象；  
 SomeOperation()中调用工厂方法创建产品，并可以使用产品的Operation()方法。    
+(*代码和UML中的Creator看作Factory，ConcreteCreator看作ConcreteFactory更好理解*)
 ```c++
 class Creator {
   /**
@@ -100,6 +101,25 @@ class ConcreteCreator1 : public Creator {
     return new ConcreteProduct1();
   }
 };
+```
+工厂方法的调用：
+```c++
+void ClientCode(const Creator &creator) {
+  // ...
+  creator.SomeOperation();
+  // ...
+}
+
+int main() {
+
+  Creator* creator = new ConcreteCreator1();
+  ClientCode(*creator);
+  // ...
+
+  delete creator;
+
+  return 0;
+}
 ```
 
 - 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
@@ -153,6 +173,8 @@ class ConcreteFactory1 : public AbstractFactory {
   }
 };
 ```
+
+用户创建ConcreteFactory1和ConcreteFactory2，传入ClientCode；ClientCode中调用工厂的CreateProductA和CreateProductB方法创建具体对象。
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
 - 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂通常没有子类。
