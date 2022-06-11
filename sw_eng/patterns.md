@@ -30,7 +30,7 @@ High level modules should not depend upon low level modules. Both should depend 
 高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。
 
 
-### 迪米特法则(Law of Demeter, ala. Least Knowledge Principle,**LKP**)
+### 迪米特法则(Law of Demeter, aka. Least Knowledge Principle,**LKP**)
 Only talk to your immediate friends.  
 
 
@@ -41,7 +41,15 @@ Only talk to your immediate friends.
 
 ### 单例模式(Singleton)  :star: 
 
-### 工厂方法(Factory Method)
+### 工厂方法(Factory Method) :star: :star: 
+
+- 符合迪米特法则：高层模块只需要知道产品的抽象类，其它的实现类都不用关心；
+- 符合依赖倒置原则：只依赖产品类的抽象；
+- 符合里氏替换原则：使用产品子类替换产品父类。
+
+###### 使用场景
+
+
 
 ### 抽象工厂(Abstract Factory)
 
