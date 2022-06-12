@@ -206,10 +206,78 @@ Separate the construction of a complex object from its representing so that the 
 而工厂方法则重点是创建，创建零件是它的主要职责，组装顺序则不是它关心的。  
 
 ## 结构型
-### 代理模式(Proxy)
+### 代理模式(Proxy)(也称委托模式) :star: :star: :star: 
 Provide a surrogate or placeholder for another object to control access to it.
 
-![proxy](https://www.plantuml.com/plantuml/png/TOzH2i8m44J_znJxgKWk82KKl83e2MASGYN6cjs0ejxTG6qeehypE--nhQXBci-1V70Yl0azeXBrKP4wvy7xV3Z1ApTDpQpb1p6lEE6Q8RfOqei-W1rSc2P_ZxRfShl_gaSz6sEhb-P4amVph1sDdAzmIWCwBPpvV5riGu8KXr2BU2oFlm40)
+![proxy](https://www.plantuml.com/plantuml/png/ROvTwi8m4CJVznJx-FyW5v0I2bv0z00bZLkefB7kRa2flRjYRB7guyxCRsTAKSUQkW0-E15SXvQY0hHHYHld2NUfFf1NB8fPinO7GFp7mTMYxBoEo7HA9Fhp2oCyVst9XOdE-I-X3H_FbuTj5i0VtuzAybLzqdae6cFdXV3AczIRw-n1hdaJ9pLGeyOkwbV8r3C9HHKeAUvJ5su0)
+
+代理模式的关键在Proxy类。Proxy类包含一个指向RealSubject对象的引用成员变量。 代理完成其任务（例如延迟初始化、记录日志、访问控制和缓存等）后会将请求传递给RealSubject对象。通常情况下，Proxy会对其RealSubject对象的整个生命周期进行管理。  
+
+核心是Proxy的构造函数：`Proxy(Subject _subject) {this.subject = _subject}`，**你要代理谁就产生该代理的实例，然后把被代理者传递进来**。  
+部分示例代码[文档8]：
+
+```c++
+
+class Proxy : public Subject {
+ private:
+  RealSubject *real_subject_;
+  // ...
+
+  /**
+   * The Proxy maintains a reference to an object of the RealSubject class. It
+   * can be either lazy-loaded or passed to the Proxy by the client.
+   */
+ public:
+  Proxy(RealSubject *real_subject) : real_subject_(new RealSubject(*real_subject)) {
+  }
+
+  ~Proxy() {
+    delete real_subject_;
+  }
+  /**
+   * The most common applications of the Proxy pattern are lazy loading,
+   * caching, controlling the access, logging, etc. A Proxy can perform one of
+   * these things and then, depending on the result, pass the execution to the
+   * same method in a linked RealSubject object.
+   */
+  void Request() const override {
+      this->real_subject_->Request();
+      this->LogAccess();
+  }
+};
+
+void ClientCode(const Subject &subject) {
+  // ...
+  subject.Request();
+  // ...
+}
+
+int main() {
+
+  RealSubject *real_subject = new RealSubject;
+
+  Proxy *proxy = new Proxy(real_subject);
+  ClientCode(*proxy);
+
+  // ...
+}
+```
+
+###### 使用场景
+1. RealSubject开销大；或者为第三方库，代码难以修改
+RealSubject类处理业务逻辑，但可能性能较慢，占用资源较多，或数据敏感，比如，要校正输入数据；Proxy则可以在不改变RealSubject代码的情况下解决这些问题。Proxy要和RealSubject有完全相同的接口。
+2. 减轻Client的负担，屏蔽中间过程，由代理完成“事前调查”和“事后追查”，如现实世界中的打官司找律师代理。
+
+### 桥接模式(Bridge)
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+![bridge](https://www.plantuml.com/plantuml/png/bOzD2i8m44RtSufP-aDlK4ghAuynnX4A-IcJoQhsxb9JD49Sk4nuxmrV7vL4axDWBCM8mpMgaD4nU9m1yOXXOg7rlTl30Z1wPRcJORouoR9Zhq6mRT__NRU9CssjvTDOdTp9vyx16s7beZLa_I_dzDifA6pIr1o-9a8rzW8VNRcmIWuL47hsj-Ji4m00)
+
+### 装饰者模式(Decorator Pattern)
+
+Attach additional responsibilities to an object dynamically. Provide a flexible alternative to sub-class for extending functionality.
+
+![decorator](https://www.plantuml.com/plantuml/png/VP1B2i8m48RtESKiVP0Rb5BK6tY2CHcnq6RAPEgczku6AWvQSPb_llz1cgmeElQTQvEIN34G7BaVE55IgAgtMjSmEO0zJ7Z9AXXq1Xv8K5jEcwsRdGiTvbpSAGWfMShY-mcVA71HMVv1uPNu2Nl062cU5PLMtl9UpWUwuRrbMV9ia_SxAtVhpNuS_AC64vorhs-sy8knYePIBD_y1000)
 
 ### 适配器模式(Adapter Pattern)(也称包装模式, wrapper) :star: :star: 
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.  
@@ -223,6 +291,9 @@ Convert the interface of a class into another interface clients expect. Adapter 
 ### 门面模式(Facade Pattern)(也称外观模式) :star: :star: 
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.  
 用户只看到一个门面类，不感知复杂的内部细节；
+
+### 享元模式(Flyweight)
+Use Sharing to support large numbers of fine grained objects efficiently.
 
 ## 行为型
 ### 策略模式(Strategy Pattern)(也称政策模式, Policy) :star: :star: :star: 
