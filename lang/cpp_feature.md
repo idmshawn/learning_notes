@@ -270,6 +270,7 @@ noexcept告诉编译器，函数中不会发生异常,这有利于编译器对�
 9. [【C++深度解析】37、C++ 中的抽象类和接口](https://blog.51cto.com/u_15290941/3048773)
 10. [C++11 带来的新特性 （3）—— 关键字noexcept](https://www.cnblogs.com/sword03/p/10020344.html)
 11. [unordered_map 简介](https://blog.csdn.net/qq_40838478/article/details/114664223)
+12. [以良好的方式编写C++ class](https://www.cnblogs.com/QG-whz/p/5517643.html)
 
 ### 面试参考
 - 指针与引用的区别？ 传值参数和传引用参数的差异点？
