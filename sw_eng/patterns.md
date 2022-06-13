@@ -179,7 +179,7 @@ class ConcreteFactory1 : public AbstractFactory {
 用户创建ConcreteFactory1和ConcreteFactory2，传入ClientCode；ClientCode中调用工厂的CreateProductA和CreateProductB方法创建具体对象。
 
 [工厂模式(简单工厂、工厂方法、抽象工厂)比较](https://refactoringguru.cn/design-patterns/factory-comparison)
-- 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂通常没有子类。
+- 简单工厂模式：描述了一个类，它拥有一个包含大量条件语句的构建方法，可根据方法的参数来选择对何种产品进行初始化并将其返回。简单工厂模式下，如果要新增一个产品，就要修改工厂类，不符合开闭原则；因此，引入工厂方法，添加一个工厂的抽象类。[文档10、11]  
 - 工厂方法：在父类中提供一个创建对象的方法，允许子类决定实例化对象的类型。如果在基类及其扩展的子类中都有一个构建方法的话， 那它可能就是工厂方法。
 - 抽象工厂：能创建一系列相关或相互依赖的对象，而无需指定其具体类。  
 什么是 “系列对象”？ 例如有这样一组的对象：`运输工具+ 引擎+ 控制器`。 它可能会有几个变体：`汽车+ 内燃机+ 方向盘`，或`飞机+ 喷气式发动机+ 操纵杆`。如果你的程序中并不涉及产品系列的话， 那就不需要抽象工厂。
@@ -373,4 +373,6 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 7. [设计模式C++11实现](https://github.com/jaredtao/DesignPattern)
 8. [Refactoring Guru:设计模式](https://refactoringguru.cn/design-patterns/catalog)
 9. [经典永不过时！重温设计模式](http://www.360doc.com/content/21/0601/08/32196507_979923182.shtml)
+10. [C++ 深入浅出工厂模式（初识篇）](https://zhuanlan.zhihu.com/p/83535678)
+11. [c++设计模式之工厂模式](https://www.cnblogs.com/cxq0017/p/6544517.html)
 
