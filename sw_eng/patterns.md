@@ -92,7 +92,7 @@ Creator的子类实现具体的工厂方法，返回不同类型的product对象
  * Concrete Creators override the factory method in order to change the
  * resulting product's type.
  */
-class ConcreteCreator1 : public Creator {
+class ConcreteCreatorA : public Creator {
   /**
    * Note that the signature of the method still uses the abstract product type,
    * even though the concrete product is actually returned from the method. This
@@ -100,7 +100,7 @@ class ConcreteCreator1 : public Creator {
    */
  public:
   Product* FactoryMethod() const override {
-    return new ConcreteProduct1();
+    return new ConcreteProductA();
   }
 };
 ```
@@ -114,7 +114,7 @@ void ClientCode(const Creator &creator) {
 
 int main() {
 
-  Creator* creator = new ConcreteCreator1();
+  Creator* creator = new ConcreteCreatorA();
   ClientCode(*creator);
   // ...
 
