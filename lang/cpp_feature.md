@@ -72,6 +72,12 @@
 ###### 顺序容器
 根据元素加入容器的顺序访问元素；如vector、array、string、list。
 
+相比于C语言，**vector最大的好处是无需用户管理内存**。待push_back的对象，容器会拷贝一份后压入：
+> std::vector<T,Allocator>::push_back  
+Appends the given element value to the end of the container.  
+> 1) The new element is initialized as a copy of value.  
+> 2) value is moved into the new element.  
+
 顺序容器常用方法
 |方法|说明|备注|
 |--|--|--|
