@@ -49,6 +49,46 @@ Ensure a class only has one instance and provide a global point of access to it.
 
 ![singleton](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLWZEp4lFIIt9prEevb9Gq5K0IfTa9YkKvcKMbgPwvW6vUScf41cOIfV4aaG5e90sJ74cL9c69aWKOQH_GMeHK45-7b2YbiiXDIy5Q2y0)
 
+参考[文档12]，两种实现方式下的代码示例：  
+- 饿汉模式：指全局的单例实例在类加载时就被构建
+```c++
+class Singleton
+{
+public:
+  static Singleton &getObject()  // 给外界的唯一接口
+  {
+    return instance;
+  }
+  // ...
+private:
+  Singleton();
+  ~Singleton();
+  // ...
+  static Singleton instance;
+};
+
+Singleton Singleton::instance; // 需要在类外定义
+```
+
+- 懒汉模式：指全局的单例实例在第一次被使用时构建
+```c++
+class Singleton
+{
+public:
+  static Singleton &getObject()  // 给外界的唯一接口
+  {
+    static Singleton instance;
+    return instance;
+  }
+  // ...
+private:
+  Singleton();
+  ~Singleton();
+  // ...
+};
+
+```
+
 ### 工厂方法(Factory Method) :star: :star: :star: 
 Define an interface for creating an object, but let subclass decide which class to instantiate. Factory Method lets a classs defer instantiation to subclasses.  
 C++代码实现参考[文档8]；但UML图[文档1]或[文档3]更准确，参考下图：
@@ -392,4 +432,5 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 9. [经典永不过时！重温设计模式](http://www.360doc.com/content/21/0601/08/32196507_979923182.shtml)
 10. [C++ 深入浅出工厂模式（初识篇）](https://zhuanlan.zhihu.com/p/83535678)
 11. [c++设计模式之工厂模式](https://www.cnblogs.com/cxq0017/p/6544517.html)
+12. [C++如何实现单例模式](https://blog.csdn.net/liushengxi_root/article/details/79333246)
 
