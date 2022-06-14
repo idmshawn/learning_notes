@@ -66,3 +66,6 @@ C++标准库memory头文件提供了两种智能指针类型来管理动态对�
 ### shared_ptr
 shared_ptr自动销毁锁管理的对象、自动释放相关联的内存。
 
+## 参考
+1. [如何：创建和使用shared_ptr实例](https://docs.microsoft.com/zh-cn/cpp/cpp/how-to-create-and-use-shared-ptr-instances?view=msvc-170)
+2. 
