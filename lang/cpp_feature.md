@@ -100,7 +100,8 @@ map与unordered_map对比[文档11]：
 - 前者为红黑树实现，有序，操作时间O(lgn)，缺点是空间占用率高；
 - 后者为hash实现，hash映射，查找时间O(1)，缺点建立耗费时间；
 
-unordered_map的key只能是标准类型，不支持自定义类型；
+unordered_map的**key默认只能是标准类型**，不支持自定义类型；因unordered_map需要对key做hash；  
+自定义类型时，c++标准库并没有对应的哈希函数和等比函数的函数对象。确有需要，可以自定义hash函数以[支持自定义key](https://blog.csdn.net/y109y/article/details/82669620)。
 
 关联容器常用方法
 |方法|说明|备注|
