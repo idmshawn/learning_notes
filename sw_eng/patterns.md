@@ -433,4 +433,5 @@ MVC(Model-View-Controller)三层架构已经成为标准的Web项目的开发模
 10. [C++ 深入浅出工厂模式（初识篇）](https://zhuanlan.zhihu.com/p/83535678)
 11. [c++设计模式之工厂模式](https://www.cnblogs.com/cxq0017/p/6544517.html)
 12. [C++如何实现单例模式](https://blog.csdn.net/liushengxi_root/article/details/79333246)
+13. [C++实现单例的5种方法总结](https://blog.csdn.net/zztan/article/details/54691809?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-54691809-blog-79333246.pc_relevant_downloadblacklistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-54691809-blog-79333246.pc_relevant_downloadblacklistv1&utm_relevant_index=2)
 
