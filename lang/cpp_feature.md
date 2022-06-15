@@ -103,6 +103,8 @@ map与unordered_map对比[文档11]：
 unordered_map的**key默认只能是标准类型**，不支持自定义类型；因unordered_map需要对key做hash；  
 自定义类型时，c++标准库并没有对应的哈希函数和等比函数的函数对象。确有需要，可以自定义hash函数以[支持自定义key](https://blog.csdn.net/y109y/article/details/82669620)。
 
+自定义hash函数时，hash计算可参考[Boost：hash_combine](boost.org/doc/libs/1_79_0/libs/container_hash/doc/html/hash.html)，或者[万能hash](https://www.codeleading.com/article/58003026290/)。
+
 关联容器常用方法
 |方法|说明|备注|
 |--|--|--|
