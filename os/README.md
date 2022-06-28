@@ -20,6 +20,7 @@
 - [原来PCIe这么简单，一定要看！](https://www.sohu.com/a/300238384_505795?qq-pf-to=pcqq.c2c)
 - [WiKipedia:PCI configuration space](https://en.wikipedia.org/wiki/PCI_configuration_space)
 - [Bus:Device.Function (BDF) Notation](https://wiki.xenproject.org/wiki/Bus:Device.Function_(BDF)_Notation)
+- [pci_dev及pci_bus结构体定义](https://techpubs.jurassic.nl/manuals/hdwr/developer/LX_DevDriver_PG/sgi_html/ch04.html)
 
 ### 参考
 1. 在线课程：[Linux内核分析及应用 陈莉君(西电)](https://www.xuetangx.com/course/XIYOU08091001441/1516763)
