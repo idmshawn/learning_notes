@@ -325,7 +325,7 @@ int main() {
 RealSubject类处理业务逻辑，但可能性能较慢，占用资源较多，或数据敏感，比如，要校正输入数据；Proxy则可以在不改变RealSubject代码的情况下解决这些问题。Proxy要和RealSubject有完全相同的接口。
 2. 减轻Client的负担，屏蔽中间过程，由代理完成“事前调查”和“事后追查”，如现实世界中的打官司找律师代理。
 
-### 桥接模式(Bridge)
+### 桥接模式(Bridge) :star: :star: 
 Decouple an abstraction from its implementation so that the two can vary independently. (将抽象和实现解耦，使两者可以独立地变化。)  
 桥接模式中，抽象角色(Abstraction)引用实现角色(Implementor)，两者是**组合关系**；模式的**重点是在两者的“解耦”上**。抽象角色的构造函数参数中，传入指定实现角色。     
 应用示例：  
@@ -346,6 +346,10 @@ Decouple an abstraction from its implementation so that the two can vary indepen
 使用该模式主要考虑合入拆分抽象和实现。桥接的意图是对变化的封装，尽可能把变化的因素封装到最细、最小的逻辑单元中。  
 但并不是一涉及继承就要考虑使用桥接，发现类的继承有N层时，可以考虑使用桥接。  
 对于比较明确不发生变化的，则通过继承来完成；若不能确定是否会发生变化，或人为是变化的，则通过桥接模式来解决。  
+
+###### 比较
+桥接模式通常会于开发前期进行设计，将程序的各个部分独立开来以便开发。适配器模式通常在已有程序中使用，让相互不兼容的类能很好地合作。  
+桥接、 状态模式和策略模式 （在某种程度上包括适配器） 的接口非常相似。 实际上， 它们都基于组合模式，即，将工作委派给其他对象。  
 
 ### 装饰者模式(Decorator Pattern)
 
