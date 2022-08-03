@@ -326,9 +326,23 @@ RealSubject类处理业务逻辑，但可能性能较慢，占用资源较多，
 2. 减轻Client的负担，屏蔽中间过程，由代理完成“事前调查”和“事后追查”，如现实世界中的打官司找律师代理。
 
 ### 桥接模式(Bridge)
-Decouple an abstraction from its implementation so that the two can vary independently.
+Decouple an abstraction from its implementation so that the two can vary independently. (将抽象和实现解耦，使两者可以独立地变化。)  
+桥接模式中，抽象角色(Abstraction)引用实现角色(Implementor)，模式的重点是在“解耦”上。抽象角色的构造函数参数中，传入指定实现角色。     
+富翁开公司的例子中，“公司”作为抽象角色，“产品”作为实现角色；“产品”可以灵活变更，不会造成“公司”大范围修改。  
+![bridge](https://www.plantuml.com/plantuml/png/bP0noiCm38LtdKBZ_xVu1Y4axTIrDt0T1GAs76HbIdFt4Z2j0-xGqVBtlGUlIsf5b-31UPiIze-aOfrEaN45n3F6cSJkxxz_s21ZTnedfk58xzyJAybe7U4jp9u2iKR1fddVspRdhZRBswTYTygQQsGdf5HazLd_nRbyTmeAZQTHpUcm0LJZq2opURPOsZMohu00bV4oLfoW8nwMu5y0)
 
-![bridge](https://www.plantuml.com/plantuml/png/bOzD2i8m44RtSufP-aDlK4ghAuynnX4A-IcJoQhsxb9JD49Sk4nuxmrV7vL4axDWBCM8mpMgaD4nU9m1yOXXOg7rlTl30Z1wPRcJORouoR9Zhq6mRT__NRU9CssjvTDOdTp9vyx16s7beZLa_I_dzDifA6pIr1o-9a8rzW8VNRcmIWuL47hsj-Ji4m00)
+> 桥接模式是一个非常简单的模式，它只是使用了类间的聚合关系、继承、覆写等常用功能，但是它却提供了一个非常清晰、稳定的架构。
+
+###### 使用场景
+- 不希望或不适用使用继承的场景
+继承属于“强侵入”：父类有一个方法，子类也必须有这个方法。  
+- 接口或者抽象类不稳定的场景
+- 重用性要求较高的场景
+
+###### 注意事项
+使用该模式主要考虑合入拆分抽象和实现。桥接的意图是对变化的封装，尽可能把变化的因素封装到最细、最小的逻辑单元中。  
+但并不是一涉及继承就要考虑使用桥接，发现类的继承有N层时，可以考虑使用桥接。  
+对于比较明确不发生变化的，则通过继承来完成；若不能确定是否会发生变化，或人为是变化的，则通过桥接模式来解决。  
 
 ### 装饰者模式(Decorator Pattern)
 
