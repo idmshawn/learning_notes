@@ -327,8 +327,11 @@ RealSubject类处理业务逻辑，但可能性能较慢，占用资源较多，
 
 ### 桥接模式(Bridge)
 Decouple an abstraction from its implementation so that the two can vary independently. (将抽象和实现解耦，使两者可以独立地变化。)  
-桥接模式中，抽象角色(Abstraction)引用实现角色(Implementor)，模式的重点是在“解耦”上。抽象角色的构造函数参数中，传入指定实现角色。     
-富翁开公司的例子中，“公司”作为抽象角色，“产品”作为实现角色；“产品”可以灵活变更，不会造成“公司”大范围修改。  
+桥接模式中，抽象角色(Abstraction)引用实现角色(Implementor)，两者是**组合关系**；模式的**重点是在两者的“解耦”上**。抽象角色的构造函数参数中，传入指定实现角色。     
+应用示例：  
+- 富翁开公司的例子[文档1]中，“公司”作为抽象角色，“产品”作为实现角色；“产品”可以灵活变更，不会造成“公司”大范围修改。    
+- 形状与颜色的例子[文档8]中，通过两者的组合关系，解决子类膨胀的问题。
+- GUI和API实现的例子[文档8]中，通过桥接隔离两者的变化。
 ![bridge](https://www.plantuml.com/plantuml/png/bP0noiCm38LtdKBZ_xVu1Y4axTIrDt0T1GAs76HbIdFt4Z2j0-xGqVBtlGUlIsf5b-31UPiIze-aOfrEaN45n3F6cSJkxxz_s21ZTnedfk58xzyJAybe7U4jp9u2iKR1fddVspRdhZRBswTYTygQQsGdf5HazLd_nRbyTmeAZQTHpUcm0LJZq2opURPOsZMohu00bV4oLfoW8nwMu5y0)
 
 > 桥接模式是一个非常简单的模式，它只是使用了类间的聚合关系、继承、覆写等常用功能，但是它却提供了一个非常清晰、稳定的架构。
