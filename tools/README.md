@@ -45,7 +45,6 @@ PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、�
 - 流行程度、软件支持情况上，Mermaid好于PlantUML；
 - 制图丰富度、及图形表示(尤其是类图)上，PlantUML好于Mermaid；
 
-不强依赖github的话，建议还是使用plantUML。
 
 ## 参考文档
 1. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
