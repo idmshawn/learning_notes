@@ -28,11 +28,23 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+## 综合比较
+
+|项目|PlantUML|Mermaid|
+|--|--|--|
+|语法原理|DSL|DSL|
+|Github支持程度|引用外链|代码内嵌|
+|Typora支持程度|未内置|内置|
+|功能点|除标准UML外，还有架构图等[文档5]|基本的UML|
+
+
 ## 参考文档
 1. [PlantUML官网](https://plantuml.com/zh/)：PlantUML语法介绍及Online Server
 2. [PlantText](https://www.planttext.com/)：UML在线绘制
 3. [Mermaid在线绘图](https://mermaid-js.github.io/mermaid-live-editor/)
 4. [Mermaid官网](https://mermaid-js.github.io/mermaid/#/)
+5. [几种绘图语法的比较](https://gowa.club/Graphviz/%E5%87%A0%E7%A7%8D%E7%BB%98%E5%9B%BE%E8%AF%AD%E6%B3%95%E7%9A%84%E6%AF%94%E8%BE%83.html)
 
 # Markdown内嵌(github)
 </br>可内嵌HTML，但HTML表格内部（tr/td标签对中）无法再使用markdown解析；
