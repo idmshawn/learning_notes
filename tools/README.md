@@ -33,15 +33,16 @@ graph TD;
 
 |项目|PlantUML|Mermaid|
 |--|--|--|
+|时间|||
 |语法原理|DSL|DSL|
 |版权|Github开源|Github开源|
 |Github支持程度|引用外链|代码内嵌(较好)|
 |Typora支持程度|未内置|内置(较好)|
 |功能点|除标准UML外，还有架构图、json图等[文档5](较好)|基本的UML|
 
-由于前几年支持了Github内置，目前github上Mermaid有49K星，而PlantUML仅6.4K星，前者将近是后者的10倍。   
-对于常见的编辑器的支持，如typora、vnote也是内置支持的mermaid，PlantUML需要额外配置支持。  
-总结，
+由于前几年支持了Github内置，目前github上Mermaid有49K星，而PlantUML仅6.4K星，前者将近是后者的10倍；commits数量，前者5K，后者不足1K，也将近5倍。   
+对于常见的编辑器的支持，如typora、vnote也是内置支持的mermaid[文档5]，PlantUML需要额外配置支持。  
+总结：
 - 流行程度、软件支持情况上，Mermaid好于PlantUML；
 - 制图丰富度上，PlantUML好于Mermaid；
 
