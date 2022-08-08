@@ -36,15 +36,14 @@ graph TD;
 |Typora支持程度|未内置|内置(较好)|
 |功能点|除标准UML外，还有架构图、json图等[文档5](较好)|基本的UML|
 
-由于前几年支持了Github内置，目前github上Mermaid有49K星，而PlantUML仅6.4K星，前者将近是后者的10倍；commits数量，前者5K，后者不足1K，也将近5倍。   
-对于常见的编辑器的支持，如typora、vnote也是内置支持的mermaid[文档5]，PlantUML需要额外配置支持。  
 PlantUML和Mermaid都支持以“代码”的方式绘制UML图，含类图、时序图、状态图等。两者语法不完全相同。  
-前者尚未在github上支持嵌入，需引用外链；但其图形标识好于后者，比如类有“C”标识。  
-后者已支持github嵌入，但图形标识过于简单，尤其是**类图**标识主观感受较差。   
+前者尚未在github上支持嵌入，需引用外链；后者已支持github嵌入。2022年8月统计，目前github上PlantUML仅6.4K星，由于2022年支持了Github内置，Mermaid有49K星，后者将近是前者的10倍；Commits数量，前者不足1K，后者5K，也将近5倍。   
+对于常见的编辑器的支持，如typora、vnote也是内置支持的mermaid[文档5]，PlantUML需要额外配置支持。  
+但在类图表示上，PlantUML图形标识好于后者，尤其是新版PlantUML的类图，比如类有“C”标识；Mermaid类图标识过于简单，主观感受较差。   
 
 总结：
 - 流行程度、软件支持情况上，Mermaid好于PlantUML；
-- 制图丰富度上，PlantUML好于Mermaid；
+- 制图丰富度、及图形表示(尤其是类图)上，PlantUML好于Mermaid；
 
 不强依赖github的话，建议还是使用plantUML。
 
