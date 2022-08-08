@@ -33,7 +33,7 @@ graph TD;
 
 |项目|PlantUML|Mermaid|
 |--|--|--|
-|时间|||
+|最早提交记录|2016|2014|
 |语法原理|DSL|DSL|
 |版权|Github开源|Github开源|
 |Github支持程度|引用外链|代码内嵌(较好)|
