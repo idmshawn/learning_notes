@@ -33,7 +33,7 @@ graph TD;
 |版权|Github开源|Github开源|
 |最早提交记录|2016|2014|
 |Github支持|引用外链|代码内嵌(较好)|
-|Typora支持|未内置|内置(较好)|
+|Typora支持|[未内置](https://github.com/typora/typora-issues/issues/1246)|内置(较好)|
 |VS Code支持|需安装插件||
 |功能点|除标准UML外，还有架构图、json图等[文档5](较好)|基本的UML|
 
