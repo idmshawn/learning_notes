@@ -28,6 +28,7 @@
 |查找符号所在so| `nm -A -D *.so \| grep foo` ||
 |搜索多个日志压缩包中的指定字符| `zgrep "ZHANGSAN" *.zip`|  |
 |LINUX服务查看|`service smb status`|status替换为restart表示重启服务|
+|解压RPM包|`rpm2cpio xxx.rpm \| cpio -div`||
 
 # VIM常用命令
 
