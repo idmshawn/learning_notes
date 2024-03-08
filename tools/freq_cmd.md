@@ -29,6 +29,8 @@
 |搜索多个日志压缩包中的指定字符| `zgrep "ZHANGSAN" *.zip`|  |
 |LINUX服务查看|`service smb status`|status替换为restart表示重启服务|
 |解压RPM包|`rpm2cpio xxx.rpm \| cpio -div`||
+|不跳出当前线程|set scheduler-locking off\|on\|step |在使用step或continue命令调试当前被调试线程的时候，其他线程也是同时执行的，如果我们只想要被调试的线程执行，而其他线程停止等待，那就要锁定要调试的线程，只让他运行。
+off:不锁定任何线程，所有线程都执行。on:只有当前被调试的线程会执行。step:阻止其他线程在当前线程单步调试的时候抢占当前线程。只有当next、continue、util以及finish的时候，其他线程才会获得重新运行的||
 
 # VIM常用命令
 
