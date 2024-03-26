@@ -10,8 +10,9 @@
 ###### 建议
 适合浅读概览。
 ###### 书源
-* [人月神话(精简)剖析](https://wenku.baidu.com/view/a66b8480b42acfc789eb172ded630b1c58ee9b7d.html)
-* 微信读书(仅前两章)
+- [人月神话(精简)剖析](https://wenku.baidu.com/view/a66b8480b42acfc789eb172ded630b1c58ee9b7d.html)
+- [The Mythical Man Month(教育网站英文原版)](https://web.eecs.umich.edu/~weimerw/2018-481/readings/mythical-man-month.pdf)
+- 微信读书(仅前两章)
 
 ## [设计模式之禅](../sw_eng/patterns.md)
 
@@ -41,4 +42,4 @@ Scott Meyers关于C++的两本书。
 ## 软件设计的哲学
 ###### 建议
 ###### 书源
-[《软件设计的哲学》中文翻译](https://cactus-proj.github.io/A-Philosophy-of-Software-Design-zh/preface.html)
+- [《软件设计的哲学》中文翻译](https://cactus-proj.github.io/A-Philosophy-of-Software-Design-zh/preface.html)
