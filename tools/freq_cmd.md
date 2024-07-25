@@ -25,6 +25,7 @@
 |g++按C++11标准编译|`g++ -std=c++11 test.cpp -o test` | 即使支持了c++11的gcc 4.8以上版本，默认仍按c++98编译，vector不支持按列表初始化，添加-std参数指定按c++11编译。[link](http://3ms.huawei.com/km/blogs/details/6488211) |
 |独立so编译| gcc -fPIC -shared -o libapp.so -g app.c |  |
 |依赖独立so的二进制编译| gcc main.c -L. -lapp  | 生成a.out，其中-lapp表示要链接libapp.so。-L.表示搜索要链接的库文件时包含当前路径。 |
+|依赖独立so的二进制编译强制指定so路径|gcc main.c -L/home/xxx/code_test -Wl,-rpath=. -lapp|-Wl,-rpath=. 强制指定路径包含当前目录|
 |查找符号所在so| `nm -A -D *.so \| grep foo` ||
 |搜索多个日志压缩包中的指定字符| `zgrep "ZHANGSAN" *.zip`|  |
 |LINUX服务查看|`service smb status`|status替换为restart表示重启服务|
