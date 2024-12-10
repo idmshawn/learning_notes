@@ -42,4 +42,4 @@ Scott Meyers关于C++的两本书。
 ## 软件设计的哲学
 ###### 建议
 ###### 书源
-- [《软件设计的哲学》中文翻译](https://cactus-proj.github.io/A-Philosophy-of-Software-Design-zh/preface.html)
+- [《软件设计的哲学》中文翻译](https://cactus-proj.github.io/A-Philosophy-of-Software-Design-zh/)
