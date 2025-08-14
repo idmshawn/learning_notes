@@ -19,6 +19,7 @@
 ## 参考
 1. CISCO Live: [Beginner’s Guide to ThousandEyes](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKENT-1656.pdf)
 2. CISCO Live: [ThousandEyes: Assurance in Focus, A next generation platform for assuring digital experiences](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKOBS-1017.pdf)
+3. [ThousandEyes + Cisco Catalyst 9000](https://www.thousandeyes.com/solutions/cisco-catalyst-9000-series)
 
 # 网络安全
 
