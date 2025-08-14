@@ -16,6 +16,8 @@ Broadcom、Juniper都有实现类似功能。Juniper可能是基于BRCM SDK的�
 
 # [网络技术洞察](insights.md)
 
+# [行业分析](vendor.md)
+
 ## 参考
 1. [SRv6官网？](https://www.segment-routing.net/)
 2. socket收发机制：[动图图解！代码执行 send 成功后，数据就发出去了吗？](https://mp.weixin.qq.com/s/cLiUuakA9kYReKHzn86zpQ)
