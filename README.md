@@ -34,6 +34,7 @@
 - [网络技术洞察](net/insights.md)
 - [网络及协议知识](net/README.md)
 - [网络设备](net/device.md)
+- [行业分析](net/vendor.md)
 
 # [读书笔记](reading/README.md)
 
