@@ -14,7 +14,7 @@
 ## 思科splunk
 
 
-## 华为NCE Insight
+## 华为NCE-CampusInsight
 
 ## 参考
 1. CISCO Live: [Beginner’s Guide to ThousandEyes](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKENT-1656.pdf)
