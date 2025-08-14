@@ -23,3 +23,14 @@
 
 # 网络安全
 
+## 思科IPSec
+思科C9000系列IPSec商用案例(数据来自Kimi搜索)
+
+| 序号 | 场景名称        | 行业/客户  | 关键场景描述                                                     | 参考链接                                                                                                                                                                                                                  |
+| -- | ----------- | ------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1  | 全球连锁零售加密互联  | 大型零售集团 | 600 余家门店 C9300X 通过 IPsec 隧道直连 AWS，实现 POS 实时上云              | [Cisco 官方配置指南 - Catalyst 9000X IPsec 示例](https://www.cisco.com/c/zh_cn/support/docs/switches/catalyst-9300x-12y-a-switch/221564-configure-ipsec-on-catalyst-9000x-series.html)                                        |
+| 2  | 欧洲机场安全回传    | 国际机场   | 航站楼 C9400X ↔ 云防火墙 IPsec 链路，承载离港/行李系统数据                     | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
+| 3  | 北美能源广域加密    | 能源公司   | 总部 C9400X 与 30 个野外变电站 C9300X 建立 Hub-Spoke IPsec 网络，替代 MPLS | [Cisco 官方配置指南 - Catalyst 9000X IPsec 示例](https://www.cisco.com/c/zh_cn/support/docs/switches/catalyst-9300x-12y-a-switch/221564-configure-ipsec-on-catalyst-9000x-series.html)                                        |
+| 4  | 亚太制造混合云     | 制造企业   | 园区 C9300X IPsec 对接 AWS Transit Gateway，打通研发网与云上 DevOps     | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
+| 5  | 三甲医院多院区加密互联 | 医疗行业   | 主院区 C9400X 与两家分院 C9300X 建立 IPsec 隧道，承载 HIS/PACS 影像数据       | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
+| 6  | 金融机构分支零信任   | 银行/保险  | 分支 C9300X 通过 IPsec 与总部数据中心互联，实现瘦分支零信任架构                    | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
