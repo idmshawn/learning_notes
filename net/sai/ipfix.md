@@ -23,6 +23,10 @@ NetFlow v9基于模板设置可视信息，灵活性较高。
 Datasheet中两次提到，Flexible NetFlow是思科IOS软件的一个重要部分。即，Flexible NetFlow是完全通过软件实现的？？ 是不是Netstream中的灵活流上报？？
 Flexible NetFlow is integral part of Cisco IOS Software that collects and measures data allowing all routers or switches in the network to become a source of telemetry and a monitoring device. Flexible NetFlow allows extremely granular and accurate traffic measurements and high-level aggregated traffic collection. Because it is part of Cisco IOS Software, Flexible NetFlow enables Cisco product-based networks to perform traffic flow analysis without purchasing external probes--making traffic analysis economical on large IP networks.
 
+按Cisco交换机设备手册，FNF就是芯片的流表；如Catalyst 9300手册中FNF的描述：
+`- Line-rate, hardware-based Flexible NetFlow (FNF), delivering flow collection of up to 128,000 flows with select models.`
+设备表项规格中，除MAC、FIB、Buffer外，也有一项是“FNF entries”。
+
 ## 参考
 1. [Flexible NetFlow](https://www.cisco.com/site/us/en/products/networking/software/ios-nx-os/flexible-netflow/index.html)
 2. Datasheet [Cisco IOS Flexible NetFlow](https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/flexible-netflow/product_data_sheet0900aecd804b590b.html)
