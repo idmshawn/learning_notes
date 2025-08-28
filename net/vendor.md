@@ -37,17 +37,5 @@
 | 5  | 三甲医院多院区加密互联 | 医疗行业   | 主院区 C9400X 与两家分院 C9300X 建立 IPsec 隧道，承载 HIS/PACS 影像数据       | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
 | 6  | 金融机构分支零信任   | 银行/保险  | 分支 C9300X 通过 IPsec 与总部数据中心互联，实现瘦分支零信任架构                    | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
 
-# 公共
-
-## 思科Flexible NetFlow
-思科Flexible NetFlow的概念在2012年就有，并非新东西；[文档2]的datasheet手册是2006年更新的，最后一次更新2008年。
-
-Datasheet中两次提到，Flexible NetFlow是思科IOS软件的一个重要部分。即，Flexible NetFlow是完全通过软件实现的？？ 是不是Netstream中的灵活流上报？？
-Flexible NetFlow is integral part of Cisco IOS Software that collects and measures data allowing all routers or switches in the network to become a source of telemetry and a monitoring device. Flexible NetFlow allows extremely granular and accurate traffic measurements and high-level aggregated traffic collection. Because it is part of Cisco IOS Software, Flexible NetFlow enables Cisco product-based networks to perform traffic flow analysis without purchasing external probes--making traffic analysis economical on large IP networks.
-
-## 参考
-1. [Flexible NetFlow](https://www.cisco.com/site/us/en/products/networking/software/ios-nx-os/flexible-netflow/index.html)
-2. Datasheet [Cisco IOS Flexible NetFlow](https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/flexible-netflow/product_data_sheet0900aecd804b590b.html)
-
 ## 其它
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
