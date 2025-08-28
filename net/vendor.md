@@ -40,7 +40,7 @@
 # 公共
 
 ## 思科Flexible NetFlow
-
+思科Flexible NetFlow的概念在2012年就有，并非新东西；[文档2]的datasheet手册是2006年更新的，最后一次更新2008年。
 
 
 ## 参考
