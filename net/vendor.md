@@ -37,5 +37,8 @@
 | 5  | 三甲医院多院区加密互联 | 医疗行业   | 主院区 C9400X 与两家分院 C9300X 建立 IPsec 隧道，承载 HIS/PACS 影像数据       | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
 | 6  | 金融机构分支零信任   | 银行/保险  | 分支 C9300X 通过 IPsec 与总部数据中心互联，实现瘦分支零信任架构                    | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
 
+## ETA
+Encrypted Traffic Analytics (ETA) is a unique capability for identifying malware in encrypted traffic coming from the access layer. Since more and more traffic is becoming encrypted, the visibility this feature affords for threat detection is critical for keeping your network secure at different layers.
+
 ## 其它
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
