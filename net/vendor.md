@@ -38,7 +38,22 @@
 | 6  | 金融机构分支零信任   | 银行/保险  | 分支 C9300X 通过 IPsec 与总部数据中心互联，实现瘦分支零信任架构                    | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
 
 ## ETA
-Encrypted Traffic Analytics (ETA) is a unique capability for identifying malware in encrypted traffic coming from the access layer. Since more and more traffic is becoming encrypted, the visibility this feature affords for threat detection is critical for keeping your network secure at different layers.
+Encrypted Traffic Analytics is an IOS XE feature that uses advanced behavioral algorithms to identify malicious traffic patterns through analysis of intraflow metadata of encrypted traffic, detecting potential threats hiding in encrypted traffic. 
+
+加密流量不能应用DPI(deep-packet inspection).
+Encrypted Traffic Analytics (ETA) is a unique capability for identifying malware in encrypted traffic coming from the **access layer**. Since more and more traffic is becoming encrypted, the visibility this feature affords for threat detection is critical for keeping your network secure at different layers.
+
+Encrypted Traffic Analytics (ETA): You benefit from the power of machine learning to identify and take actions toward threats or anomalies in your network, including malware detection in encrypted traffic (without decryption) and distributed anomaly detection.
+
+ETA extracts two main data elements: the **initial data packet (IDP)** and the **sequence of packet length and time** (SPLT). These elements are then communicated using a dedicated NetFlow template to Cisco Stealthwatch Enterprise. When used in conjunction with Flexible NetFlow, a complete view of the life of the flow is possible providing the capability to not only identify malicious traffic but anomalous behavior and customizable policy violations in your network utilizing.
+
+思科的云端使用机器学习(ML)算法：
+Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms. The training period allows the system to learn the behavior of the customer network. The length of the training period depends entirely on the amount of traffic seen. Once this initial period is complete, Cognitive Intelligence analyzes the encrypted traffic data elements within the ETA records by applying machine learning and statistical modeling with existing classifiers.
+
+### 应用场景
+思科[文档1]列举了
+1.  医疗场景 Figure 6 Encrypted medical communications in Cisco SD-Access fabric。
+2.  零售场景 Figure 13 Addition of ETA in retail network
 
 ### 参考
 1. [Encrypted Traffic Analytics: Solutions Adoption Prescriptive Reference—Design Guide](https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Campus/eta-design-guide-2019oct.pdf?dtid=osscdc000283&linkclickid=srch) 2019.
