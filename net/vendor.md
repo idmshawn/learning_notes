@@ -40,5 +40,8 @@
 ## ETA
 Encrypted Traffic Analytics (ETA) is a unique capability for identifying malware in encrypted traffic coming from the access layer. Since more and more traffic is becoming encrypted, the visibility this feature affords for threat detection is critical for keeping your network secure at different layers.
 
+### 参考
+1. [Encrypted Traffic Analytics: Solutions Adoption Prescriptive Reference—Design Guide](https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Campus/eta-design-guide-2019oct.pdf?dtid=osscdc000283&linkclickid=srch) 2019.
+
 ## 其它
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
