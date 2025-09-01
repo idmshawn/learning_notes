@@ -58,5 +58,16 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 ### 参考
 1. [Encrypted Traffic Analytics: Solutions Adoption Prescriptive Reference—Design Guide](https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Campus/eta-design-guide-2019oct.pdf?dtid=osscdc000283&linkclickid=srch) 2019.
 
-## 其它
+# 行业洞察(其它)
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
+
+思科工具
+
+|工具/系统|作用|备注|
+|--|--|--|
+|千眼|运维可视系统||
+|splunk|||
+|XDR|安全检测及响应系统||
+|Umbrella|安全工具||
+
+
