@@ -58,6 +58,12 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 ### 参考
 1. [Encrypted Traffic Analytics: Solutions Adoption Prescriptive Reference—Design Guide](https://www.cisco.com/c/dam/en/us/td/docs/solutions/CVD/Campus/eta-design-guide-2019oct.pdf?dtid=osscdc000283&linkclickid=srch) 2019.
 
+
+## TrustSec策略可视
+
+### 参考
+1. [TrustSec Refresh, Reinforced with latest segmentation innovations](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2024/pdf/BRKENS-1852.pdf)
+
 # 行业洞察(其它)
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
 
