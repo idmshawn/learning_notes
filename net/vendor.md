@@ -67,14 +67,23 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 # 行业洞察(其它)
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
 
-思科工具
+# 思科系统和软件汇总
 
 |工具/系统|全称|作用|备注|
 |--|--|--|--|
-|千眼|ThousandEyes|运维可视系统||
+|千眼|ThousandEyes|运维可视系统|注2|
 |splunk||||
-|XDR|Extend Detection & Response|安全检测及响应系统||
-|Umbrella||安全工具||
+|XDR|Extended Detection and Response|安全检测及响应系统|注6|
+|Umbrella||云安全工具; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
 |DNA Center||思科本地部署平台，防仿冒、终端识别基于DNAC||
+|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
+|SNA，也称Stealthwatch|Secure Network Analytics|Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5|
 
 
+## 参考
+1. [Cisco Identity Services Engine (ISE)](https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html)
+2. [Cisco ThousandEyes](https://www.cisco.com/site/us/en/products/networking/software/internet-cloud-intelligence/index.html)
+3. [Cisco Secure Network Analytics](https://www.cisco.com/site/us/en/products/security/security-analytics/secure-network-analytics/index.html)
+4. [Cisco Umbrella](https://umbrella.cisco.com/)
+5. [Network threat detection and response with Cisco Stealthwatch](https://www.cisco.com/site/us/en/products/security/security-analytics/secure-network-analytics/index.html)
+6. [Cisco XDR](https://www.cisco.com/site/us/en/products/security/xdr/index.html)
