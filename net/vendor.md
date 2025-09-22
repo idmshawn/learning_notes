@@ -69,11 +69,12 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 
 思科工具
 
-|工具/系统|作用|备注|
-|--|--|--|
-|千眼|运维可视系统||
-|splunk|||
-|XDR|安全检测及响应系统||
-|Umbrella|安全工具||
+|工具/系统|全称|作用|备注|
+|--|--|--|--|
+|千眼|ThousandEyes|运维可视系统||
+|splunk||||
+|XDR|Extend Detection & Response|安全检测及响应系统||
+|Umbrella||安全工具||
+|DNA Center||思科本地部署平台，防仿冒、终端识别基于DNAC||
 
 
