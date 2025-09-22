@@ -69,16 +69,19 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 
 # 思科系统和软件汇总
 
-|工具/系统|全称|作用|备注|
-|--|--|--|--|
-|千眼|ThousandEyes|运维可视系统|注2|
-|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
-|XDR|Extended Detection and Response|安全检测及响应系统|注6|
-|Umbrella||云安全工具; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
-|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC||
-|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
-|SNA，也称Stealthwatch|Secure Network Analytics|Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5|
-|Meraki||Secure and manage IT from an intuitive, cloud-based dashboard with built-in assurance. |注8|
+|分类|工具/系统|全称|作用|备注|
+|--|--|--|--|--|
+|可视运维|千眼|ThousandEyes|运维可视系统|注2|
+|可视运维|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
+|安全|XDR|Extended Detection and Response|安全检测及响应系统|注6|
+|安全|Umbrella||云安全工具; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
+|？|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC||
+|安全|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
+|安全|SNA，前称Stealthwatch|Secure Network Analytics|Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5，9|
+|？|Meraki||Secure and manage IT from an intuitive, cloud-based dashboard with built-in assurance. |注8|
+
+
+Secure Network Analytics 可以快速、准确地检测到威胁（例如网络命令-与-控制 (C&C) 攻击、勒索软件、分布式拒绝服务 (DDoS) 攻击、非法加密货币挖矿、未知恶意软件和内部威胁）。通过使用无代理解决方案，您可以对整个网络流量进行全面的威胁监控，即使流量已加密也是如此。
 
 ## 参考
 1. [Cisco Identity Services Engine (ISE)](https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html)
@@ -89,3 +92,4 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 6. [Cisco XDR](https://www.cisco.com/site/us/en/products/security/xdr/index.html)
 7. [splunk](https://www.splunk.com/en_us/products/observability.html)
 8. [meraki: CLOUD-MANAGED NETWORK MANAGEMENT](https://meraki.cisco.com/products/meraki-dashboard/)
+9. [Cisco Secure Network Analytics](https://www.cisco.com/c/zh_cn/products/collateral/security/stealthwatch/datasheet-c78-739398.html)
