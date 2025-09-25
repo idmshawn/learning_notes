@@ -74,6 +74,13 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 4、提供了[AGNTCY](https://github.com/agntcy/.github/blob/main/profile/README.md)开源工程，用于作为IoA的MAS(Multi-agent System)示范
 The AGNTCY project is starting with deterministic patterns (Pattern 1) to establish reliable foundations, then expanding to semantic routing (Pattern 2), and eventually supporting planner-based systems (Pattern 3) as reasoning capabilities mature.
 
+5、给出IoA定义：      
+This new AI-native world needs a framework to enable collaboration across the ecosystem of agentic applications of various kinds, from different vendors, sometimes across different industries. **We call this framework the Internet of Agents.**
+
+IoA需要内置量子安全。
+
+6、xx
+
 ### 参考
 1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
 2. 多Agent系统(MAS, Multi-agent System)示例？，[AGNTCY](https://docs.agntcy.org/)
