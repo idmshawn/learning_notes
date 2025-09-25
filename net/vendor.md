@@ -28,15 +28,6 @@
 ## 思科IPSec
 思科C9000系列IPSec商用案例(数据来自Kimi搜索)  --》 数据参考源都不对
 
-| 序号 | 场景名称        | 行业/客户  | 关键场景描述                                                     | 参考链接                                                                                                                                                                                                                  |
-| -- | ----------- | ------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1  | 全球连锁零售加密互联  | 大型零售集团 | 600 余家门店 C9300X 通过 IPsec 隧道直连 AWS，实现 POS 实时上云              | [Cisco 官方配置指南 - Catalyst 9000X IPsec 示例](https://www.cisco.com/c/zh_cn/support/docs/switches/catalyst-9300x-12y-a-switch/221564-configure-ipsec-on-catalyst-9000x-series.html)                                        |
-| 2  | 欧洲机场安全回传    | 国际机场   | 航站楼 C9400X ↔ 云防火墙 IPsec 链路，承载离港/行李系统数据                     | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
-| 3  | 北美能源广域加密    | 能源公司   | 总部 C9400X 与 30 个野外变电站 C9300X 建立 Hub-Spoke IPsec 网络，替代 MPLS | [Cisco 官方配置指南 - Catalyst 9000X IPsec 示例](https://www.cisco.com/c/zh_cn/support/docs/switches/catalyst-9300x-12y-a-switch/221564-configure-ipsec-on-catalyst-9000x-series.html)                                        |
-| 4  | 亚太制造混合云     | 制造企业   | 园区 C9300X IPsec 对接 AWS Transit Gateway，打通研发网与云上 DevOps     | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
-| 5  | 三甲医院多院区加密互联 | 医疗行业   | 主院区 C9400X 与两家分院 C9300X 建立 IPsec 隧道，承载 HIS/PACS 影像数据       | [Cisco Security Configuration Guide - Catalyst 9300 IPsec](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_ipsec.html)  |
-| 6  | 金融机构分支零信任   | 银行/保险  | 分支 C9300X 通过 IPsec 与总部数据中心互联，实现瘦分支零信任架构                    | [Cisco Catalyst 9000 Platform FAQ - 安全场景](https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-9000/nb-06-cat9k-swit-plat-faq-cte-en.html)                                                             |
-
 ## ETA
 Encrypted Traffic Analytics is an IOS XE feature that uses advanced behavioral algorithms to identify malicious traffic patterns through analysis of intraflow metadata of encrypted traffic, detecting potential threats hiding in encrypted traffic. 
 
@@ -74,12 +65,15 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 |可视运维|千眼|ThousandEyes|运维可视系统|注2|
 |可视运维|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
 |安全|XDR|Extended Detection and Response|安全检测及响应系统|注6|
-|安全|Umbrella||云安全工具; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
+|安全|Umbrella||基于云的安全接入服务 (SASE)，提供 DNS 安全、SWG、CASB 等; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
 |？|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC||
-|安全|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
-|安全|SNA，前称Stealthwatch|Secure Network Analytics|Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5，9|
+|安全|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点，统一认证、策略下发；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
+|安全|SNA，前称Stealthwatch|Secure Network Analytics|基于 NetFlow/Telemetry 做行为监测、威胁检测。Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5，9|
+|安全|SCA，前称Stealthwatch Cloud|Secure Cloud Analytics|云原生的流量分析平台，检测横向移动、可疑流量。||
 |？|Meraki||Secure and manage IT from an intuitive, cloud-based dashboard with built-in assurance. |注8|
-
+|安全|Duo||提供 MFA 与零信任身份校验，收购公司||
+|AI|OutShift||专注于Internet of Agents，思科旗下公司|注10|
+|安全|Hypershield||下一代分布式安全架构，把安全能力嵌入交换机、服务器网卡、虚拟化层，实现“AI 原生 + 无处不在的防御”|注11|
 
 Secure Network Analytics 可以快速、准确地检测到威胁（例如网络命令-与-控制 (C&C) 攻击、勒索软件、分布式拒绝服务 (DDoS) 攻击、非法加密货币挖矿、未知恶意软件和内部威胁）。通过使用无代理解决方案，您可以对整个网络流量进行全面的威胁监控，即使流量已加密也是如此。
 
@@ -93,3 +87,5 @@ Secure Network Analytics 可以快速、准确地检测到威胁（例如网络�
 7. [splunk](https://www.splunk.com/en_us/products/observability.html)
 8. [meraki: CLOUD-MANAGED NETWORK MANAGEMENT](https://meraki.cisco.com/products/meraki-dashboard/)
 9. [Cisco Secure Network Analytics](https://www.cisco.com/c/zh_cn/products/collateral/security/stealthwatch/datasheet-c78-739398.html)
+10. [outshift](https://outshift.cisco.com/the-internet-of-agents)
+11. [Cisco Hypershield](https://www.cisco.com/site/us/en/products/security/hypershield/index.html)
