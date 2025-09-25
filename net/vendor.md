@@ -66,16 +66,17 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 
 2、给出Agent互联互通的两个例子：其它的SaaS指纹开发和管理、药物研发；    
 
-3、定义了多agent软件的三种模式：    
+3、定义了Multi-agent Software的三种模式：    
 - Deterministic routing模式(Pattern 1)，适用于可靠性大于灵活性的企业关键任务处理；如，软件开发的流程中，agent用于安全扫描、依赖分析、容器执行顺序等。
 - Semantic routing模式(Pattern 2)，适用于有限范围内灵活性的面向用户的系统；如，企业IT支撑中，用于解答数据库访问问题的“数据库代理”，诊断网络问题的“网络代理”。
 - Planner-based模式(Pattern 3)，适用于灵活性最高的消费型应用；如，旅游规划代理，动态查找航班，酒店预订、天气服务等。
 
-4、提供了AGNTCY开源工程，用于作为IoA示范？
+4、提供了[AGNTCY](https://github.com/agntcy/.github/blob/main/profile/README.md)开源工程，用于作为IoA的MAS(Multi-agent System)示范
 The AGNTCY project is starting with deterministic patterns (Pattern 1) to establish reliable foundations, then expanding to semantic routing (Pattern 2), and eventually supporting planner-based systems (Pattern 3) as reasoning capabilities mature.
 
 ### 参考
 1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
+2. 多Agent系统(MAS, Multi-agent System)示例？，[AGNTCY](https://docs.agntcy.org/)
 
 
 # 思科系统和软件汇总
