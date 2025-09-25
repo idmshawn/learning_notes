@@ -55,8 +55,28 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 ### 参考
 1. [TrustSec Refresh, Reinforced with latest segmentation innovations](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2024/pdf/BRKENS-1852.pdf)
 
-# 行业洞察(其它)
+# 行业洞察
 [Cisco Live汇总](https://github.com/babajung/cisco-live/blob/master/README.md)
+
+## IoA洞察
+### 思科
+思科旗下Outshift专注于IoA，于2025年7月份发布IoA白皮书，文档1。白皮书指出：
+
+1、网络趋势从传统的Internet，到移动互联网，到云互联网，当前迎来了Agent互联网；网络基础设施需要有IoA的标准规范，以指导IoA基础设施的生态发展，避免碎片化发展、重复造轮子。   
+
+2、给出Agent互联互通的两个例子：其它的SaaS指纹开发和管理、药物研发；    
+
+3、定义了多agent软件的三种模式：    
+- Deterministic routing模式(Pattern 1)，适用于可靠性大于灵活性的企业关键任务处理；如，软件开发的流程中，agent用于安全扫描、依赖分析、容器执行顺序等。
+- Semantic routing模式(Pattern 2)，适用于有限范围内灵活性的面向用户的系统；如，企业IT支撑中，用于解答数据库访问问题的“数据库代理”，诊断网络问题的“网络代理”。
+- Planner-based模式(Pattern 3)，适用于灵活性最高的消费型应用；如，旅游规划代理，动态查找航班，酒店预订、天气服务等。
+
+4、提供了AGNTCY开源工程，用于作为IoA示范？
+The AGNTCY project is starting with deterministic patterns (Pattern 1) to establish reliable foundations, then expanding to semantic routing (Pattern 2), and eventually supporting planner-based systems (Pattern 3) as reasoning capabilities mature.
+
+### 参考
+1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
+
 
 # 思科系统和软件汇总
 
