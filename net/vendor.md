@@ -64,12 +64,12 @@ Cisco Stealthwatch with Cognitive Intelligence uses machine-learning algorithms.
 |--|--|--|--|--|
 |可视运维|千眼|ThousandEyes|运维可视系统|注2|
 |可视运维|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
-|安全|XDR|Extended Detection and Response|安全检测及响应系统|注6|
+|安全|XDR|Extended Detection and Response|扩展的安全检测及响应系统，云原生SaaS|注6|
 |安全|Umbrella||基于云的安全接入服务 (SASE)，提供 DNS 安全、SWG、CASB 等; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
-|？|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC||
+|？|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC。包含AI Endpoint Analytics，采用机器学习提升未知终端识别率，完成IoT设备的资产认证管控和资产可视化。||
 |安全|ISE|Identity Services Engine|零信任架构下，ISE是策略决策点，统一认证、策略下发；It gathers intel from the stack to authenticate users and endpoints, automatically containing threats. Enable a dynamic and automated approach to policy enforcement|注1|
 |安全|SNA，前称Stealthwatch|Secure Network Analytics|基于 NetFlow/Telemetry 做行为监测、威胁检测。Analyze your existing network data to help detect threats that may have found a way to bypass your existing controls, before they can do serious damage. Detect and respond to emerging threats in your digital business with industry-leading machine learning and behavioral modeling|注3，5，9|
-|安全|SCA，前称Stealthwatch Cloud|Secure Cloud Analytics|云原生的流量分析平台，检测横向移动、可疑流量。||
+|安全|SCA，前称Stealthwatch Cloud，后收编为NDR|Secure Cloud Analytics|云原生的流量分析平台，检测横向移动、可疑流量。||
 |？|Meraki||Secure and manage IT from an intuitive, cloud-based dashboard with built-in assurance. |注8|
 |安全|Duo||提供 MFA 与零信任身份校验，收购公司||
 |AI|OutShift||专注于Internet of Agents，思科旗下公司|注10|
