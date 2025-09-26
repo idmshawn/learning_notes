@@ -79,8 +79,22 @@ This new AI-native world needs a framework to enable collaboration across the ec
 
 IoA需要内置量子安全。
 
-6、xx
+6、IoA的构建，一般划分为三个互联层  
+- AI-native agentic applications：这一层涵盖了从业务工作流程自动化到科学发现再到社交互动的全方位智能应用。
+- **Agent Communication Platform (ACP)**：该层为AI代理如何发现、验证和相互交互提供了基本协议和标准。 （**瘦腰模型中IoA的“腰”**，相当于Internet中的“IP”，或Cloud Internet中的“HTTPS/gRPC/Open API”）
+- AI and quantum-safe infrastructure：这一基础层提供了安全且可扩展的基础设施，支持所有AI代理的交互。
 
+
+开源工程AGNTCY包含以下内容：
+
+|项目|链接|作用|说明|
+|--|--|--|--|
+|Open Agent Schema Framework (OASF)|github.com/agntcy/oasf|提供标准格式的agent基础框架||
+|Agent Connect Protocol (ACP)|github.com/agntcy/acp-spec|支持不同框架下的agent通信、处理认证、配置、错误处理的标准协议||
+|Agent2Agent Protocol (A2A) by Google|a2a-protocol.org/latest/|agent间协同和通信的标准方式||
+|Secure Low-latency Interactive Messaging (SLIM)|github.com/agntcy/slim||
+|...|||
+  
 ### 参考
 1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
 2. 多Agent系统(MAS, Multi-agent System)示例？，[AGNTCY](https://docs.agntcy.org/)
