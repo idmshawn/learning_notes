@@ -15,13 +15,19 @@
 
 ## 思科splunk
 
-
 ## 华为NCE-CampusInsight
+
+## 思科AVC和NBAR2
+Application Visibility and Controls (AVC) 
+ 
+Next Generation NBAR (NBAR2)
 
 ## 参考
 1. CISCO Live: [Beginner’s Guide to ThousandEyes](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKENT-1656.pdf)
 2. CISCO Live: [ThousandEyes: Assurance in Focus, A next generation platform for assuring digital experiences](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKOBS-1017.pdf)
 3. [ThousandEyes + Cisco Catalyst 9000](https://www.thousandeyes.com/solutions/cisco-catalyst-9000-series)
+4. [Cisco Application Visibility and Controls (AVC) and Next Generation NBAR (NBAR2)](https://docs.liveaction.com/pdf/Cisco%20AVC%20and%20NBAR2%20App%20Note.pdf)
+5. [瞭解9800無線控制器上的應用可視性與可控性](https://www.cisco.com/c/zh_tw/support/docs/wireless/catalyst-9800-series-wireless-controllers/222242-understand-avc-on-the-catalyst-9800-wire.html)
 
 # 网络安全
 
