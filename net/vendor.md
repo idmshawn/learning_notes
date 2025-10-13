@@ -18,15 +18,29 @@
 ## 华为NCE-CampusInsight
 
 ## 思科AVC和NBAR2
-Application Visibility and Controls (AVC) 
- 
-Next Generation NBAR (NBAR2)
+[文档4]
+#### AVC
+Application Visibility and Controls (AVC) ，用于监控和管理应用性能指标；利用已有的NBAR2等技术，目标是适当地分类网络中的流量 
+> "With this data, the network administrator can act on the classified traffic in order to properly prioritize and control flow through QoS policies."
+
+相比传统的流机制NetFlow和Flexible NetFlow(FNF)，AVC主要使用五元组中的4个，即主要关注源/目的IP、协议号、目的端口，忽略源端口号，以便降低流数目、将多个类似流聚合为一条AVC流。
+测量指标含(详见文档4)：
+CND，Client Network Delay
+SND，Server Network Delay，即WAN网络时延；
+AD，Application Delay，应用处理时延；
+
+#### NBAR 
+Next Generation Network Based Application Recognition (NBAR2)，NBAR2为AVC提供了应用识别能力。
+NBAR2基于其DPI(Deep Packet Inspection)引擎，提供了高级别的流量分类(providing a greater level of traffic classification)。
+支持1000个应用签名，和不断更新的协议包，以更好地识别和基于Group匹配应用；如email组下的POP3、SMTP、IMAP等；
+
+NBAR2测量对象含TCP、UDP，见文档4附图LiveNX Flow Report。
 
 ## 参考
 1. CISCO Live: [Beginner’s Guide to ThousandEyes](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKENT-1656.pdf)
 2. CISCO Live: [ThousandEyes: Assurance in Focus, A next generation platform for assuring digital experiences](https://www.ciscolive.com/c/dam/r/ciscolive/global-event/docs/2025/pdf/BRKOBS-1017.pdf)
 3. [ThousandEyes + Cisco Catalyst 9000](https://www.thousandeyes.com/solutions/cisco-catalyst-9000-series)
-4. [Cisco Application Visibility and Controls (AVC) and Next Generation NBAR (NBAR2)](https://docs.liveaction.com/pdf/Cisco%20AVC%20and%20NBAR2%20App%20Note.pdf)
+4. 【推荐】[Cisco Application Visibility and Controls (AVC) and Next Generation NBAR (NBAR2)](https://docs.liveaction.com/pdf/Cisco%20AVC%20and%20NBAR2%20App%20Note.pdf)
 5. [瞭解9800無線控制器上的應用可視性與可控性](https://www.cisco.com/c/zh_tw/support/docs/wireless/catalyst-9800-series-wireless-controllers/222242-understand-avc-on-the-catalyst-9800-wire.html)
 
 # 网络安全
