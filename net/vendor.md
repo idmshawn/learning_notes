@@ -131,6 +131,8 @@ IoA需要内置量子安全。
 |--|--|--|--|--|
 |可视运维|千眼|ThousandEyes|运维可视系统|注2|
 |可视运维|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
+|可视运维|AVC|Application Visibility and Controls|基于应用的网络流测量，指标含CND/SND/AD等|见前章节|
+|可视运维|NBAR|Network Based Application Recognition|应用识别|见前章节|
 |安全|XDR|Extended Detection and Response|扩展的安全检测及响应系统，云原生SaaS|注6|
 |安全|Umbrella||基于云的安全接入服务 (SASE)，提供 DNS 安全、SWG、CASB 等; Get flexible, fast, and effective cloud security so you can secure your users, even in a matter of minutes|注4|
 |？|DNA Center|也称Cisco Catalyst Center|思科本地部署平台，防仿冒、终端识别基于DNAC。包含AI Endpoint Analytics，采用机器学习提升未知终端识别率，完成IoT设备的资产认证管控和资产可视化。||
