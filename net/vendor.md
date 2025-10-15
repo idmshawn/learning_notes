@@ -129,8 +129,8 @@ IoA需要内置量子安全。
 
 |分类|工具/系统|全称|作用|备注|
 |--|--|--|--|--|
-|可视运维|千眼|ThousandEyes|运维可视系统|注2|
-|可视运维|splunk||Unify network and application data for advanced observability and resilience. |收购的第三方公司？提供商业的可视解决方案；注7|
+|可视运维|千眼|ThousandEyes|运维可视系统|2022年收购；注2|
+|可视运维|splunk||Unify network and application data for advanced observability and resilience. |2024年思科以280亿美元的天价收购Splunk，提供商业的可视解决方案；注7|
 |可视运维|AVC|Application Visibility and Controls|基于应用的网络流测量，指标含CND/SND/AD等|见前章节|
 |可视运维|NBAR|Network Based Application Recognition|应用识别|见前章节|
 |安全|XDR|Extended Detection and Response|扩展的安全检测及响应系统，云原生SaaS|注6|
