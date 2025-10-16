@@ -98,6 +98,8 @@ The AGNTCY project is starting with deterministic patterns (Pattern 1) to establ
 This new AI-native world needs a framework to enable collaboration across the ecosystem of agentic applications of various kinds, from different vendors, sometimes across different industries. **We call this framework the Internet of Agents.**
 
 IoA需要内置量子安全。
+[Human-in-the-loop](https://en.wikipedia.org/wiki/Human-in-the-loop)，主要指机器学习中的人机交互：Human-in-the-loop interaction。
+human-on-the-loop
 
 6、IoA的构建，一般划分为三个互联层  
 - AI-native agentic applications：这一层涵盖了从业务工作流程自动化到科学发现再到社交互动的全方位智能应用。
