@@ -117,15 +117,14 @@ human-on-the-loop
 |Secure Low-latency Interactive Messaging (SLIM)|github.com/agntcy/slim||
 |...|||
   
-### 参考
-1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
-2. 多Agent系统(MAS, Multi-agent System)示例？，[AGNTCY](https://docs.agntcy.org/)
-
 ### 微软
 人带领agent工作xxxxx
 
 ### 参考
-1. [Microsoft Work Trend Index Annual Report](https://news.microsoft.com/annual-work-trend-index-2025/)
+1. 思科旗下Outshift的IoA白皮书：[The Internet of Agents](https://outshift-headless-cms-s3.s3.us-east-2.amazonaws.com/Internet_of_Agents_Whitepaper.pdf)
+2. 多Agent系统(MAS, Multi-agent System)示例？，[AGNTCY](https://docs.agntcy.org/)
+3. [An Illustrated Guide To AI Agents](https://www.scribd.com/document/904059766/An-Illustrated-Guide-to-AI-Agents)
+4. [Microsoft Work Trend Index Annual Report](https://news.microsoft.com/annual-work-trend-index-2025/)
 
 # 思科系统和软件汇总
 
